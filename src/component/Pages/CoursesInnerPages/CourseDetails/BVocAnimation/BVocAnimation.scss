@@ -1,0 +1,49 @@
+@use "../../../../../assets/theme/var" as *;
+
+.b_voc {
+  padding-block: 9rem;
+
+  & .heading {
+    display: inline-block;
+    background-color: $primary;
+    color: $navyblue;
+    padding: 1.5rem;
+    padding-inline: 4rem;
+  }
+
+  & .row {
+    margin-top: 6rem;
+  }
+
+  &_heading {
+    padding-bottom: 1rem;
+    border-bottom: 3px solid $navyblue;
+    display: inline-block;
+    padding-top: 3rem;
+  }
+
+  &_content {
+    padding-block: 3rem;
+
+    & .b_voc_text {
+      font-size: 1.8rem;
+      margin: 3rem 0;
+    }
+  }
+
+  &_section {
+    span {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    & p {
+      font-size: 1.7rem;
+    }
+
+    >div {
+      margin-bottom: 3rem;
+    }
+  }
+}

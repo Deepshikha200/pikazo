@@ -1,0 +1,31 @@
+@use "../../../../assets/theme/var" as *;
+
+.placements {
+  padding: 5rem 0;
+
+  @media (max-width:991px) {
+    padding: 3rem 0;
+
+  }
+
+  &_img {
+    padding: 0 10px;
+    margin-top: 5rem;
+  }
+
+  img {
+    max-width: 100%;
+    // height: auto;
+    // border-radius: 50%;
+    box-shadow: 0px 0 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .slick-slide {
+    margin: 0 10px;
+  }
+
+  .slick-track {
+    display: flex !important;
+    gap: 20px;
+  }
+}

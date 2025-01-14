@@ -1,0 +1,342 @@
+@use "../../../assets/theme/var" as *;
+
+.inner-courses,
+.diploma {
+  padding-top: 9.5rem;
+  overflow-x: clip;
+  position: relative;
+
+  &_text {
+    & h2 {
+      font-size: 7.8rem;
+
+      @media (max-width:1199px) {
+        font-size: 6rem;
+      }
+
+      @media (max-width:991px) {
+        font-size: 4rem;
+      }
+
+      @media (max-width:480px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    & h3 {
+      font-size: 3rem;
+
+
+      @media (max-width:1199px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width:991px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width:480px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &-preview {
+    padding: 5rem 0;
+    background-color: $greybg;
+
+    @media (max-width:991px) {
+      padding: 3rem 0;
+
+    }
+
+    .preview-col {
+      & h2 {
+        padding-bottom: 0.6rem;
+        border-bottom: 3px solid $black;
+        display: inline;
+      }
+
+      & h3 {
+        margin: 5rem 0 2rem 0;
+
+        @media (max-width:991px) {
+          margin: 3rem 0 1rem 0;
+
+        }
+      }
+
+
+
+      & p {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+
+        @media (max-width:991px) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .test_img {
+      &1 {
+        width: 40rem;
+        position: absolute;
+        top: 60rem;
+        right: 26rem;
+        animation: growthImg 2s linear 3s infinite alternate-reverse;
+        animation-play-state: running; // Ensure animation runs by default
+
+        &:hover {
+          animation-play-state: paused; // Pause on hover
+        }
+      }
+
+      @keyframes growthImg {
+        0% {
+          top: 60rem;
+        }
+
+        100% {
+          top: 53rem;
+        }
+
+      }
+
+      &2 {
+        position: absolute;
+        top: 54rem;
+        right: 0;
+        width: 40rem;
+        animation: moderate 2s linear 3s infinite alternate-reverse;
+        animation-play-state: running; // Ensure animation runs by default
+
+        &:hover {
+          animation-play-state: paused; // Pause on hover
+        }
+      }
+
+      @keyframes moderate {
+        0% {
+          top: 54rem;
+        }
+
+        100% {
+          top: 59rem;
+        }
+      }
+    }
+
+    // @keyframes slide {
+    //   0% {
+    //     transform: translateX(0);
+    //   }
+
+    //   25% {
+    //     transform: translateX(20px);
+    //   }
+
+    //   50% {
+    //     transform: translateX(40px);
+    //     ; 
+    //   }
+
+    //   75% {
+    //     transform: translateX(20px);
+    //   }
+
+    //   100% {
+    //     transform: translateX(0);
+    //   }
+    // }
+
+
+  }
+
+  .course_accordion {
+    margin-top: 4rem;
+
+    @media (max-width:991px) {
+      margin-top: 2rem;
+
+    }
+
+    .accordion {
+      background-color: transparent;
+
+      .accordion-item {
+        background-color: transparent;
+        margin-bottom: 3rem;
+        border: 1px solid $grey;
+        border-radius: 1rem;
+
+        @media (max-width:768px) {
+          margin-bottom: 1rem;
+
+        }
+
+        .accordion-header {
+          padding: 0;
+          padding-top: 6px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          font-family: $baseFont !important;
+        }
+
+        .accordion-button {
+          padding-bottom: 1rem;
+          font-size: 2rem;
+          font-weight: 700;
+          background-color: transparent;
+          box-shadow: none;
+
+          @media (max-width:768px) {
+            font-size: 16px;
+            font-weight: 400;
+
+          }
+
+          @media (max-width:767px) {
+            font-weight: 400;
+          }
+
+          span {
+            svg {
+              transition: all 0.1s ease-in-out;
+            }
+          }
+
+          &.collapsed {
+            span {
+              svg {
+                transform: rotate(225deg);
+                transition: all 0.1s ease-in-out;
+              }
+            }
+          }
+
+          &::after {
+            background-image: url();
+          }
+        }
+
+        .accordion-body {
+          color: var(--darktextgrey);
+          padding-left: 8rem;
+          padding-bottom: 2rem;
+
+          @media (max-width:480px) {
+            font-size: 14px;
+            padding-left: 31px;
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+.course-list {
+  column-count: 3;
+  font-size: 2rem;
+  list-style: square;
+  cursor: pointer;
+
+  li {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    break-inside: avoid;
+
+    &:hover {
+      color: $navyblue;
+    }
+  }
+
+  @media (max-width:991px) {
+    column-count: 2;
+    font-size: 1.4rem;
+
+  }
+}
+
+.diploma {
+  & h2 {
+    margin: 5rem 0;
+  }
+
+  &_heading {
+    background-color: $primary;
+    color: $navyblue;
+    padding: 0.5rem;
+    padding-inline: 2rem;
+    font-size: 2.8rem;
+
+  }
+
+  &_course {
+    & h3 {
+      font-size: 3.5rem;
+      border-bottom: 3px solid $black;
+      display: inline;
+      padding-bottom: 1rem;
+
+      @media (max-width:1199px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width:991px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width:480px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    & h4 {
+      padding: 4rem 0;
+
+      @media (max-width:991px) {
+        padding: 2rem 0;
+
+      }
+    }
+
+    & p {
+      font-size: 1.8rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+
+      @media (max-width:991px) {
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+      }
+    }
+
+    & ul {
+      li {
+        font-size: 1.8rem;
+
+        @media (max-width:991px) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+.graphic_heading {
+  background-color: $primary;
+  color: $navyblue;
+  padding: 0.5rem;
+  padding-inline: 2rem;
+  margin-bottom: 2rem;
+  // border-radius: 2rem;
+  display: inline-block;
+  font-size: 2.8rem;
+
+}

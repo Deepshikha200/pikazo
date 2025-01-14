@@ -1,0 +1,25 @@
+@use "../../../assets/theme/var" as *;
+
+.student {
+  padding-top: 13rem;
+
+  &_btn {
+    text-align: center;
+    padding-top: 4rem;
+
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 1.8rem;
+      padding: 0.5rem 2rem;
+      text-transform: uppercase;
+
+      &.active {
+        color: $white;
+        background-color: $navyblue;
+      }
+    }
+  }
+
+
+}

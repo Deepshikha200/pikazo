@@ -1,0 +1,73 @@
+@use "../../../../assets/theme/var" as *;
+
+.event {
+  padding: 6rem 0;
+  position: relative;
+  background-color: $greybg;
+
+  @media (max-width: 991px) {
+    padding: 3rem 0;
+  }
+
+  &_img {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+
+    img {
+      height: 45rem;
+      border-radius: 2rem;
+    }
+
+    .side-image {
+      position: absolute;
+      top: 9%;
+      z-index: 1;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      /* Ensure smooth transition */
+      opacity: 0;
+    }
+
+    .event_img1 {
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .event_img2 {
+      height: 39rem;
+      left: -16%;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      /* Add transition here */
+      opacity: 0;
+      z-index: -1;
+
+    }
+
+    .event_img3 {
+      left: 4%;
+      height: 40rem;
+      top: 36px;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      /* Add transition here */
+      opacity: 0;
+      z-index: -1;
+
+    }
+
+    &:hover {
+      .event_img1 {
+        // transform: scale(1.05);
+      }
+
+      .event_img2 {
+        opacity: 1;
+        transform: translateX(-11%) rotate(-27deg);
+      }
+
+      .event_img3 {
+        opacity: 1;
+        transform: translateX(67%) rotate(20deg);
+      }
+    }
+  }
+}

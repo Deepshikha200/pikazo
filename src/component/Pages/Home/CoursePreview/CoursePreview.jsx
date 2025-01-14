@@ -1,0 +1,123 @@
+import React, { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import ReactPlayer from "react-player";
+import vfx from "../../../../assets/images/vfx.mp4";
+import ui from "../../../../assets/images/UIUX.mp4";
+import market from "../../../../assets/images/market.mp4";
+import web from "../../../../assets/images/web.mp4";
+import "./CoursePreview.scss";
+import CommonHeading from "../../../../common/CommonHeading/CommonHeading";
+import img2 from "../../../../assets/images/aboutimg11.jpg";
+
+const CoursePreview = () => {
+  const [playingVideo, setPlayingVideo] = useState(null);
+
+  const courses = [
+    {
+      id: "vfx",
+      title: "VFX",
+      url: vfx,
+      description:
+        "This significant course includes Roto, Paint & Prep, Green Screen, CC & CG, Camera Tracking, Match Move, Face Tracking, and 2D & 3D Compositing.",
+    },
+    {
+      id: "ui",
+      title: "UX/UI Designing",
+      url: ui,
+      description:
+        "This course includes environment making, character creation, gaming visual effects, and learning software like Unreal Engine and Unity.",
+    },
+    {
+      id: "market",
+      title: "Digital Marketing",
+      url: market,
+      description:
+        "Pikazo offers certified SEO courses. This course provides full-fledged SEO services and is affordable for any student.",
+    },
+    {
+      id: "web",
+      title: "Web & Graphics",
+      url: web,
+      description:
+        "In this course, we include Graphics and web designing, brochure, business kit, Visiting cards, Poster making, Web template, Infographics, etc.",
+    },
+    {
+      id: "animation",
+      title: "Animation",
+      url: "https://vimeo.com/934760458",
+      description:
+        "We prepare you for 2D & 3D animation, helping you master modeling, animation, lighting, rendering, performance, and compositing.",
+    },
+    {
+      id: "video-editing",
+      title: "Video Editing",
+      url: "https://vimeo.com/935358980",
+      description:
+        "This course includes video editing on advanced technologies, motion graphics, creating commercial ads, and basics of sound engineering.",
+    },
+    {
+      id: "film-making",
+      title: "Film Making",
+      url: "https://vimeo.com/935323300",
+      description:
+        "Learn advanced filmmaking techniques, storyboarding, scripting, shooting, editing, and post-production to bring stories to life.",
+    },
+    {
+      id: "game-designing",
+      title: "Game Designing",
+      url: "https://vimeo.com/935352028",
+      description:
+        "This course covers environment making, character creation, gaming visual effects, and learning tools like Unreal Engine and Unity.",
+    },
+  ];
+
+  return (
+    <section className="course_preview">
+      <Container>
+        <CommonHeading heading="Our Course" className="text-white mb-0" />
+        <p className="text-white mb-5 pb-5 text-center">
+          Unlock Your Potential with Knowledge That Inspires Brilliance.
+        </p>
+        <Row>
+          {courses.map((course) => (
+            <Col lg={3} md={6} sm={6} className=" item_col " key={course.id}>
+              <div className="text-center  course_preview_item mx-4">
+                <div
+                  className="video-container"
+                  onMouseEnter={() => setPlayingVideo(course.id)}
+                  onMouseLeave={() => setPlayingVideo(null)}
+                >
+                  {!playingVideo || playingVideo !== course.id ? (
+                    <div className="thumbnail-overlay">
+                      <button
+                        className="play-button"
+                        onClick={() => setPlayingVideo(course.id)}
+                      >
+                        <img src={img2} alt="" />
+                      </button>
+                    </div>
+                  ) : null}
+                  <ReactPlayer
+                    url={course.url}
+                    playing={playingVideo === course.id}
+                    controls
+                    width="100%"
+                    height="400px"
+                    className="react-player"
+                    loop
+                  />
+                </div>
+                <div className="course_preview_item_text">
+                  <h4 className="mb-20">{course.title}</h4>
+                  <p>{course.description}</p>
+                </div>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
+  );
+};
+
+export default CoursePreview;

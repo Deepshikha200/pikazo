@@ -1,0 +1,106 @@
+@use "../../../../assets/theme/var" as *;
+
+.form {
+  margin-bottom: 6rem;
+  padding-top: 15rem;
+
+  @media (max-width:1199px) {
+    padding-top: 7rem;
+  }
+
+  @media (max-width:767px) {
+    padding-top: 3rem;
+  }
+
+  @media (max-width:768px) {
+    margin-bottom: 0;
+
+  }
+
+  &_col {
+    position: relative;
+
+    &_img {
+      position: absolute;
+      height: auto;
+      max-width: 100%;
+
+      img {
+        height: 32rem;
+      }
+
+      @media (max-width:991px) {
+        position: relative;
+        text-align: center;
+      }
+    }
+
+    .second {
+      @media (max-width:991px) {
+        display: none;
+      }
+    }
+
+    .first {
+      top: 14rem;
+      right: 6rem;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        right: 8px;
+        bottom: 8px;
+        background-color: $white;
+        z-index: -1;
+      }
+
+      @media (max-width:991px) {
+        position: static;
+        
+      }
+    }
+
+    &_text {
+      padding-left: 3rem;
+
+      @media (max-width:991px) {
+        padding-left: 0;
+        text-align: center;
+      }
+
+      @media (max-width:480px) {
+        margin-top: 4rem;
+
+      }
+
+      h2 {
+        position: relative;
+      }
+
+      & p {
+        color: $grey
+      }
+
+      .learn_more_btn {
+        border-radius: 0;
+        min-width: 19rem;
+        width: 19rem;
+      }
+    }
+  }
+
+  .customInput {
+    margin-bottom: 0;
+    margin-top: 1rem;
+
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+
+}
