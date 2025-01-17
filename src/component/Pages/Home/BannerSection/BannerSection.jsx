@@ -1,12 +1,10 @@
 import React, { useState, useRef } from "react";
 import img1 from "../../../../assets/images/banner.jpg";
 import img2 from "../../../../assets/images/bannerf1.jpg";
-// import img3 from "../../../../assets/images/bannerf2.jpg";
 import img4 from "../../../../assets/images/banner1.jpeg";
-
 import Slider from "react-slick";
 import "./BannerSection.scss";
-import { motion } from "framer-motion"; // Ensure correct import
+import { motion } from "framer-motion";
 import CommonButton from "../../../../common/CommonButton/CommonButton";
 
 const BannerSection = () => {
@@ -23,10 +21,6 @@ const BannerSection = () => {
       image: img2,
       text: "Where ideas become games",
     },
-    // {
-    //   image: img3,
-    //   text: "Your Journey  Success3",
-    // },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,8 +32,8 @@ const BannerSection = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 3300,
+    autoplay: true,
+    autoplaySpeed: 3300,
     vertical: true,
     verticalSwiping: true,
     beforeChange: (current, next) => setCurrentSlide(next),

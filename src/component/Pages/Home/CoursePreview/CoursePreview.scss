@@ -20,12 +20,16 @@
     @media (max-width:991px) {
 
       margin-bottom: 2.5rem;
-      
     }
   }
 
   .react-player {
     height: 350px !important;
+
+    @media (max-width:480px) {
+      height: 250px !important;
+
+    }
   }
 
   &:after {

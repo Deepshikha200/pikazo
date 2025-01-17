@@ -22,11 +22,11 @@
     padding: 4rem 3rem;
     margin-top: 3rem;
     transition: box-shadow 500ms ease, border 500ms ease;
+    border-radius: 1rem;
 
 
     @media (max-width:768px) {
-      padding: 4.5rem 4rem;
-
+      padding: 2.5rem 2rem
     }
 
     img {

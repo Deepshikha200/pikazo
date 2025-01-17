@@ -14,6 +14,7 @@ const CommonModal = (props) => {
         backdropClassName={props.backdropClassName}
         backdrop={props?.backdrop}
         className={`${props.className} ${props.variant} commonModal`}
+        size={props.size}
       >
         {props.heading && (
           <Modal.Header>

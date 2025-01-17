@@ -5,12 +5,10 @@ import Awards from "./Awards/Awards";
 import Course from "./Course/Course";
 import CoursePreview from "./CoursePreview/CoursePreview";
 import Projects from "./Projects/Projects";
-import Demo from "./demo/Demo";
 import Placements from "./Placements/Placements";
-import Footer from "../../../common/Footer/Footer";
-import Header from "../../../common/Header/Header";
 import OurStudent from "./OurStudent/OurStudent";
 import EventAndActivity from "./EventAndActivity/EventAndActivity";
+import Testimonial from "./Testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -21,10 +19,10 @@ const Home = () => {
       <Course />
       <CoursePreview />
       <Projects />
-      {/* <Demo /> */}
       <OurStudent />
       <Placements />
       <EventAndActivity />
+      <Testimonial />
     </>
   );
 };

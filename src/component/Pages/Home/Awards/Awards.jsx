@@ -29,7 +29,6 @@ const Awards = () => {
           <span>Our Affiliation</span>
         </h4>
 
-        {/* First Row */}
         <Row className="justify-content-center">
           {boxes.slice(0, 4).map((img, index) => (
             <Col
@@ -56,7 +55,6 @@ const Awards = () => {
           ))}
         </Row>
 
-        {/* Second Row */}
         <Row className="justify-content-center">
           {boxes.slice(4).map((img, index) => (
             <Col
