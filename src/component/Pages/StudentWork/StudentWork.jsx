@@ -15,30 +15,30 @@ const StudentWork = () => {
   const [animationKey, setAnimationKey] = useState(0);
 
   const motionGraphicsLinks = [
-    "https://www.youtube.com/watch?v=4WLDBVRUsUE",
-    "https://www.youtube.com/watch?v=1KdOjq70N9k",
-    "https://www.youtube.com/watch?v=lVBeiq0hQTM",
-    "https://www.youtube.com/watch?v=fRle1f95Uoo",
-    "https://www.youtube.com/watch?v=0PGVZuxS47k",
-    "https://www.youtube.com/watch?v=N6fgrYksWw4",
-    "https://www.youtube.com/watch?v=IbGWa6R21rE",
-    "https://www.youtube.com/watch?v=3jEr25nXYMU",
+    "https://www.youtube.com/embed/4WLDBVRUsUE",
+    "https://www.youtube.com/embed/1KdOjq70N9k",
+    "https://www.youtube.com/embed/lVBeiq0hQTM",
+    "https://www.youtube.com/embed/fRle1f95Uoo",
+    "https://www.youtube.com/embed/0PGVZuxS47k",
+    "https://www.youtube.com/embed/N6fgrYksWw4",
+    "https://www.youtube.com/embed/IbGWa6R21rE",
+    "https://www.youtube.com/embed/3jEr25nXYMU",
   ];
 
   const videoEditingLinks = [
-    "https://www.youtube.com/watch?v=xHskODr8pIw",
-    "https://www.youtube.com/watch?v=xoF6s2GC9fM",
-    "https://www.youtube.com/watch?v=MsjkeYfPWKY",
-    "https://www.youtube.com/watch?v=ncTcIGtAb4M",
-    "https://www.youtube.com/watch?v=AKFDelPXVsI",
-    "https://www.youtube.com/watch?v=RqRXKwdALyQ",
+    "https://www.youtube.com/embed/xHskODr8pIw",
+    "https://www.youtube.com/embed/xoF6s2GC9fM",
+    "https://www.youtube.com/embed/MsjkeYfPWKY",
+    "https://www.youtube.com/embed/ncTcIGtAb4M",
+    "https://www.youtube.com/embed/AKFDelPXVsI",
+    "https://www.youtube.com/embed/RqRXKwdALyQ",
   ];
 
   const categories = {
     All: [...ArtImages, ...VectorArt, ...Graphics],
     "Vector Art": VectorArt,
-    "Graphic Designing": Graphics,
     "Digital Art": ArtImages,
+    "Graphic Designing": Graphics,
     "Motion Graphics": motionGraphicsLinks,
     "Video Editing": videoEditingLinks,
   };
@@ -109,8 +109,8 @@ const StudentWork = () => {
                           height="200"
                           src={item}
                           title={`Video ${index + 1}`}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          // frameBorder="0"
+                          // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                         ></iframe>
                       ) : (
