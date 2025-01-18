@@ -10,8 +10,8 @@ const EventAndActivity = () => {
     <section className="event">
       <Container>
         <Row className="align-items-center">
-          <Col lg={6}>
-            <div className="event_heading">
+          <Col lg={6} className="mb-lg-0 mb-5">
+            <div className="event_heading text-lg-start  text-center">
               <h2>Event and Activity</h2>
             </div>
           </Col>

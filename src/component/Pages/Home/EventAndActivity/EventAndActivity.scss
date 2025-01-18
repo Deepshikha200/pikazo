@@ -30,6 +30,13 @@
     .event_img1 {
       z-index: 2;
       transition: transform 0.3s ease;
+
+      @media (max-width:991px) {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+      }
     }
 
     .event_img2 {

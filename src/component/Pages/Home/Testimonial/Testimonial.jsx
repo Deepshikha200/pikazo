@@ -15,7 +15,7 @@ const Testimonial = () => {
       <Container>
         <CommonButton
           text="Click Here to view our testimonials"
-          className="w-25 d-block mx-auto"
+          className="w-25 d-block mx-auto "
           onClick={() => setShowModal(true)} // Open modal
         />
         <TestimonialModal show={showModal} handleClose={handleClose} />

@@ -32,7 +32,7 @@ const OurStudent = () => {
       {
         breakpoint: 480, // Mobile breakpoint
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },

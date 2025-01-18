@@ -13,28 +13,28 @@ const TestimonialModal = ({ show, handleClose }) => {
       heading="Testimonial"
     >
       <Row>
-        <Col lg={3}>
+        <Col lg={3} sm={3} xs={4}>
           <img src={test} alt="" />
         </Col>
-      <Col lg={3}>
+        <Col lg={3} sm={3} xs={4}>
           <img src={test} alt="" />
         </Col>
-        <Col lg={3}>
+        <Col lg={3} sm={3} xs={4}>
           <img src={test} alt="" />
         </Col>
-        <Col lg={3}>
+        <Col lg={3} sm={3} xs={4}>
           <img src={test} alt="" />
         </Col>
-        <Col lg={3}>
+        <Col lg={3} sm={3} xs={4}>
           <img src={test} alt="" />
         </Col>
-        <Col lg={3}>
+        <Col lg={3} sm={3} xs={4}>
           <img src={test} alt="" />
         </Col>
-        <Col lg={3}>
+        <Col lg={3} sm={3} xs={4}>
           <img src={test} alt="" />
         </Col>
-        <Col lg={3}>
+        <Col lg={3} sm={3} xs={4}>
           <img src={test} alt="" />
         </Col>
       </Row>

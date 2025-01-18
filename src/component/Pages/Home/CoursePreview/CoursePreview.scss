@@ -59,6 +59,11 @@
 
       & p {
         font-size: 1.8rem;
+      }
+
+      @media (max-width:991px) {
+        padding-inline: 1rem;
+        padding-top: 2rem;
 
       }
     }

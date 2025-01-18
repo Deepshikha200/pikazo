@@ -2,7 +2,6 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { motion } from "framer-motion";
 import "./Awards.scss";
-import CommonHeading from "./../../../../common/CommonHeading/CommonHeading";
 import Artboard1 from "../../../../assets/images/Artboard1.png";
 import Artboard2 from "../../../../assets/images/Artboard2.png";
 import Artboard3 from "../../../../assets/images/Artboard3.png";
