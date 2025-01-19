@@ -6,7 +6,6 @@
 
   @media (max-width:991px) {
     padding-top: 5rem;
-
   }
 
   .slider-item {
@@ -16,6 +15,7 @@
     .image-container {
       position: relative;
       overflow: hidden;
+      border-radius: 2rem;
 
       img {
         width: 100%;

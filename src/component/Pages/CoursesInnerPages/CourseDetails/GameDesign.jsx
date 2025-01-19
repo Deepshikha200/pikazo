@@ -47,7 +47,7 @@ const GameDesign = () => {
         subtitle="Game Designing"
         description="The Game Design course is designed to equip students with the skills and knowledge necessary to create engaging and immersive gaming experiences. This comprehensive program covers a wide range of topics, including game mechanics, level design, storytelling, user interface (UI) design, and programming principles. Students will learn to conceptualize, design, and develop games across various platforms, such as PC, consoles, and mobile devices."
         description1="The course aims to develop a strong foundation in game design principles, allowing students to understand the underlying mechanics that make games enjoyable and addictive. Through hands-on projects and practical assignments, students will gain experience in using industry-standard game development tools and engines."
-        imageSrc={img}
+        src={img}
         faqData={faqData}
       />
     </section>

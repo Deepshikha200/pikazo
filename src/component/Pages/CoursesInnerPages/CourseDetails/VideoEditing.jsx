@@ -1,8 +1,18 @@
 import React from "react";
 import CoursesInnerPages from "../CoursesInnerPages";
 import img from "../../../../assets/images/banner/Artboard2.png";
+import { Col, Container, Row } from "react-bootstrap";
 
 const VideoEditing = () => {
+  const videoEditingLinks = [
+    "https://www.youtube.com/embed/xHskODr8pIw",
+    "https://www.youtube.com/embed/xoF6s2GC9fM",
+    "https://www.youtube.com/embed/MsjkeYfPWKY",
+    "https://www.youtube.com/embed/ncTcIGtAb4M",
+    "https://www.youtube.com/embed/AKFDelPXVsI",
+    "https://www.youtube.com/embed/RqRXKwdALyQ",
+  ];
+
   const faqData = [
     {
       ques: "Module 1",
@@ -74,6 +84,26 @@ const VideoEditing = () => {
         src={img}
         faqData={faqData}
       />
+      <Container>
+        <div className="text-center py-5">
+          <h2 className="text-center  graphic_heading">Student Work</h2>
+          <Row>
+            {videoEditingLinks.map((item, index) => (
+              <Col lg={3} sm={6} xs={12} className="mb-4">
+                <div key={index} className="py-3">
+                  <iframe
+                    width="100%"
+                    height="200"
+                    src={item}
+                    title={`Video ${index + 1}`}
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      </Container>
     </section>
   );
 };

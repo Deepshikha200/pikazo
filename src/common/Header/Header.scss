@@ -67,7 +67,11 @@ header {
         }
       }
 
-      &.active,
+      &.active {
+        color: $white;
+      }
+
+      // &.active,
       &:hover {
         color: $primary;
       }

@@ -61,6 +61,7 @@ const CoursesInnerPages = ({
               ))}
             </Accordion>
           </div>
+
         </Container>
       </div>
     </section>

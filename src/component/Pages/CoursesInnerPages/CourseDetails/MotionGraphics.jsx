@@ -2,6 +2,7 @@ import React from "react";
 import img from "../../../../assets/Student_Work/Graphics/Artboard1.png";
 import CoursesInnerPages from "../CoursesInnerPages";
 import img2 from "../../../../assets/images/banner/Artboard23.png";
+import { Col, Container, Row } from "react-bootstrap";
 
 const MotionGraphics = () => {
   const faqData = [
@@ -51,6 +52,17 @@ const MotionGraphics = () => {
     },
   ];
 
+  const motionGraphicsLinks = [
+    "https://www.youtube.com/embed/4WLDBVRUsUE",
+    "https://www.youtube.com/embed/1KdOjq70N9k",
+    "https://www.youtube.com/embed/lVBeiq0hQTM",
+    "https://www.youtube.com/embed/fRle1f95Uoo",
+    "https://www.youtube.com/embed/0PGVZuxS47k",
+    "https://www.youtube.com/embed/N6fgrYksWw4",
+    "https://www.youtube.com/embed/IbGWa6R21rE",
+    "https://www.youtube.com/embed/3jEr25nXYMU",
+  ];
+
   return (
     <section>
       <CoursesInnerPages
@@ -62,6 +74,26 @@ const MotionGraphics = () => {
         // buttonText="Upgrade your skill with Pikazo"
         faqData={faqData} // Pass the FAQ data here
       />
+      <Container>
+        <div className="text-center py-5">
+          <h2 className="text-center  graphic_heading">Student Work</h2>
+          <Row>
+            {motionGraphicsLinks.map((item, index) => (
+              <Col lg={3} sm={6} xs={12} className="mb-4">
+                <div key={index} className="py-3">
+                  <iframe
+                    width="100%"
+                    height="200"
+                    src={item}
+                    title={`Video ${index + 1}`}
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      </Container>
     </section>
   );
 };

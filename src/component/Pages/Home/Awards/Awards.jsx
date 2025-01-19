@@ -27,58 +27,87 @@ const Awards = () => {
         <h4 className="affiliation_heading">
           <span>Our Affiliation</span>
         </h4>
-
-        <Row className="justify-content-center">
-          {boxes.slice(0, 4).map((img, index) => (
-            <Col
-              key={index}
-              lg={3}
-              md={4}
-              sm={6}
-              xs={6}
-              className="d-flex justify-content-center "
-            >
-              <motion.div
-                initial={{ opacity: 0, y: -100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{
-                  scale: 1.07,
-                  transition: { duration: 0.2, delay: 0.2 },
-                }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="affiliation_img"
+        <div className="d-lg-block d-none">
+          <Row className="justify-content-center ">
+            {boxes.slice(0, 4).map((img, index) => (
+              <Col
+                key={index}
+                lg={3}
+                md={4}
+                sm={6}
+                xs={6}
+                className="d-flex justify-content-center "
               >
-                <img src={img} alt={`Affiliation ${index + 1}`} />
-              </motion.div>
-            </Col>
-          ))}
-        </Row>
-
-        <Row className="justify-content-center">
-          {boxes.slice(4).map((img, index) => (
-            <Col
-              key={index}
-              lg={3}
-              md={4}
-              sm={6}
-              xs={6}
-              className="d-flex justify-content-center "
-            >
-              <motion.div
-                initial={{ opacity: 0, y: -100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{
-                  scale: 1.07,
-                  transition: { duration: 0.2, delay: 0.2 },
-                }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="affiliation_img"
+                <motion.div
+                  initial={{ opacity: 0, y: -100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{
+                    scale: 1.07,
+                    transition: { duration: 0.2, delay: 0.2 },
+                  }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="affiliation_img"
+                >
+                  <img src={img} alt={`Affiliation ${index + 1}`} />
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </div>
+        <div className="d-lg-none d-block">
+          <Row className=" justify-content-center">
+            {boxes.map((img, index) => (
+              <Col
+                key={index}
+                lg={3}
+                md={4}
+                sm={6}
+                xs={6}
+                className="d-flex justify-content-center "
               >
-                <img src={img} alt={`Affiliation ${index + 5}`} />
-              </motion.div>
-            </Col>
-          ))}
-        </Row>
+                <motion.div
+                  initial={{ opacity: 0, y: -100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{
+                    scale: 1.07,
+                    transition: { duration: 0.2, delay: 0.2 },
+                  }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="affiliation_img"
+                >
+                  <img src={img} alt={`Affiliation ${index + 1}`} />
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </div>
+        <div className="d-lg-block d-none">
+          <Row className="justify-content-center">
+            {boxes.slice(4).map((img, index) => (
+              <Col
+                key={index}
+                lg={3}
+                md={4}
+                sm={6}
+                xs={6}
+                className="d-flex justify-content-center "
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: -100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{
+                    scale: 1.07,
+                    transition: { duration: 0.2, delay: 0.2 },
+                  }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="affiliation_img"
+                >
+                  <img src={img} alt={`Affiliation ${index + 5}`} />
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </div>
 
         <p className="text-center fs-1">
           We partner with the top government education bodies, universities,

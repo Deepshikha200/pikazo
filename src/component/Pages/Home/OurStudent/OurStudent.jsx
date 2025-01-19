@@ -53,13 +53,6 @@ const OurStudent = () => {
               <div className="image-container">
                 <img src={image} alt={`Artwork ${index + 1}`} />
                 <div className="overlay">
-                  {/* <button
-                    className="view-more-btn"
-                    onClick={() => handleViewMoreClick(image)}
-                  >
-                    View More
-                  </button> */}
-
                   <CommonButton
                     text="View More"
                     className="view-more-btn"

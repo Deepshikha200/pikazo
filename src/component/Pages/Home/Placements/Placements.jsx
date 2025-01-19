@@ -15,7 +15,7 @@ const Placements = () => {
     autoplaySpeed: 1000,
     responsive: [
       {
-        breakpoint: 768, 
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -31,7 +31,7 @@ const Placements = () => {
           <h2 className="text-center">Our Placements</h2>
           <Slider {...settings}>
             {PlacementImg.map((image, index) => (
-              <div key={index} className="placements_img d-flex gap-5 ">
+              <div key={index} className="placements_img ">
                 <img
                   src={image}
                   alt={`Placement ${index + 1}`}

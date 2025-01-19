@@ -45,7 +45,7 @@ const StudentWork = () => {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
-    setAnimationKey((prev) => prev + 1); // Increment key to retrigger animation
+    setAnimationKey((prev) => prev + 1);
   };
 
   const containerVariants = {
@@ -53,7 +53,7 @@ const StudentWork = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Stagger the appearance of children
+        staggerChildren: 0.2,
       },
     },
   };

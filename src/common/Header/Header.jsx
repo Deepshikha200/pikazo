@@ -74,11 +74,7 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
               />
             </Navbar.Brand>
             <Nav className="mx-auto">
-              <NavLink
-                to="/"
-                className="nav-link"
-                onClick={handleNavLinkClick}
-              >
+              <NavLink to="/" className="nav-link" onClick={handleNavLinkClick}>
                 Home
               </NavLink>
 
@@ -138,7 +134,7 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
 
               <Nav.Link
                 href="#about-us"
-                className="nav-link "
+                className="nav-link"
                 onClick={handleNavLinkClick}
               >
                 About Us
