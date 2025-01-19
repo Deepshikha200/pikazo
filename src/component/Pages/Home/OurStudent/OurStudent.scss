@@ -2,9 +2,9 @@
 
 .our-student {
   background-color: $greybg;
-  padding-top: 9rem;
+  padding: 9rem 0;
 
-  @media (max-width:991px) {
+  @media (max-width: 991px) {
     padding-top: 5rem;
   }
 
@@ -17,10 +17,21 @@
       overflow: hidden;
       border-radius: 2rem;
 
-      img {
-        width: 100%;
-        height: auto;
-        transition: all 0.3s ease;
+      .img-wrap {
+        overflow: hidden;
+        width: 38rem;
+        height: 25rem;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%; // Ensures full width
+          height: auto; // Maintains aspect ratio
+          transition: transform 0.3s ease;
+        }
       }
 
       .overlay {
@@ -34,7 +45,7 @@
         justify-content: center;
         align-items: center;
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: opacity 0.3s ease;
 
         .view-more-btn {
           background-color: #fff;
@@ -48,7 +59,7 @@
             background-color: $primary;
           }
 
-          @media (max-width:767px) {
+          @media (max-width: 767px) {
             width: 11rem;
             min-width: 11rem;
           }
@@ -56,12 +67,12 @@
       }
 
       &:hover {
-        img {
-          transform: scale(1.05);
-        }
-
         .overlay {
           opacity: 1;
+        }
+
+        .img-wrap img {
+          transform: translate(-50%, -50%) scale(1.05);
         }
       }
     }

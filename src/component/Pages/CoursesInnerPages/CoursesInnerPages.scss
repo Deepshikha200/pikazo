@@ -6,6 +6,16 @@
   overflow-x: clip;
   position: relative;
 
+
+  @media (max-width:767px) {
+    padding-top: 8.5rem;
+  }
+
+  @media (max-width:480px) {
+    padding-top: 6rem;
+
+  }
+
   &_text {
     & h2 {
       font-size: 7.8rem;

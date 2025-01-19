@@ -40,18 +40,19 @@ const OurStudent = () => {
   };
 
   const navigate = useNavigate();
-
   const allImages = [...ArtImages, ...VectorArt, ...Graphics];
 
   return (
     <section className="our-student">
       <Container>
-        <CommonHeading heading="Our Students Work" className="heading" />
+        <CommonHeading heading="Our Students Work" className="heading mb-4" />
         <Slider {...settings}>
           {allImages.map((image, index) => (
             <div key={index} className="slider-item">
               <div className="image-container">
-                <img src={image} alt={`Artwork ${index + 1}`} />
+                <div className="img-wrap">
+                  <img src={image} alt={`Artwork ${index + 1}`} />
+                </div>
                 <div className="overlay">
                   <CommonButton
                     text="View More"

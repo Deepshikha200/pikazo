@@ -8,7 +8,7 @@ import test from "../../../assets/images/test.png";
 // import img1 from "../../../assets/images/banner/Artboard1.png";
 
 const CoursesInnerPages = ({
-  subtitle,
+subtitle,
   description,
   description1,
   imageSrc,
@@ -24,7 +24,7 @@ const CoursesInnerPages = ({
         <Container>
           <Row>
             <Col lg={8} className="preview-col">
-              <h2>Course Overview</h2>
+              <h2 className="text-lg-start text-center">Course Overview</h2>
               <h3>{subtitle}</h3>
               <p>{description}</p>
               <p>{description1}</p>
@@ -61,7 +61,6 @@ const CoursesInnerPages = ({
               ))}
             </Accordion>
           </div>
-
         </Container>
       </div>
     </section>

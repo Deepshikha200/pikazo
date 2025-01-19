@@ -22,7 +22,7 @@ const FormPage = () => {
               </motion.div>
             </div>
           </Col>
-          <Col lg={4} md={6}>
+          <Col lg={5} md={6}>
             <div className="form_col_text">
               <h2 data-content="One of the Most " className="mb-20">
                 WHO WE ARE?
@@ -46,7 +46,7 @@ const FormPage = () => {
               <CommonButton text="Learn More" className="learn_more_btn" />
             </div>
           </Col>
-          <Col lg={4} md={12}>
+          <Col lg={3} md={12}>
             <GetInTocuh />
           </Col>
         </Row>

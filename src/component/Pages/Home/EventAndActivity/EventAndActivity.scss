@@ -17,6 +17,13 @@
     img {
       height: 45rem;
       border-radius: 2rem;
+
+      @media (max-width:991px) {}
+
+      @media (max-width:480px) {
+        height: 20rem;
+      }
+
     }
 
     .side-image {

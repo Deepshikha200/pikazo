@@ -6,7 +6,7 @@ import { PlacementImg } from "../../../../assets/Student_Work/ArtImages.js";
 
 const Placements = () => {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
