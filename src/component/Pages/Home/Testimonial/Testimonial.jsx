@@ -7,7 +7,6 @@ import TestimonialModal from "../../../../common/Modal/TestimonialModal/Testimon
 const Testimonial = () => {
   const [showModal, setShowModal] = React.useState(false);
 
-  // Handle modal close
   const handleClose = () => setShowModal(false);
 
   return (

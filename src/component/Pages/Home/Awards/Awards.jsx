@@ -43,7 +43,7 @@ const Awards = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   whileHover={{
                     scale: 1.07,
-                    transition: { duration: 0.2, delay: 0.2 },
+                    transition: { duration: 0.2, delay: 0.1 },
                   }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="affiliation_img"

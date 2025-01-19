@@ -6,9 +6,10 @@ import { RedCross } from "../../../assets/images/Icons/SvgIcons";
 import { motion } from "motion/react";
 import test from "../../../assets/images/test.png";
 // import img1 from "../../../assets/images/banner/Artboard1.png";
+import GetInTocuh from './../../../common/GetInTocuh/GetInTocuh';
 
 const CoursesInnerPages = ({
-subtitle,
+  subtitle,
   description,
   description1,
   imageSrc,
@@ -23,18 +24,18 @@ subtitle,
       <div className="inner-courses-preview">
         <Container>
           <Row>
-            <Col lg={8} className="preview-col">
+            <Col lg={9} className="preview-col">
               <h2 className="text-lg-start text-center">Course Overview</h2>
               <h3>{subtitle}</h3>
               <p>{description}</p>
               <p>{description1}</p>
             </Col>
-            <Col lg={4}>
-              <motion.div className="test_img">
+            <Col lg={3}>
+              {/* <motion.div className="test_img">
                 <img src={test} alt="" className="test_img1" />
                 <img src={test} alt="" className="test_img2" />
-              </motion.div>
-              {/* <GetInTocuh /> */}
+              </motion.div> */}
+              <GetInTocuh />
             </Col>
           </Row>
 
