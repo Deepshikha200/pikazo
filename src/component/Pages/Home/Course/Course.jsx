@@ -59,7 +59,7 @@ const Course = () => {
             >
               <motion.div
                 initial={{ opacity: 0, y: -100 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.77, delay: index * 0.5 }}
                 className="course_col d-flex align-items-center justify-content-center flex-column gap-lg-4 gap-2 me-lg-5  me-0 h-100 "
               >
