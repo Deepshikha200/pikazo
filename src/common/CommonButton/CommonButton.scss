@@ -17,9 +17,6 @@
   background-color: $primary;
   border-radius: 1rem;
 
-
-
-
   @media (max-width:1679px) {
     min-height: 3rem;
     width: 100%;
@@ -31,11 +28,8 @@
     min-height: 3rem;
     min-width: 100%;
     width: 100%;
-  }
-
-  @media (max-width:991px) {
     min-height: 4rem;
-
+    padding: 0;
   }
 
   @media (max-width:767px) {
@@ -50,7 +44,5 @@
     margin: 0;
     padding: 0;
     min-height: 0;
-
-
   }
 }

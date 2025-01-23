@@ -24,13 +24,13 @@ const CoursesInnerPages = ({
       <div className="inner-courses-preview">
         <Container>
           <Row>
-            <Col lg={9} className="preview-col">
+            <Col lg={9} md={12} className="preview-col">
               <h2 className="text-lg-start text-center">Course Overview</h2>
               <h3>{subtitle}</h3>
               <p>{description}</p>
               <p>{description1}</p>
             </Col>
-            <Col lg={3}>
+            <Col lg={3} md={12}>
               {/* <motion.div className="test_img">
                 <img src={test} alt="" className="test_img1" />
                 <img src={test} alt="" className="test_img2" />

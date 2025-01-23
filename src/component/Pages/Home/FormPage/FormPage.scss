@@ -33,7 +33,7 @@
     }
 
     .second {
-      @media (max-width:991px) {
+      @media (max-width:1199px) {
         display: none;
       }
     }
@@ -54,7 +54,7 @@
         z-index: -1;
       }
 
-      @media (max-width:991px) {
+      @media (max-width:1199px) {
         position: static;
       }
     }

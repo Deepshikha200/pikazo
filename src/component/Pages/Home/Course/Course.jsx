@@ -6,8 +6,8 @@ import course1 from "../../../../assets/images/course1.png";
 import course2 from "../../../../assets/images/course2.png";
 import course3 from "../../../../assets/images/course3.png";
 import course4 from "../../../../assets/images/course4.png";
-
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Course = () => {
   const data = [
@@ -44,21 +44,32 @@ const Course = () => {
         pauseOnClick={true}
         className="moving_text mb-lg-5 mb-3"
       >
-        {/* We love to create high quality cinematography. */}
         Your creative career starts here.
       </Marquee>
       <Container>
         <Row className="">
           {data.map((item, index) => (
-            <Col lg={3} md={4} sm={6} key={index} className=" mb-5 mb-lg-0">
-              <div className="course_col d-flex align-items-center justify-content-center flex-column gap-lg-4 gap-2 me-lg-5  me-0 h-100 ">
+            <Col
+              xl={3}
+              lg={4}
+              md={4}
+              sm={6}
+              key={index}
+              className=" mb-5 mb-lg-0"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.77, delay: index * 0.5 }}
+                className="course_col d-flex align-items-center justify-content-center flex-column gap-lg-4 gap-2 me-lg-5  me-0 h-100 "
+              >
                 <div className="mb-20 ">
                   <img src={item.img} alt="" />
                 </div>
                 <h4 className="text-center">{item.title}</h4>
                 <p className="text-center text-grey">{item.desc}</p>
                 <Link>{item.link}</Link>
-              </div>
+              </motion.div>
             </Col>
           ))}
         </Row>

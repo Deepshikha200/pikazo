@@ -16,15 +16,15 @@
     @media (max-width:1119px) {
       flex-wrap: wrap;
       justify-content: space-between;
-      padding:0;
+      padding: 0;
     }
 
     >div {
       margin-right: 26rem;
+
       @media (max-width:1119px) {
         margin-right: 0;
         margin-top: 3rem;
-
       }
 
       &:last-child {
@@ -47,6 +47,11 @@
 
         @media (max-width:1119px) {
           padding: 2rem 0;
+        }
+
+        @media (max-width:480px) {
+          padding: 1rem 0;
+          font-size: 1.3rem;
 
         }
       }
@@ -55,6 +60,11 @@
     &-icons {
       cursor: pointer;
       margin-bottom: 3.9rem;
+
+      @media (max-width:991px) {
+        margin-bottom: 0;
+
+      }
     }
 
     &-location {

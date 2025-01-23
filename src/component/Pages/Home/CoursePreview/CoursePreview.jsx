@@ -15,6 +15,7 @@ import thumbnail5 from "../../../../assets/images/Website thumbnails/PhotoGraphy
 import thumbnail6 from "../../../../assets/images/Website thumbnails/UiUX.jpg";
 import thumbnail7 from "../../../../assets/images/Website thumbnails/VideoEditing.jpg";
 import thumbnail8 from "../../../../assets/images/Website thumbnails/WebGraphics.jpg";
+import { motion } from "framer-motion";
 
 const CoursePreview = () => {
   const [playingVideo, setPlayingVideo] = useState(null);
@@ -89,14 +90,30 @@ const CoursePreview = () => {
   return (
     <section className="course_preview">
       <Container>
-        <CommonHeading heading="Our Course" className="text-white mb-0" />
-        <p className="text-white mb-5 pb-5 text-center">
+        <CommonHeading
+          heading="Our Course"
+          className="text-white mb-0"
+          dataContent="Our Course"
+        />
+        <p className="text-white mb-lg-5 pb-5 text-center">
           Unlock Your Potential with Knowledge That Inspires Brilliance.
         </p>
         <Row>
-          {courses.map((course) => (
-            <Col lg={3} md={6} sm={6} className="item_col" key={course.id}>
-              <div className="text-center course_preview_item mx-4">
+          {courses.map((course, index) => (
+            <Col
+              xl={3}
+              lg={4}
+              md={6}
+              sm={6}
+              className="item_col"
+              key={course.id}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.3 }}
+                className="text-center course_preview_item mx-4"
+              >
                 <div
                   className="video-container"
                   onMouseEnter={() => setPlayingVideo(course.id)}
@@ -104,12 +121,12 @@ const CoursePreview = () => {
                 >
                   {!playingVideo || playingVideo !== course.id ? (
                     <div className="thumbnail-overlay">
-                      <button
+                      <div
                         className="play-button"
                         onClick={() => setPlayingVideo(course.id)}
                       >
                         <img src={course.thumbnail} alt={course.title} />
-                      </button>
+                      </div>
                     </div>
                   ) : null}
                   <ReactPlayer
@@ -117,7 +134,7 @@ const CoursePreview = () => {
                     playing={playingVideo === course.id}
                     controls
                     width="100%"
-                    height="400px"
+                    height="380px"
                     className="react-player"
                     loop
                   />
@@ -126,7 +143,7 @@ const CoursePreview = () => {
                   <h4 className="mb-20">{course.title}</h4>
                   <p>{course.description}</p>
                 </div>
-              </div>
+              </motion.div>
             </Col>
           ))}
         </Row>

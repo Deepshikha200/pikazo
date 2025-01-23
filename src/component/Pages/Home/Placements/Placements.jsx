@@ -3,6 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import Slider from "react-slick";
 import "./Placements.scss";
 import { PlacementImg } from "../../../../assets/Student_Work/ArtImages.js";
+import CommonHeading from "../../../../common/CommonHeading/CommonHeading.jsx";
 
 const Placements = () => {
   var settings = {
@@ -28,7 +29,8 @@ const Placements = () => {
     <section className="placements">
       <Container>
         <div>
-          <h2 className="text-center">Our Placements</h2>
+          {/* <h2 className="text-center">Our Placements</h2> */}
+          <CommonHeading heading="Our Placements" />
           <Slider {...settings}>
             {PlacementImg.map((image, index) => (
               <div key={index} className="placements_img ">
