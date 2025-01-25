@@ -60,10 +60,10 @@ export const VectorArt = [
   VectorImg4,
   VectorImg5,
   VectorImg6,
-  VectorImg7,
-  VectorImg8,
-  VectorImg9,
-  VectorImg10,
+  // VectorImg7,
+  // VectorImg8,
+  // VectorImg9,
+  // VectorImg10,
 ];
 
 

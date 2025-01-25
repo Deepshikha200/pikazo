@@ -39,7 +39,7 @@
     z-index: 2;
     opacity: 0;
     animation: slideText 1s ease-in-out forwards;
-    top: 45%;
+    top: 71%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -54,6 +54,7 @@
       // margin-bottom: ;
       line-height: 6rem;
       letter-spacing: 2px;
+      white-space: nowrap;
 
       @media (max-width:991px) {
         font-size: 2.4rem;
@@ -150,8 +151,8 @@
       }
     }
   }
-}
 
-.slick-arrow.slick-next {
-  display: none !important;
+  .slick-arrow.slick-next {
+    display: none !important;
+  }
 }

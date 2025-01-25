@@ -1,0 +1,40 @@
+@use "../../../assets//theme/var" as *;
+
+.events {
+  padding-top: 7rem;
+
+  .bg-yellow {
+    background-color: $yellow;
+  }
+
+  &_content {
+    padding: 5rem 0;
+
+
+    .imgaes {
+      max-width: 160rem;
+      margin: 0 auto;
+      margin-top: 7rem;
+    }
+  }
+
+  &_con {
+    max-width: 70rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+
+    & h2 {
+      margin-block: 4rem;
+      font-family: ' Courier, monospace';
+      font-size: 5.5rem;
+    }
+
+    & p {
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 3rem;
+    }
+
+  }
+}

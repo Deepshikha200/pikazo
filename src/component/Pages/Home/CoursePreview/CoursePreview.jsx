@@ -19,7 +19,14 @@ import { motion } from "framer-motion";
 
 const CoursePreview = () => {
   const [playingVideo, setPlayingVideo] = useState(null);
+  const [expandedCourses, setExpandedCourses] = useState({});
 
+  const toggleReadMore = (id) => {
+    setExpandedCourses((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
   const courses = [
     {
       id: "vfx",
@@ -92,7 +99,7 @@ const CoursePreview = () => {
       <Container>
         <CommonHeading
           heading="Our Course"
-          className="text-white mb-0"
+          className="text-white mb-0 pb-0"
           dataContent="Our Course"
         />
         <p className="text-white mb-lg-5 pb-5 text-center">
@@ -111,6 +118,7 @@ const CoursePreview = () => {
               <motion.div
                 initial={{ opacity: 0, y: -100 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.3 }}
                 className="text-center course_preview_item mx-4"
               >
@@ -121,12 +129,11 @@ const CoursePreview = () => {
                 >
                   {!playingVideo || playingVideo !== course.id ? (
                     <div className="thumbnail-overlay">
-                      <div
-                        className="play-button"
-                        onClick={() => setPlayingVideo(course.id)}
-                      >
-                        <img src={course.thumbnail} alt={course.title} />
-                      </div>
+                      <img
+                        src={course.thumbnail}
+                        alt={course.title}
+                        className="thumbnail"
+                      />
                     </div>
                   ) : null}
                   <ReactPlayer
@@ -140,8 +147,24 @@ const CoursePreview = () => {
                   />
                 </div>
                 <div className="course_preview_item_text">
-                  <h4 className="mb-20">{course.title}</h4>
-                  <p>{course.description}</p>
+                  <h4 className="mb-2">{course.title}</h4>
+                  <div className="description-add">
+                    <div
+                      className={`read-more-box ${
+                        expandedCourses[course.id] ? "active" : ""
+                      }`}
+                    >
+                      <p>
+                        {expandedCourses[course.id] ? course.description : ``}
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    className="read-more-btn"
+                    onClick={() => toggleReadMore(course.id)}
+                  >
+                    {expandedCourses[course.id] ? "Read Less" : "Read More"}
+                  </button>
                 </div>
               </motion.div>
             </Col>

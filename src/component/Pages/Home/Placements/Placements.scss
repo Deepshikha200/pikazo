@@ -5,26 +5,28 @@
 
   @media (max-width:991px) {
     padding: 3rem 0;
-
   }
 
-  &_img {
-    padding: 0 10px;
-    margin-top: 5rem;
+  .heading {
+    margin-top: 30rem;
+    display: inline-block;
+    border-bottom: 2px solid $yellow;
+    padding-bottom: 0.8rem;
+    line-height: 5rem;
+    max-width: 23rem;
+    text-align: start;
   }
 
   img {
-    // max-width: 100%;
+    height: 220px;
+    width: 220px;
+    border: 1px solid transparent;
     border-radius: 2rem;
-    box-shadow: 0px 0 12px rgba(0, 0, 0, 0.12);
-  }
+    transition: all 0.2s ease-in-out;
 
-  .slick-slide {
-    margin: 0 10px;
-  }
-
-  .slick-track {
-    display: flex !important;
-    gap: 20px;
+    &:hover {
+      border-color: $yellow;
+      transition: all 0.2s ease-in-out;
+    }
   }
 }

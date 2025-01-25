@@ -82,6 +82,7 @@
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    cursor: pointer;
 
     >div {
       flex: 1;
@@ -95,7 +96,7 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
-          transform:scale(1.1);
+          transform: scale(1.1);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
       }
@@ -109,7 +110,7 @@
         background-color: rgba(0, 0, 0, 0.1);
         z-index: 1;
         overflow: clip;
-        pointer-events: none; 
+        pointer-events: none;
       }
 
       .overlay_text {
@@ -121,7 +122,7 @@
         z-index: 2;
 
         .heaing {
-          font-size: 2.5rem;
+          font-size: 2.4rem;
           font-weight: 700;
         }
 

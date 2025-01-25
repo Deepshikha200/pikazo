@@ -1,7 +1,6 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../component/MainLayout/Layout";
-import AboutUs from "../component/Pages/AboutUs/AboutUs";
 import Home from "../component/Pages/Home/Home";
 import StudentWork from "../component/Pages/StudentWork/StudentWork";
 import GraphicDesign from "../component/Pages/CoursesInnerPages/CourseDetails/GraphicDesign";
@@ -18,6 +17,8 @@ import VFXCourse from "./../component/Pages/CoursesInnerPages/CourseDetails/VFXC
 import VideoEditing from "./../component/Pages/CoursesInnerPages/CourseDetails/VideoEditing";
 import Demo from "../component/Pages/Home/demo/Demo";
 import BVocAnimation from "../component/Pages/CoursesInnerPages/CourseDetails/BVocAnimation/BVocAnimation";
+import EventAndActivity from "../component/Pages/Home/EventAndActivity/EventAndActivity";
+import EventsAndActivites from "../component/Pages/EventsAndActivites/EventsAndActivites";
 
 const Routes = () => {
   const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const Routes = () => {
         {
           path: "student-work",
           element: <StudentWork />,
+        },
+        {
+          path: "events",
+          element: <EventsAndActivites />,
         },
         {
           path: "graphic-design",

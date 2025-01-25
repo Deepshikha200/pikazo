@@ -1,48 +1,27 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
-import Slider from "react-slick";
+import { Col, Container, Row } from "react-bootstrap";
 import "./Placements.scss";
 import { PlacementImg } from "../../../../assets/Student_Work/ArtImages.js";
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading.jsx";
 
 const Placements = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <section className="placements">
       <Container>
-        <div>
-          {/* <h2 className="text-center">Our Placements</h2> */}
-          <CommonHeading heading="Our Placements" />
-          <Slider {...settings}>
-            {PlacementImg.map((image, index) => (
-              <div key={index} className="placements_img ">
-                <img
-                  src={image}
-                  alt={`Placement ${index + 1}`}
-                  className="border"
-                />
-              </div>
-            ))}
-          </Slider>
-        </div>
+        <Row>
+          <Col lg={3}>
+            <CommonHeading heading="Our Top Placements" className="heading" />
+          </Col>
+          <Col lg={9}>
+            <div className="d-flex flex-wrap ">
+              {PlacementImg.map((image, index) => (
+                <img src={image} alt="" key={index} />
+              ))}
+            </div>
+          </Col>
+        </Row>
+
+        {/* {PlacementImg.map((image, index) => ( */}
       </Container>
     </section>
   );

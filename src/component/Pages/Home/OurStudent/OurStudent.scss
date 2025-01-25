@@ -2,7 +2,8 @@
 
 .our-student {
   background-color: $greybg;
-  padding: 9rem 0;
+  padding-top: 9rem;
+  padding-bottom: 2rem;
 
   @media (max-width: 991px) {
     padding-top: 5rem;
@@ -15,7 +16,7 @@
     .image-container {
       position: relative;
       overflow: hidden;
-      border-radius: 2rem;
+      border-radius: 0.5rem;
 
       .img-wrap {
         overflow: hidden;
@@ -76,5 +77,34 @@
         }
       }
     }
+  }
+
+  .slick-slide img {
+    display: inline !important;
+
+  }
+
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-next {
+    top: 50%;
+    left: auto;
+    // right: 50px;
+    margin-top: -20px;
+    ;
+  }
+
+  .slick-arrow.slick-prev {
+ left: -4rem;
+
+  }
+
+  .slick-next:before {
+    content: url('../../../../assets/Images/Icons/right.svg');
+
+  }
+
+  .slick-prev:before {
+    content: url('../../../../assets/Images/Icons/left.svg');
+
   }
 }
