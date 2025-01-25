@@ -20,81 +20,46 @@
   }
 
   .course-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-  }
+    .course-box {
+      border-radius: 2rem;
+      border: 1px solid $borderclr;
+      height: 100%;
 
-  .course-box {
-    max-width: 350px;
-    border: 2px solid #c5c5c5;
-    border-radius: 1rem;
-    padding: 1.2rem;
-    text-align: center;
-    position: relative;
-    align-self: start;
-
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-    &:hover {
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .image-container {
-      img {
-        max-width: 100%;
-        max-height: 100px;
-        object-fit: contain;
+    .heading_text {
+      background-color: $navyblue;
+      padding: 2.6rem 3.6rem;
+      color: $white;
+      border-radius: 2rem 2rem 0 0;
+      gap: 3rem;
+      position: relative;
+
+      .image {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
       }
-    }
 
-    h4 {
-      margin: 3rem 0;
-      font-size: 1.8rem;
-      color: #333;
+      & h4 {
+        font-size: 4rem;
+        font-family: Inter;
+        max-width: 27rem;
+        margin-top: 4rem;
+      }
+
+      >div {
+        height: 42px;
+        width: 42px;
+      }
     }
 
     .description {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.7s ease, opacity 0.7s ease;
-      opacity: 0;
-
-      &.show {
-        max-height: 290px;
-        opacity: 1;
-        margin-top: 1rem;
-      }
-    }
-
-    button {
-      margin: 0 auto;
-      display: block;
-      margin-top: 1rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      background-color: $yellow;
-      color: $white;
-      border-radius: 0.4rem;
-      padding: 0.8rem 1rem;
-
-      &:hover {
-        background-color: $yellow;
-        color: $white;
-      }
-
-    }
-
-    .btn-show {
-      background-color: rgba($navyblue, $alpha: 0.89);
-
-      &:hover {
-        background-color: rgba($navyblue, $alpha: 0.89);
-        color: $white;
-      }
+      padding: 2rem 3rem;
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: 3rem;
     }
   }
+
 }

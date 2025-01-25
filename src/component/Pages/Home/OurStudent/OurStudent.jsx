@@ -108,7 +108,7 @@ const OurStudent = () => {
             </div>
           ))}
         </Slider>
-        <div className="mt-4">
+        <div className="mt-5 py-5">
           <Slider {...settings}>
             {motionGraphicsLinks.map((image, index) => (
               <div key={index} className="slider-item">

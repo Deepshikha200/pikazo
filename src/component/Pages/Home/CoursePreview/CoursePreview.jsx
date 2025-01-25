@@ -11,7 +11,7 @@ import thumbnail1 from "../../../../assets/images/Website thumbnails/Animtation.
 import thumbnail2 from "../../../../assets/images/Website thumbnails/DigtialMarketing.jpg";
 import thumbnail3 from "../../../../assets/images/Website thumbnails/FilmMaking.jpg";
 import thumbnail4 from "../../../../assets/images/Website thumbnails/GameDesign.jpg";
-import thumbnail5 from "../../../../assets/images/Website thumbnails/PhotoGraphy.jpg";
+import thumbnail5 from "../../../../assets/images/Website thumbnails/vfx.jpeg";
 import thumbnail6 from "../../../../assets/images/Website thumbnails/UiUX.jpg";
 import thumbnail7 from "../../../../assets/images/Website thumbnails/VideoEditing.jpg";
 import thumbnail8 from "../../../../assets/images/Website thumbnails/WebGraphics.jpg";
@@ -120,7 +120,7 @@ const CoursePreview = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.3 }}
-                className="text-center course_preview_item mx-4"
+                className="course_preview_item mx-3"
               >
                 <div
                   className="video-container"
@@ -142,12 +142,20 @@ const CoursePreview = () => {
                     controls
                     width="100%"
                     height="380px"
-                    className="react-player"
+                    className="react-player rounded"
                     loop
                   />
                 </div>
                 <div className="course_preview_item_text">
-                  <h4 className="mb-2">{course.title}</h4>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <h4>{course.title}</h4>
+                    <button
+                      className="read-more-btn"
+                      onClick={() => toggleReadMore(course.id)}
+                    >
+                      {expandedCourses[course.id] ? "Read Less" : "Read More"}
+                    </button>
+                  </div>
                   <div className="description-add">
                     <div
                       className={`read-more-box ${
@@ -159,12 +167,6 @@ const CoursePreview = () => {
                       </p>
                     </div>
                   </div>
-                  <button
-                    className="read-more-btn"
-                    onClick={() => toggleReadMore(course.id)}
-                  >
-                    {expandedCourses[course.id] ? "Read Less" : "Read More"}
-                  </button>
                 </div>
               </motion.div>
             </Col>
