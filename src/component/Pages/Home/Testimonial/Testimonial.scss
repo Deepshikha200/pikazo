@@ -2,10 +2,10 @@
 
 .testimonial {
   margin: 5.6rem;
-  border-radius: 6rem;
+  border-radius: 4rem;
   background-color: #EFEBE7;
   position: relative;
-  min-height: 70rem;
+  min-height: 83rem;
   position: relative;
 
   &-title {
@@ -14,7 +14,7 @@
     margin-bottom: 2rem;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 45%;
     transform: translate(-50%);
 
     font-size: 7rem;
@@ -86,5 +86,159 @@
       right: 26%;
       transform: rotate(-12deg);
     }
+
+    &.test9 {
+      top: 16rem;
+      right: 26%;
+      transform: rotate(-12deg);
+    }
+
+    &.test10 {
+      top: 15rem;
+      right: 45%;
+      transform: rotate(15deg);
+    }
+
+    &.test11 {
+      top: 15rem;
+      right: 62%;
+      transform: rotate(13deg);
+      height: 200px;
+      width: 200px;
+    }
+
+    &.test12 {
+      top: 16rem;
+      left: 6%;
+      transform: rotate(17deg);
+
+      img {
+        height: 15rem;
+        width: 15rem;
+      }
+    }
+
+    &.test13 {
+      top: 24rem;
+      left: -3%;
+      transform: rotate(-4deg);
+    }
+
+    &.test14 {
+      top: 30rem;
+      left: 14%;
+      transform: rotate(8deg);
+    }
+
+    &.test15 {
+      top: 49%;
+      left: 40%;
+      transform: translate(-50%, -50%) rotate(10deg);
+
+      img {
+        height: 16rem;
+        width: 16rem;
+      }
+    }
+
+    &.test16 {
+      top: 30rem;
+      left: 14%;
+      transform: rotate(8deg);
+    }
+
+    &.test17 {
+      top: 48rem;
+      left: -3%;
+      transform: rotate(16deg);
+    }
+
+    &.test18 {
+      bottom: -9%;
+      left: 5%;
+      transform: rotate(6deg);
+    }
+
+    &.test19 {
+      bottom: -13%;
+      left: 23%;
+      transform: rotate(-8deg);
+
+      img {
+        height: 27rem;
+        width: 27rem;
+      }
+    }
+
+    &.test20 {
+      bottom: -10%;
+      right: 40%;
+      transform: rotate(13deg);
+    }
+
+    &.test21 {
+      bottom: 14%;
+      left: 36%;
+      transform: rotate(13deg);
+
+      img {
+        height: 12rem;
+        width: 12rem;
+      }
+    }
+
+    &.test27 {
+      top: 52%;
+      left: 60%;
+      transform: translate(-50%, -50%) rotate(10deg);
+
+      img {
+        height: 11rem;
+        width: 11rem;
+      }
+    }
+
+    &.test28 {
+      top: 28%;
+      left: 78%;
+      transform: translate(-50%, -50%) rotate(10deg);
+
+      img {
+        height: 11rem;
+        width: 11rem;
+      }
+    }
+
+    &.test22 {
+      bottom: 14%;
+      left: 19%;
+      transform: rotate(-16deg);
+    }
+
+    &.test23 {
+      bottom: 14%;
+      left: 44%;
+      transform: rotate(13deg);
+    }
+
+    &.test24 {
+      bottom: 9%;
+      right: 2%;
+      transform: rotate(-9deg);
+    }
+
+    &.test25 {
+      bottom: -11%;
+      right: 15%;
+      transform: rotate(9deg);
+    }
+
+
+    &.test26 {
+      bottom: 14%;
+      right: 23%;
+      transform: rotate(-9deg);
+    }
+
   }
 }

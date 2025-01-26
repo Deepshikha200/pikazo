@@ -19,6 +19,7 @@ import test15 from "../../../../assets/images/Testimonials/test15.png";
 import test16 from "../../../../assets/images/Testimonials/test16.png";
 import test17 from "../../../../assets/images/Testimonials/test17.png";
 import test18 from "../../../../assets/images/Testimonials/test18.png";
+import blur_test from "../../../../assets/images/Testimonials/blur_test.png";
 
 const Testimonial = () => {
   const testimonials = [
@@ -31,15 +32,26 @@ const Testimonial = () => {
     test7,
     test8,
     test9,
-    // test10,
-    // test11,
-    // test12,
-    // test13,
-    // test14,
-    // test15,
-    // test16,
-    // test17,
-    // test18,
+    test10,
+    test11,
+    blur_test,
+    test12,
+    test13,
+    blur_test,
+    test14,
+    test15,
+    test16,
+    test17,
+    test18,
+    blur_test,
+    test11,
+    test3,
+    test4,
+    test7,
+    test15,
+    blur_test,
+    blur_test,
+    
   ];
 
   return (

@@ -95,6 +95,85 @@ const CoursePreview = () => {
   ];
 
   return (
+    // <section className="course_preview">
+    //   <Container>
+    //     <CommonHeading
+    //       heading="Our Course"
+    //       className="text-white mb-0 pb-0"
+    //       dataContent="Our Course"
+    //     />
+    //     <p className="text-white mb-lg-5 pb-5 text-center">
+    //       Unlock Your Potential with Knowledge That Inspires Brilliance.
+    //     </p>
+    //     <Row>
+    //       {courses.map((course, index) => (
+    //         <Col
+    //           xl={3}
+    //           lg={4}
+    //           md={6}
+    //           sm={6}
+    //           className="item_col"
+    //           key={course.id}
+    //         >
+    //           <motion.div
+    //             initial={{ opacity: 0, y: -100 }}
+    //             whileInView={{ opacity: 1, y: 0 }}
+    //             viewport={{ once: true }}
+    //             transition={{ duration: 0.5, delay: index * 0.3 }}
+    //             className="course_preview_item mx-3"
+    //           >
+    //             <div
+    //               className="video-container"
+    //               onMouseEnter={() => setPlayingVideo(course.id)}
+    //               onMouseLeave={() => setPlayingVideo(null)}
+    //             >
+    //               {!playingVideo || playingVideo !== course.id ? (
+    //                 <div className="thumbnail-overlay">
+    //                   <img
+    //                     src={course.thumbnail}
+    //                     alt={course.title}
+    //                     className="thumbnail"
+    //                   />
+    //                 </div>
+    //               ) : null}
+    //               <ReactPlayer
+    //                 url={course.url}
+    //                 playing={playingVideo === course.id}
+    //                 controls
+    //                 width="100%"
+    //                 height="380px"
+    //                 className="react-player rounded"
+    //                 loop
+    //               />
+    //             </div>
+    //             <div className="course_preview_item_text">
+    //               <div className="d-flex justify-content-between align-items-center">
+    //                 <h4>{course.title}</h4>
+    //                 <button
+    //                   className="read-more-btn"
+    //                   onClick={() => toggleReadMore(course.id)}
+    //                 >
+    //                   {expandedCourses[course.id] ? "Read Less" : "Read More"}
+    //                 </button>
+    //               </div>
+    //               <div className="description-add">
+    //                 <div
+    //                   className={`read-more-box ${
+    //                     expandedCourses[course.id] ? "active" : ""
+    //                   }`}
+    //                 >
+    //                   <p>
+    //                     {expandedCourses[course.id] ? course.description : ``}
+    //                   </p>
+    //                 </div>
+    //               </div>
+    //             </div>
+    //           </motion.div>
+    //         </Col>
+    //       ))}
+    //     </Row>
+    //   </Container>
+    // </section>
     <section className="course_preview">
       <Container>
         <CommonHeading
@@ -105,73 +184,65 @@ const CoursePreview = () => {
         <p className="text-white mb-lg-5 pb-5 text-center">
           Unlock Your Potential with Knowledge That Inspires Brilliance.
         </p>
-        <Row>
+        <div className="course-items ">
           {courses.map((course, index) => (
-            <Col
-              xl={3}
-              lg={4}
-              md={6}
-              sm={6}
-              className="item_col"
+            <motion.div
               key={course.id}
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+              className="course_preview_item"
             >
-              <motion.div
-                initial={{ opacity: 0, y: -100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.3 }}
-                className="course_preview_item mx-3"
+              <div
+                className="video-container"
+                onMouseEnter={() => setPlayingVideo(course.id)}
+                onMouseLeave={() => setPlayingVideo(null)}
               >
-                <div
-                  className="video-container"
-                  onMouseEnter={() => setPlayingVideo(course.id)}
-                  onMouseLeave={() => setPlayingVideo(null)}
-                >
-                  {!playingVideo || playingVideo !== course.id ? (
-                    <div className="thumbnail-overlay">
-                      <img
-                        src={course.thumbnail}
-                        alt={course.title}
-                        className="thumbnail"
-                      />
-                    </div>
-                  ) : null}
-                  <ReactPlayer
-                    url={course.url}
-                    playing={playingVideo === course.id}
-                    controls
-                    width="100%"
-                    height="380px"
-                    className="react-player rounded"
-                    loop
-                  />
-                </div>
-                <div className="course_preview_item_text">
-                  <div className="d-flex justify-content-between align-items-center">
-                    <h4>{course.title}</h4>
-                    <button
-                      className="read-more-btn"
-                      onClick={() => toggleReadMore(course.id)}
-                    >
-                      {expandedCourses[course.id] ? "Read Less" : "Read More"}
-                    </button>
+                {!playingVideo || playingVideo !== course.id ? (
+                  <div className="thumbnail-overlay">
+                    <img
+                      src={course.thumbnail}
+                      alt={course.title}
+                      className="thumbnail"
+                    />
                   </div>
-                  <div className="description-add">
-                    <div
-                      className={`read-more-box ${
-                        expandedCourses[course.id] ? "active" : ""
-                      }`}
-                    >
-                      <p>
-                        {expandedCourses[course.id] ? course.description : ``}
-                      </p>
-                    </div>
+                ) : null}
+                <ReactPlayer
+                  url={course.url}
+                  playing={playingVideo === course.id}
+                  controls
+                  width="100%"
+                  height="380px"
+                  className="react-player rounded"
+                  loop
+                />
+              </div>
+              <div className="course_preview_item_text">
+                <div className="d-flex justify-content-between align-items-center">
+                  <h4>{course.title}</h4>
+                  <button
+                    className="read-more-btn"
+                    onClick={() => toggleReadMore(course.id)}
+                  >
+                    {expandedCourses[course.id] ? "Read Less" : "Read More"}
+                  </button>
+                </div>
+                <div className="description-add">
+                  <div
+                    className={`read-more-box ${
+                      expandedCourses[course.id] ? "active" : ""
+                    }`}
+                  >
+                    <p>
+                      {expandedCourses[course.id] ? course.description : ``}
+                    </p>
                   </div>
                 </div>
-              </motion.div>
-            </Col>
+              </div>
+            </motion.div>
           ))}
-        </Row>
+        </div>
       </Container>
     </section>
   );

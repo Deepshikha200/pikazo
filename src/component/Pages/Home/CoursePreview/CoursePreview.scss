@@ -15,13 +15,10 @@
 
   }
 
-  .item_col {
-    margin-bottom: 6rem;
-
-    @media (max-width:1199px) {
-
-      margin-bottom: 2.5rem;
-    }
+  .course-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 
   .react-player {
@@ -44,13 +41,6 @@
     // }
   }
 
-  .vp-center {
-    display: flex;
-    align-items: flex-start !important;
-    justify-content: center;
-    // padding-top: 1.9rem;
-  }
-
   &:after {
     content: "";
     position: absolute;
@@ -67,23 +57,23 @@
     padding-bottom: 2rem;
     height: 100%;
     background-color: $white;
-
+    width: 36rem;
     height: 100%;
     padding: 0 2.13rem 2.13rem 2.13rem;
     border-radius: 2rem;
 
 
     & h4 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
+      font-family: Inter;
+
     }
 
     &_text {
-
       padding: 1rem;
 
       & p {
-        font-size: 1.8rem;
-        font-weight: 500;
+        font-size: 1.7rem;
       }
 
       @media (max-width:1199px) {
@@ -111,7 +101,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-color: rgba(0, 0, 0, 0.6);
     z-index: 2;
   }
 
@@ -142,37 +131,33 @@
   }
 }
 
-.course_preview {
-  .read-more-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s;
-    transition: max-height 0.4s ease-out, opacity 0.3s ease;
+.read-more-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
 
-    &:hover {
-      background-color: #0056b3;
-    }
+  &:hover {
+    background-color: #0056b3;
   }
+}
 
-  .read-more-box {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, opacity 0.3s ease;
-    padding-top: 0;
-    padding-bottom: 0;
+.read-more-box {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease;
+  padding-top: 0;
+  padding-bottom: 0;
 
-    &.active {
-      max-height: 200px; // Adjust this value according to your content size
-      opacity: 1;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-    }
+  &.active {
+    max-height: 200px; 
+    opacity: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
-
 }
