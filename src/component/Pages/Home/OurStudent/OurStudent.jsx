@@ -23,16 +23,23 @@ const OurStudent = () => {
     // autoplaySpeed: 1000,
     responsive: [
       {
-        breakpoint: 768, // Mobile breakpoint
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // Mobile breakpoint
+        breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -50,14 +57,14 @@ const OurStudent = () => {
     autoplaySpeed: 1000,
     responsive: [
       {
-        breakpoint: 768, // Mobile breakpoint
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480, // Mobile breakpoint
+        breakpoint: 480,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -114,7 +121,6 @@ const OurStudent = () => {
               <div key={index} className="slider-item">
                 <div className="image-container">
                   <div className="img-wrap">
-                    {/* <img src={image} alt={`Artwork ${index + 1}`} /> */}
                     <iframe
                       width="100%"
                       height="200"
@@ -122,13 +128,6 @@ const OurStudent = () => {
                       allowFullScreen
                     ></iframe>
                   </div>
-                  {/* <div className="overlay">
-                    <CommonButton
-                      text="View More"
-                      className="view-more-btn"
-                      onClick={() => navigate("/student-work")}
-                    />
-                  </div> */}
                 </div>
               </div>
             ))}

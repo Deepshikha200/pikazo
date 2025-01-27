@@ -85,10 +85,7 @@
         min-width: 19rem;
         width: 19rem;
 
-        @media (max-width:767px) {
-          
-          
-        }
+        @media (max-width:767px) {}
       }
     }
   }
@@ -103,5 +100,4 @@
     color: red;
     font-size: 12px;
   }
-
 }

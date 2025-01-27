@@ -8,8 +8,8 @@
   }
 
   &-container {
-    min-height: 80vh; // Adjust slider container height
-    height: 80vh; // Set the slider height to 80vh
+    min-height: 80vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -17,8 +17,8 @@
     overflow: hidden;
 
     @media (max-width:991px) {
-      min-height: 60vh; // Adjust slider container height
-      height: 60vh; // Set the slider height to 80vh
+      min-height: 60vh;
+      height: 60vh;
     }
 
     &::before {
@@ -51,7 +51,6 @@
     & h1 {
       font-size: 5rem;
       font-weight: 700;
-      // margin-bottom: ;
       line-height: 6rem;
       letter-spacing: 2px;
       white-space: nowrap;
@@ -88,31 +87,6 @@
     z-index: 2;
     color: $white;
 
-    // @media (max-width:768px) {
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    //   bottom: 33%;
-    // }
-
-    // @media (max-width:480px) {
-    //   bottom: 36%;
-    // }
-
-    // button {
-    //   display: block;
-    //   border: none;
-    //   background-color: transparent;
-    //   color: $grey;
-    //   font-size: 1.8rem;
-
-    //   @media (max-width:768px) {
-    //     font-size: 1.4rem;
-    //   }
-    // }
-
-    // .btn-active {
-    //   color: $white;
-    // }
   }
 
   .btn-style {
@@ -132,10 +106,10 @@
 
   .slick-vertical .slick-slide {
     border: none !important;
-    height: 80vh !important; // Adjust each slide height
+    height: 80vh !important;
 
     @media (max-width:991px) {
-      height: 60vh !important; // Set the slider height to 80vh
+      height: 60vh !important;
     }
 
     >div {
@@ -143,10 +117,10 @@
 
       >div {
         display: block !important;
-        height: 80vh; // Ensure inner div matches slider height
+        height: 80vh;
 
         @media (max-width:991px) {
-          height: 60vh !important; // Set the slider height to 80vh
+          height: 60vh !important;
         }
       }
     }
