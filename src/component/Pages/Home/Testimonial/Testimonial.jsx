@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import "./Testimonial.scss"; // Include your SCSS file
+import "./Testimonial.scss";
 import test1 from "../../../../assets/images/Testimonials/test1.png";
 import test2 from "../../../../assets/images/Testimonials/test2.png";
 import test3 from "../../../../assets/images/Testimonials/test3.png";
@@ -51,7 +51,6 @@ const Testimonial = () => {
     test15,
     blur_test,
     blur_test,
-    
   ];
 
   return (
