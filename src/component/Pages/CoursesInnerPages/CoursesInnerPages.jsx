@@ -4,16 +4,14 @@ import { Col, Container, Row } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { RedCross } from "../../../assets/images/Icons/SvgIcons";
 import { motion } from "motion/react";
-import test from "../../../assets/images/test.png";
-// import img1 from "../../../assets/images/banner/Artboard1.png";
-import GetInTocuh from './../../../common/GetInTocuh/GetInTocuh';
+import GetInTocuh from "./../../../common/GetInTocuh/GetInTocuh";
 
 const CoursesInnerPages = ({
   subtitle,
   description,
   description1,
-  imageSrc,
   faqData,
+  jobs,
   src,
 }) => {
   return (
@@ -26,19 +24,14 @@ const CoursesInnerPages = ({
           <Row>
             <Col lg={9} md={12} className="preview-col">
               <h2 className="text-lg-start text-center">Course Overview</h2>
-              <h3>{subtitle}</h3>
+              <h3>{subtitle}</h3> 
               <p>{description}</p>
               <p>{description1}</p>
             </Col>
             <Col lg={3} md={12}>
-              {/* <motion.div className="test_img">
-                <img src={test} alt="" className="test_img1" />
-                <img src={test} alt="" className="test_img2" />
-              </motion.div> */}
               <GetInTocuh />
             </Col>
           </Row>
-
           <div className="course_accordion">
             <Accordion defaultActiveKey="0">
               {faqData.map((item, index) => (
@@ -62,6 +55,14 @@ const CoursesInnerPages = ({
               ))}
             </Accordion>
           </div>
+          <div className="text-center py-5">
+            <h2 className="text-center  graphic_heading">Applicable jobs</h2>
+          </div>
+          <ul className="course-list mb-5">
+            {jobs.map((job, index) => (
+              <li key={index}>{job}</li>
+            ))}
+          </ul>
         </Container>
       </div>
     </section>

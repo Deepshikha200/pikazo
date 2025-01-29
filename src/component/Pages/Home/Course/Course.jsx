@@ -52,7 +52,7 @@ const Course = () => {
       <Container>
         <Row className="course-container">
           {data.map((item, index) => (
-            <Col lg={3}>
+            <Col lg={3} md={6} sm={6} xs={12} className="mb-5">
               <motion.div className="course-box mx-2" key={index}>
                 <div className="heading_text ">
                   <h4>{item.title}</h4>

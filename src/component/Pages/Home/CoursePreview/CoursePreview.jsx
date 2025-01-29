@@ -95,7 +95,6 @@ const CoursePreview = () => {
   ];
 
   return (
-   
     <section className="course_preview">
       <Container>
         <CommonHeading

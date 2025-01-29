@@ -44,7 +44,7 @@
     transform: translateX(-50%);
     text-align: center;
 
-    @media (max-width:480px) {
+    @media (max-width:575px) {
       top: 49%;
     }
 
@@ -62,7 +62,7 @@
         line-height: normal;
       }
 
-      @media (max-width:480px) {
+      @media (max-width:575px) {
         font-size: 2rem;
         line-height: 4rem;
         margin-bottom: 0;
@@ -94,7 +94,7 @@
     min-width: 18rem;
     z-index: 8;
 
-    @media (max-width:480px) {
+    @media (max-width:575px) {
       min-height: 3rem;
       width: 9rem;
       min-width: 8rem;

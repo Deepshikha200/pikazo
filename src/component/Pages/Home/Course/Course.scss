@@ -13,7 +13,7 @@
         font-size: 7rem;
       }
 
-      @media (max-width:480px) {
+      @media (max-width:575px) {
         font-size: 4rem;
       }
     }
@@ -24,7 +24,6 @@
       border-radius: 2rem;
       border: 1px solid $borderclr;
       height: 100%;
-
     }
 
     .heading_text {
@@ -46,14 +45,15 @@
         font-family: Inter;
         max-width: 27rem;
         margin-top: 4rem;
-      }
 
-      @media (min-width:1440px) {
+        @media (max-width:991px) {
+          font-size: 3rem;
+          margin-top: 0;
+        }
 
-        // font-size: 3.7rem;
-        // font-family: Inter;
-        // max-width: 41rem;
-        // margin-top: 4rem;
+        @media (max-width:575px) {
+          font-size: 2rem;
+        }
       }
 
       >div {
@@ -67,7 +67,11 @@
       font-weight: 500;
       font-size: 1.8rem;
       line-height: 3rem;
+
+      @media (max-width:991px) {
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+      }
     }
   }
-
 }

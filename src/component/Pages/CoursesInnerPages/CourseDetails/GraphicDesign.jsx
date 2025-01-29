@@ -150,23 +150,16 @@ const GraphicDesign = () => {
     <section className="pb-5">
       <CoursesInnerPages
         subtitle="Graphics Designing"
-        description="The Pikazo Institute offers top-notch training in graphic design, focusing on digital design, website design, and front-end development. Our course covers essential tools like Adobe Photoshop, Illustrator, and InDesign, alongside concepts such as UX/UI design, responsive design, and mobile-first design."
-        description1="Students gain hands-on experience through workshops, guest lectures, and real-world projects, preparing them for careers in advertising, marketing, branding, and more. Upon completion, students receive a diploma, equipping them with the skills needed to thrive in various industries. Join us to kickstart your career in graphic design!"
+        description="This course explores the principles of visual communication and design, focusing on creating impactful and professional designs. Students will learn branding, typography, layout design, and color theory while mastering tools like Adobe Photoshop, Illustrator, and InDesign. By the end, learners will create logos, brochures, posters, packaging, and digital content.
+"
         src={img1}
         faqData={faqData}
+        jobs={jobs}
       />
-      <div className="text-center py-5">
-        <h2 className="text-center  graphic_heading">Applicable jobs</h2>
-      </div>
+
       <Container>
-        <ul className="course-list mb-5">
-          {jobs.map((job, index) => (
-            <li key={index}>{job}</li>
-          ))}
-        </ul>
         <div className="text-center py-5">
           <h2 className="text-center  graphic_heading">Student Work</h2>
-
           <Row className="mt-5">
             <AnimatePresence mode="wait">
               <motion.div

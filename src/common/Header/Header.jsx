@@ -147,7 +147,7 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
                 Events
               </NavLink>
               <NavLink
-                to="/placement"
+                href="#placement"
                 className="nav-link"
                 onClick={handleNavLinkClick}
               >
