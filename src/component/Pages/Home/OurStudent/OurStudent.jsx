@@ -10,17 +10,20 @@ import {
 import "./OurStudent.scss";
 import CommonButton from "../../../../common/CommonButton/CommonButton";
 import { useNavigate } from "react-router-dom";
+import {
+  LeftArrow,
+  RightArrow,
+} from "../../../../assets/images/Icons/SvgIcons";
 
 const OurStudent = () => {
   const settings = {
-    dots: false,
+    // dots: true,
     arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 1000,
+
     responsive: [
       {
         breakpoint: 1199,
@@ -30,14 +33,14 @@ const OurStudent = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 991,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 575,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -53,20 +56,20 @@ const OurStudent = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
+    // autoplay: true,
+    // autoplaySpeed: 1000,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 991,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 575,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },

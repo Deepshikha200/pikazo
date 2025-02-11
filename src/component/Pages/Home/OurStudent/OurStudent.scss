@@ -13,6 +13,14 @@
     position: relative;
     padding: 0 1rem;
 
+    @media (max-width:575px) {
+      left: 10%;
+      padding: 0;
+
+
+    }
+
+
     .image-container {
       position: relative;
       overflow: hidden;
@@ -87,14 +95,24 @@
   .slick-arrow.slick-prev,
   .slick-arrow.slick-next {
     top: 50%;
-    left: auto;
-    // right: 50px;
+    left: 100%;
     margin-top: -20px;
-    ;
+
+    @media (max-width: 767px) {
+      left: 98.5%;
+    }
+
+    @media (max-width: 575px) {
+      left: 97%;
+    }
   }
 
   .slick-arrow.slick-prev {
- left: -4rem;
+    left: -2%;
+
+    @media (max-width: 767px) {
+      left: -4%;
+    }
 
   }
 

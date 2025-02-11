@@ -363,3 +363,38 @@ export const ThreeYear = () => (
     />
   </svg>
 );
+
+export const LeftArrow = () => (
+  <svg
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-vubbuv"
+    focusable="false"
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    data-testid="ChevronLeftIcon"
+  >
+    <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+  </svg>
+);
+export const RightArrow = () => (
+  <svg
+    width="27"
+    height="27"
+    viewBox="0 0 27 27"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8.625 75.0375L99.2824 38.8125L189.94 75.0375L99.2824 111.262L8.625 75.0375Z"
+      stroke="white"
+      stroke-width="17"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M189.94 75.512V115.286M49.8359 94.1204V147.777C49.8359 147.777 70.5791 168.188 99.2831 168.188C127.991 168.188 148.734 147.777 148.734 147.777V94.1204"
+      stroke="white"
+      stroke-width="17"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);

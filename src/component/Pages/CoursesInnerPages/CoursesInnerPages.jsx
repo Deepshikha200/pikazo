@@ -24,7 +24,7 @@ const CoursesInnerPages = ({
           <Row>
             <Col lg={9} md={12} className="preview-col">
               <h2 className="text-lg-start text-center">Course Overview</h2>
-              <h3>{subtitle}</h3> 
+              <h3>{subtitle}</h3>
               <p>{description}</p>
               <p>{description1}</p>
             </Col>
@@ -37,7 +37,7 @@ const CoursesInnerPages = ({
               {faqData.map((item, index) => (
                 <Accordion.Item eventKey={index.toString()} key={index}>
                   <Accordion.Header>
-                    <span className="mx-4">
+                    <span className="mx-lg-4 mx-0 me-2 me-lg-0">
                       <RedCross />
                     </span>
                     {item.ques}

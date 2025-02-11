@@ -34,7 +34,6 @@
     & h3 {
       font-size: 3rem;
 
-
       @media (max-width:1199px) {
         font-size: 2rem;
       }
@@ -86,54 +85,54 @@
       }
     }
 
-    .test_img {
-      &1 {
-        width: 40rem;
-        position: absolute;
-        top: 60rem;
-        right: 26rem;
-        animation: growthImg 2s linear 3s infinite alternate-reverse;
-        animation-play-state: running; // Ensure animation runs by default
+    // .test_img {
+    //   &1 {
+    //     width: 40rem;
+    //     position: absolute;
+    //     top: 60rem;
+    //     right: 26rem;
+    //     animation: growthImg 2s linear 3s infinite alternate-reverse;
+    //     animation-play-state: running; // Ensure animation runs by default
 
-        &:hover {
-          animation-play-state: paused; // Pause on hover
-        }
-      }
+    //     &:hover {
+    //       animation-play-state: paused; // Pause on hover
+    //     }
+    //   }
 
-      @keyframes growthImg {
-        0% {
-          top: 60rem;
-        }
+    //   @keyframes growthImg {
+    //     0% {
+    //       top: 60rem;
+    //     }
 
-        100% {
-          top: 53rem;
-        }
+    //     100% {
+    //       top: 53rem;
+    //     }
 
-      }
+    //   }
 
-      &2 {
-        position: absolute;
-        top: 54rem;
-        right: 0;
-        width: 40rem;
-        animation: moderate 2s linear 3s infinite alternate-reverse;
-        animation-play-state: running; // Ensure animation runs by default
+    //   &2 {
+    //     position: absolute;
+    //     top: 54rem;
+    //     right: 0;
+    //     width: 40rem;
+    //     animation: moderate 2s linear 3s infinite alternate-reverse;
+    //     animation-play-state: running; // Ensure animation runs by default
 
-        &:hover {
-          animation-play-state: paused; // Pause on hover
-        }
-      }
+    //     &:hover {
+    //       animation-play-state: paused; // Pause on hover
+    //     }
+    //   }
 
-      @keyframes moderate {
-        0% {
-          top: 54rem;
-        }
+    //   @keyframes moderate {
+    //     0% {
+    //       top: 54rem;
+    //     }
 
-        100% {
-          top: 59rem;
-        }
-      }
-    }
+    //     100% {
+    //       top: 59rem;
+    //     }
+    //   }
+    // }
 
     // @keyframes slide {
     //   0% {
@@ -157,8 +156,6 @@
     //     transform: translateX(0);
     //   }
     // }
-
-
   }
 
   .course_accordion {
@@ -166,7 +163,6 @@
 
     @media (max-width:991px) {
       margin-top: 2rem;
-
     }
 
     .accordion {
@@ -180,7 +176,6 @@
 
         @media (max-width:768px) {
           margin-bottom: 1rem;
-
         }
 
         .accordion-header {
@@ -203,7 +198,6 @@
           @media (max-width:768px) {
             font-size: 16px;
             font-weight: 400;
-
           }
 
           @media (max-width:767px) {
