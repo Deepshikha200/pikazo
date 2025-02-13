@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import "./Course.scss";
-// import course1 from "../../../../assets/images/course1.png";
-// import course2 from "../../../../assets/images/course2.png";
-// import course3 from "../../../../assets/images/course3.png";
-// import course4 from "../../../../assets/images/course4.png";
 import { motion } from "framer-motion";
 import {
   OneYear,
@@ -52,7 +48,7 @@ const Course = () => {
       <Container>
         <Row className="course-container">
           {data.map((item, index) => (
-            <Col lg={3} md={6} sm={6} xs={12} className="mb-5">
+            <Col xl={3} lg={4} md={6} sm={6} xs={12} className="mb-5">
               <motion.div className="course-box mx-2" key={index}>
                 <div className="heading_text ">
                   <h4>{item.title}</h4>

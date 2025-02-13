@@ -86,6 +86,9 @@
 
       & p {
         font-size: 1.7rem;
+        min-height: 13rem;
+        height: 100%;
+
 
         @media (max-width:767px) {
           font-size: 1.5rem;

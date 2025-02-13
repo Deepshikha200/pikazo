@@ -47,6 +47,8 @@ const Placements = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: index * 0.2, duration: 0.6 }}
+                    height={200}
+                    width={200}
                   />
                 ))}
               </motion.div>
