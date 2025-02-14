@@ -1,11 +1,57 @@
 @use "../../../assets/theme/var" as *;
 
 .student {
-  padding-top: 13rem;
+  padding-top: 0;
   padding-bottom: 6rem;
 
+  &_img {
+    position: relative;
+    z-index: 4;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../../../assets/images/studentgradient.png");
+      background-size: cover;
+      background-position: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .student_heading {
+      position: absolute;
+      bottom: 4rem;
+      color: $white;
+      font-family: $baseFont;
+      z-index: 4;
+      font-weight: 600;
+      left: 16.5rem;
+      font-size: 6rem;
+
+      @media (max-width:991px) {
+        font-size: 4rem;
+        left: 1rem;
+
+      }
+
+      @media (max-width:767px) {
+        font-size: 2.4rem;
+        left: 1rem;
+
+      }
+    }
+  }
+
   @media (max-width:767px) {
-    padding-top: 9rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
 
     .container {
@@ -14,12 +60,11 @@
     }
   }
 
-
-
   &_btn {
     text-align: center;
-    padding-top: 4rem;
-
+    padding-block: 4rem;
+    display: flex;
+    justify-content: space-between;
 
     @media (max-width:767px) {
       padding-top: 1rem;
@@ -28,23 +73,26 @@
     button {
       background-color: transparent;
       border: none;
-      font-size: 1.8rem;
+      font-size: 2rem;
       padding: 0.5rem 2rem;
-      text-transform: uppercase;
 
       @media (max-width:767px) {
         font-size: 1.6rem;
-        text-transform: capitalize;
+        padding: 0.1rem 1rem;
+
+      }
+
+      @media (max-width:575px) {
+        font-size: 1.4rem;
         padding: 0.1rem 1rem;
 
       }
 
       &.active {
-        color: $white;
-        background-color: $navyblue;
+        font-weight: 500;
+        border-radius: 2rem;
+        background-color: $primary;
       }
     }
   }
-
-
 }

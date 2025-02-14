@@ -15,7 +15,6 @@ import Photography from "./../component/Pages/CoursesInnerPages/CourseDetails/Ph
 import UiUx from "./../component/Pages/CoursesInnerPages/CourseDetails/UiUx";
 import VFXCourse from "./../component/Pages/CoursesInnerPages/CourseDetails/VFXCourse";
 import VideoEditing from "./../component/Pages/CoursesInnerPages/CourseDetails/VideoEditing";
-import Demo from "../component/Pages/Home/demo/Demo";
 import BVocAnimation from "../component/Pages/CoursesInnerPages/CourseDetails/BVocAnimation/BVocAnimation";
 import EventAndActivity from "../component/Pages/Home/EventAndActivity/EventAndActivity";
 import EventsAndActivites from "../component/Pages/EventsAndActivites/EventsAndActivites";

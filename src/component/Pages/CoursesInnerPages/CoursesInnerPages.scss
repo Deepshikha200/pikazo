@@ -241,10 +241,14 @@
 }
 
 .course-list {
-  // column-count: 3;
   font-size: 1.8rem;
   list-style: square;
   cursor: pointer;
+
+  &.work {
+    column-count: 3;
+
+  }
 
   li {
     margin-bottom: 1rem;

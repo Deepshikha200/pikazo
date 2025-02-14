@@ -9,6 +9,8 @@ import {
   Graphics,
 } from "../../../assets/Student_Work/ArtImages";
 import Header from "../../../common/Header/Header";
+import student_img from "../../../assets/images/student_bg.png";
+import student_bg from "../../../assets/images/studentgradient.png";
 
 const StudentWork = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -48,6 +50,8 @@ const StudentWork = () => {
     setAnimationKey((prev) => prev + 1);
   };
 
+  const images = {};
+
   const containerVariants = {
     hidden: { opacity: 1 },
     show: {
@@ -67,8 +71,11 @@ const StudentWork = () => {
     <>
       <Header />
       <section className="student">
+        <div className="student_img">
+          <img src={student_img} alt="" />
+          <h2 className="student_heading">Student Work</h2>
+        </div>
         <Container>
-          <CommonHeading heading="Student Work" className="student_heading" />
           <div className="student_btn">
             {Object.keys(categories).map((category) => (
               <button
@@ -82,7 +89,7 @@ const StudentWork = () => {
               </button>
             ))}
           </div>
-          <Row className="student_work_gallery mt-5">
+          <Row className="student_work_gallery grid-container mt-5">
             <AnimatePresence mode="wait">
               <motion.div
                 key={animationKey}

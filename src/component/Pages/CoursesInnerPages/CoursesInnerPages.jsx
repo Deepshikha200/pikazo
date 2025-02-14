@@ -58,7 +58,7 @@ const CoursesInnerPages = ({
           <div className="text-center py-5">
             <h2 className="text-center  graphic_heading">Applicable jobs</h2>
           </div>
-          <ul className="course-list mb-5">
+          <ul className="course-list work mb-5">
             {jobs.map((job, index) => (
               <li key={index}>{job}</li>
             ))}
