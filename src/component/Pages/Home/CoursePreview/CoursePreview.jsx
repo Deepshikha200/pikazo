@@ -109,7 +109,7 @@ const CoursePreview = () => {
           {courses.map((course, index) => (
             <motion.div
               key={course.id}
-              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 0, y: -100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
@@ -133,6 +133,7 @@ const CoursePreview = () => {
                   url={course.url}
                   playing={playingVideo === course.id}
                   controls
+                  muted
                   width="100%"
                   height="380px"
                   className="react-player rounded"
