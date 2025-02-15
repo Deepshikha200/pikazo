@@ -33,7 +33,7 @@
       font-family: $baseFont;
       z-index: 4;
       font-weight: 600;
-      left: 16.5rem;
+      left: 4rem;
       font-size: 6rem;
 
       @media (max-width:991px) {
@@ -60,11 +60,16 @@
     }
   }
 
+  &_con {
+    padding-inline: 4rem;
+
+  }
+
   &_btn {
     text-align: center;
     padding-block: 4rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     @media (max-width:767px) {
       padding-top: 1rem;

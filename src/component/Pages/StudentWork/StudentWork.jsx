@@ -75,7 +75,7 @@ const StudentWork = () => {
           <img src={student_img} alt="" />
           <h2 className="student_heading">Student Work</h2>
         </div>
-        <Container>
+        <div className="student_con">
           <div className="student_btn">
             {Object.keys(categories).map((category) => (
               <button
@@ -133,7 +133,7 @@ const StudentWork = () => {
               </motion.div>
             </AnimatePresence>
           </Row>
-        </Container>
+        </div>
       </section>
     </>
   );
