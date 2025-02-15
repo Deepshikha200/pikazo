@@ -64,8 +64,7 @@ export const VectorArt = [
   VectorImg8,
   VectorImg9,
   VectorImg10,
-  Graphics1,
-  Graphics2,
+
 ];
 
 
@@ -87,21 +86,24 @@ import Graphics16 from "./Graphics/img6.png";
 import Graphics17 from "./Graphics/img7.png";
 
 export const Graphics = [
-
   Graphics13,
   Graphics14,
+  Graphics10,
+
+  Graphics9,
   Graphics15,
   Graphics16,
   Graphics3,
   Graphics6,
   Graphics4,
   Graphics5,
-  Graphics9,
-  Graphics10,
-  Graphics17,
-  Graphics12,
+
+  // Graphics17,
+  // Graphics12,
   Graphics8,
   Graphics7,
+  Graphics1,
+  Graphics2,
 
 
 ];

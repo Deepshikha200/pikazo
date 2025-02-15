@@ -101,6 +101,7 @@ const StudentWork = () => {
               >
                 {categories[selectedCategory].map((item, index) => (
                   <Col
+                    xl={2}
                     lg={3}
                     md={4}
                     sm={6}
