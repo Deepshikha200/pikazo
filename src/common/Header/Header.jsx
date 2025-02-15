@@ -139,13 +139,13 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
               >
                 About Us
               </Nav.Link>
-              <NavLink
+              {/* <NavLink
                 to="/events"
                 className="nav-link"
                 onClick={handleNavLinkClick}
               >
                 Events
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 href="#placement"
                 className="nav-link"

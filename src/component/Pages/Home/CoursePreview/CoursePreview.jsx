@@ -38,7 +38,7 @@ const CoursePreview = () => {
     },
     {
       id: "ui",
-      title: "UX/UI Designing",
+      title: "UX/UI ",
       url: ui,
       description:
         "This course includes environment making, character creation, gaming visual effects, and learning software like Unreal Engine and Unity.",

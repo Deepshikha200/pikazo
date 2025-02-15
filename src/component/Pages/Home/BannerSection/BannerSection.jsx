@@ -15,11 +15,11 @@ const BannerSection = () => {
     },
     {
       image: img4,
-      text: "Where creativity meets technology",
+      // text: "Where creativity meets technology",
     },
     {
       image: img2,
-      text: "Where ideas become games",
+      // text: "Where ideas become games",
     },
   ];
 
@@ -32,8 +32,8 @@ const BannerSection = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3300,
+    // autoplay: true,
+    autoplaySpeed: 1500,
     vertical: true,
     verticalSwiping: true,
     beforeChange: (current, next) => setCurrentSlide(next),
@@ -92,7 +92,7 @@ const BannerSection = () => {
                   animate="animate"
                   {...ButtonAnimation}
                 >
-                  <CommonButton text="Get Started" />
+                  {/* <CommonButton text="Get Started" /> */}
                 </motion.div>
               </div>
             </div>

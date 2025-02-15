@@ -121,7 +121,11 @@ const StudentWork = () => {
                           allowFullScreen
                         ></iframe>
                       ) : (
-                        <img src={item} alt={`Artboard ${index + 1}`} />
+                        <img
+                          src={item}
+                          alt={`Artboard ${index + 1}`}
+                          className="artboard"
+                        />
                       )}
                     </motion.div>
                   </Col>

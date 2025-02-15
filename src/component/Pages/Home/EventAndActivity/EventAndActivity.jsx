@@ -8,7 +8,6 @@ import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const EventAndActivity = () => {
-  const navigate = useNavigate();
 
   return (
     <section className="event">
@@ -17,7 +16,7 @@ const EventAndActivity = () => {
           <CommonHeading heading="Event and Activity" className="pb-0" />
         </div>
 
-        <div onClick={() => navigate("/events")} className="event_content">
+        <div className="event_content">
           <div>
             <div className="orverlay"></div>
             <div className="overlay_text">
@@ -52,7 +51,7 @@ const EventAndActivity = () => {
             <img src={img2} alt="" className="event_img2" />
           </div>
         </div>
-        <div onClick={() => navigate("/events")} className="event_content mt-4">
+        <div className="event_content mt-4">
           <div>
             <div className="orverlay"></div>
             <div className="overlay_text">

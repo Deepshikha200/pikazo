@@ -18,7 +18,7 @@ const Home = () => {
       <Awards />
       <Course />
       <CoursePreview />
-      <Projects />
+      {/* <Projects /> */}
       <OurStudent />
       <EventAndActivity />
       <Placements />

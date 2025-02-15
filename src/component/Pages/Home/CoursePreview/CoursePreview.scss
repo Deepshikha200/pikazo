@@ -63,6 +63,13 @@
     height: 100%;
     padding: 0 2.13rem 2.13rem 2.13rem;
     border-radius: 2rem;
+    transition: all 0.4s ease-in-out;
+
+    // &:hover {
+    //   transform: rotate3d(0, 1, 0, 30deg) !important;
+    //   transition: all 0.4s ease-in-out;
+
+    // }
 
     @media (max-width:767px) {
       padding: 0 1.5rem 1.5rem 1.5rem;
@@ -76,7 +83,6 @@
 
       @media (max-width:767px) {
         font-size: 1.8rem;
-
       }
 
     }
@@ -92,7 +98,6 @@
 
         @media (max-width:767px) {
           font-size: 1.5rem;
-
         }
       }
 
@@ -110,6 +115,13 @@
     max-width: 640px;
     margin: auto;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+
+    }
   }
 
   .thumbnail-overlay {
