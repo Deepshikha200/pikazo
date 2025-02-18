@@ -20,6 +20,7 @@ import test16 from "../../../../assets/images/Testimonials/test16.png";
 import test17 from "../../../../assets/images/Testimonials/test17.png";
 import test18 from "../../../../assets/images/Testimonials/test18.png";
 import blur_test from "../../../../assets/images/Testimonials/blur_test.png";
+import Slider from "react-slick";
 
 const Testimonial = () => {
   const testimonials = [
@@ -34,35 +35,75 @@ const Testimonial = () => {
     test9,
     test10,
     test11,
-    blur_test,
+    // blur_test,
     test12,
     test13,
-    blur_test,
+    // blur_test,
     test14,
     test15,
     test16,
     test17,
     test18,
-    blur_test,
     test11,
     test3,
     test4,
     test7,
     test15,
-    blur_test,
-    blur_test,
+    
+    // blur_test,
+    // blur_test,
   ];
+  const testimonials_slider = [
+    test1,
+    test2,
+    test3,
+    test4,
+    test5,
+    test6,
+    test7,
+    test8,
+    test9,
+    test10,
+    test11,
+    test12,
+    test13,
+    test14,
+    test15,
+    test16,
+    test17,
+    test18,
+  ];
+  const settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
     <section className="testimonial">
       <Container>
-        <h2 className="testimonial-title">Testimonials</h2>
-        <div className="testimonial-grid">
-          {testimonials.map((image, index) => (
-            <div key={index} className={`testimonial-card test${index + 1}`}>
-              <img src={image} alt={`Testimonial ${index + 1}`} />
-            </div>
-          ))}
+        <div className="d-md-block d-none testimonial_con">
+          <h2 className="testimonial-title">Testimonials</h2>
+          <div className="testimonial-grid">
+            {testimonials.map((image, index) => (
+              <div key={index} className={`testimonial-card test${index + 1}`}>
+                <img src={image} alt={`Testimonial ${index + 1}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="d-md-none d-block test">
+          <h2 className="test_heading">Testimonials</h2>
+          <Slider {...settings}>
+            {testimonials_slider.map((image, index) => (
+              <img key={index} src={image} alt={`Testimonial ${index + 1}`} />
+            ))}
+          </Slider>
         </div>
       </Container>
     </section>

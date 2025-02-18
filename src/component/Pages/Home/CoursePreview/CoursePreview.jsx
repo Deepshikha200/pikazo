@@ -109,10 +109,10 @@ const CoursePreview = () => {
           {courses.map((course, index) => (
             <motion.div
               key={course.id}
-              animate={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
               className="course_preview_item"
             >
               <div

@@ -7,7 +7,6 @@ import CommonHeading from "../../../../common/CommonHeading/CommonHeading.jsx";
 
 const Placements = () => {
   const [currentPage, setCurrentPage] = useState(0);
-
   const imagesPerPage = 8;
 
   const pages = [];
@@ -34,19 +33,19 @@ const Placements = () => {
             <div className="placement_img">
               <motion.div
                 key={currentPage}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
+                initial={{ rotateY: 0, opacity: 0 }}
+                animate={{ rotateY: 0, opacity: 1 }}
+                exit={{ rotateY: 0, opacity: 0 }}
+                transition={{ duration: 0.8 }}
               >
                 {pages[currentPage].map((image, index) => (
                   <motion.img
                     key={index}
                     src={image}
                     alt={`placement-${index}`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: index * 0.2, duration: 0.6 }}
+                    initial={{ rotate: 180, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    transition={{ delay: index * 0.1, duration: 0.2 }}
                     height={200}
                     width={200}
                   />
