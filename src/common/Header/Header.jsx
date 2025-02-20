@@ -126,13 +126,19 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
                   </ul>
                 </div>
               </li>
-
               <Nav.Link
                 href="#about-us"
                 className="nav-link"
                 onClick={handleNavLinkClick}
               >
                 About Us
+              </Nav.Link>
+              <Nav.Link
+                href="#placement"
+                className="nav-link"
+                onClick={handleNavLinkClick}
+              >
+                Placement
               </Nav.Link>
               <NavLink
                 to="/certificate-verification"
