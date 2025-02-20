@@ -9,6 +9,8 @@ import {
   ThreeYear,
 } from "../../../../assets/images/Icons/SvgIcons";
 import { Col, Container, Row } from "react-bootstrap";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Course = () => {
   const data = [
@@ -36,6 +38,20 @@ const Course = () => {
     },
   ];
 
+  useGSAP(() => {
+    gsap.from(".course-container .course_col", {
+      scrollTrigger: {
+        trigger: ".course-container",
+        start: "top 70%",
+        end: "top 90%",
+      },
+      y: -100,
+      opacity: 0,
+      stagger: 0.3,
+      duration: 0.88,
+    });
+  });
+
   return (
     <section className="course py-60">
       <Marquee
@@ -48,14 +64,21 @@ const Course = () => {
       <Container>
         <Row className="course-container">
           {data.map((item, index) => (
-            <Col xl={3} lg={4} md={6} sm={6} xs={12} className="mb-5">
-              <motion.div className="course-box mx-2" key={index}>
-                <div className="heading_text ">
+            <Col
+              xl={3}
+              lg={4}
+              md={6}
+              sm={6}
+              xs={12}
+              className="mb-5 course_col"
+            >
+              <div className="course-box mx-2" key={index}>
+                <div className="heading_text">
                   <h4>{item.title}</h4>
                   <div className="image">{item.img}</div>
                 </div>
-                <div className="description ">{item.desc}</div>
-              </motion.div>
+                <div className="description">{item.desc}</div>
+              </div>
             </Col>
           ))}
         </Row>

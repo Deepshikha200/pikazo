@@ -131,7 +131,7 @@ h1,
 h2,
 .h2 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   // font-family: $baseFont;
   // font-family: 'Quaily', sans-serif;
 
@@ -238,10 +238,11 @@ sup {
   padding-bottom: 6rem;
 
   @media (max-width:768px) {
-    padding: 3rem 0 ;
+    padding: 3rem 0;
   }
 }
 
-div , p {
-font-family: Inter;
+div,
+p {
+  font-family: Inter;
 }

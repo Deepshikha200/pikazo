@@ -19,10 +19,10 @@ const Home = () => {
       <Course />
       <CoursePreview />
       {/* <Projects /> */}
-      <OurStudent />
+      {/* <OurStudent />
       <EventAndActivity />
       <Placements />
-      <Testimonial />
+      <Testimonial /> */}
     </>
   );
 };

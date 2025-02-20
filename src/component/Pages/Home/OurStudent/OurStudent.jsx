@@ -56,8 +56,8 @@ const OurStudent = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 1000,
     responsive: [
       {
         breakpoint: 991,
@@ -108,11 +108,11 @@ const OurStudent = () => {
                   <img src={image} alt={`Artwork ${index + 1}`} />
                 </div>
                 <div className="overlay">
-                  <CommonButton
-                    text="View More"
-                    className="view-more-btn"
+                  {/* <CommonButton
+                    // text="View More"
+                    // className="view-more-btn"
                     onClick={() => navigate("/student-work")}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
