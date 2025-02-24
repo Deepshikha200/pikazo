@@ -6,62 +6,141 @@ import event3 from "../../../../assets/images/event3.jpeg";
 import event4 from "../../../../assets/images/event4.jpeg";
 import event5 from "../../../../assets/images/event5.jpeg";
 import event6 from "../../../../assets/images/event6.jpeg";
-
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading";
 import { Container } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import logo1 from "../../../../assets/images/eventone.png";
+import logo2 from "../../../../assets/images/eventtwo.png";
+import logo3 from "../../../../assets/images/eventthree.png";
 
 const EventAndActivity = () => {
   return (
     <section className="event">
       <Container>
-        <div className="event_heading  text-center mb-5">
+        <div className="event_heading  mb-5">
           <CommonHeading heading="Event and Activity" className="pb-0" />
         </div>
 
         <div className="event_content">
           <div>
-            <div className="orverlay"></div>
+            <div className="overlay"></div>
             <div className="overlay_text">
-              <p className="heaing text-center">Comic Con 2024</p>
+              <img
+                src={logo1}
+                alt="Event Logo"
+                className="event_logo"
+                height="55px"
+                width="140px"
+              />
+              <h4>Collaboration with AMD</h4>
+              <p>
+                We’re thrilled to collaborate with AMD to bring high-performance
+                solutions to Pikazzo. Together, we’re pushing the boundaries of
+                innovation.
+              </p>
             </div>
-            <img src={event1} alt="" className="event_event1" />
+            <img
+              src={event2}
+              alt="Collaboration with AMD"
+              className="event_images"
+            />
           </div>
           <div>
-            <div className="orverlay"></div>
+            <div className="overlay"></div>
             <div className="overlay_text">
-              <p className="heaing text-center">Collaboration With AMD</p>
+              <div className="d-flex gap-3">
+                <img
+                  src={logo2}
+                  alt="Event Logo"
+                  className="event_logo"
+                  width="120px"
+                />
+                <div>
+                  <h4>Comic Con 2024</h4>
+                  <p>
+                    A thrilling celebration of comics, movies, gaming, and
+                    cosplay, which brought fans and creators together for an
+                    unforgettable experience.
+                  </p>
+                </div>
+              </div>
             </div>
-            <img src={event2} alt="" className="event_event1" />
-          </div>
-          <div>
-            <div className="orverlay"></div>
-            <div className="overlay_text">
-              <p className="heaing text-center">Unreal Engine Workshop</p>
-            </div>
-            <img src={event3} alt="" className="event_event1" />
+            <img src={event1} alt="Comic Con 2024" className="event_images" />
           </div>
 
           <div>
-            <div className="orverlay"></div>
+            <div className="overlay"></div>
             <div className="overlay_text">
-              <p className="heaing text-center">Ramoji Filmcity</p>
+              <div className="d-flex gap-3">
+                <img
+                  src={logo3}
+                  alt="Event Logo"
+                  className="event_logo"
+                  height="55px"
+                  width="100px"
+                />
+                <div>
+                  <h4>Unreal Engine Workshop</h4>
+                  <p>
+                    A hands-on session exploring real-time 3D creation,
+                    environment design, and interactive experiences—perfect for
+                    aspiring game developers and 3D artists!
+                  </p>
+                </div>
+              </div>
             </div>
-            <img src={event4} alt="" className="event_event1" />
+            <img
+              src={event3}
+              alt="Unreal Engine Workshop"
+              className="event_images"
+            />
           </div>
+
           <div>
-            <div className="orverlay"></div>
+            <div className="overlay"></div>
             <div className="overlay_text">
-              <p className="heaing text-center">Motion Capture Workshop</p>
+              <h4>Ramoji Filmcity</h4>
+              <p>
+                A thrilling journey through the world’s largest film city!
+                Students experienced behind-the-scenes magic, explored grand
+                sets, and learned filmmaking secrets—an unforgettable adventure
+                in cinematic excellence.
+              </p>
             </div>
-            <img src={event5} alt="" className="event_event1" />
+            <img src={event4} alt="Ramoji Filmcity" className="event_images" />
           </div>
+
           <div>
-            <div className="orverlay"></div>
+            <div className="overlay"></div>
             <div className="overlay_text">
-              <p className="heaing text-center">Virtual Production Workshop</p>
+              <h4>Motion Capture Workshop</h4>
+              <p>
+                Bringing characters to life! Participants explored real-time
+                motion tracking, animation, and performance capture, gaining
+                hands-on experience in industry-standard mocap technology.
+              </p>
             </div>
-            <img src={event6} alt="" className="event_event1" />
+            <img
+              src={event5}
+              alt="Motion Capture Workshop"
+              className="event_images"
+            />
+          </div>
+
+          <div>
+            <div className="overlay"></div>
+            <div className="overlay_text">
+              <h4>Virtual Production Workshop</h4>
+              <p>
+                A deep dive into next-gen filmmaking! Participants explored
+                real-time VFX, LED walls, and motion capture, gaining hands-on
+                experience in cutting-edge virtual production techniques.
+              </p>
+            </div>
+            <img
+              src={event6}
+              alt="Virtual Production Workshop"
+              className="event_images"
+            />
           </div>
         </div>
       </Container>

@@ -248,7 +248,7 @@ p {
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 14px;
   border-radius: 2rem;
 }
 
@@ -258,6 +258,6 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba($navyblue, $alpha: 0.9);
+  background: rgba($navyblue, $alpha: 1);
   border-radius: 10px;
 }

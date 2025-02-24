@@ -5,7 +5,7 @@ import CommonHeading from "../../../../common/CommonHeading/CommonHeading";
 import {
   ArtImages,
   VectorArt,
-  Graphics,
+  GraphicsNew,
 } from "../../../../assets/Student_Work/ArtImages";
 import "./OurStudent.scss";
 import CommonButton from "../../../../common/CommonButton/CommonButton";
@@ -17,7 +17,7 @@ import {
 
 const OurStudent = () => {
   const settings = {
-    // dots: true,
+    dots: false,
     arrows: true,
     infinite: true,
     speed: 500,
@@ -50,7 +50,7 @@ const OurStudent = () => {
   };
 
   const settings2 = {
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     speed: 500,
@@ -77,7 +77,7 @@ const OurStudent = () => {
   };
 
   const navigate = useNavigate();
-  const allImages = [...ArtImages, ...VectorArt, ...Graphics];
+  const allImages = [...ArtImages, ...VectorArt, ...GraphicsNew];
 
   const motionGraphicsLinks = [
     "https://www.youtube.com/embed/4WLDBVRUsUE",

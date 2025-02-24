@@ -64,7 +64,7 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
               </NavLink>
 
               <li
-                className="nav-link course_menu"
+                className="nav-link course_menu me-5"
                 onMouseEnter={() => setIsDropdownVisible(true)}
                 onMouseLeave={() => setIsDropdownVisible(false)}
               >

@@ -398,3 +398,9 @@ export const RightArrow = () => (
     />
   </svg>
 );
+
+// export const EventOneLogo = () => {
+//   return (
+
+//   )
+// }

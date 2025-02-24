@@ -9,6 +9,7 @@ import Placements from "./Placements/Placements";
 import OurStudent from "./OurStudent/OurStudent";
 import EventAndActivity from "./EventAndActivity/EventAndActivity";
 import Testimonial from "./Testimonial/Testimonial";
+import GetInTocuh from "../../../common/GetInTocuh/GetInTocuh";
 
 const Home = () => {
   return (

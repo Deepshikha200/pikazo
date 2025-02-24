@@ -9,75 +9,6 @@
     padding: 3rem 0;
   }
 
-  // &_img {
-  //   position: relative;
-  //   z-index: 2;
-  //   transition: transform 0.3s ease;
-
-  //   img {
-  //     height: 45rem;
-
-  //     @media (max-width:991px) {}
-
-  //     @media (max-width:575px) {
-  //       height: 20rem;
-  //     }
-
-  //   }
-
-  //   .side-image {
-  //     position: absolute;
-  //     top: 9%;
-  //     z-index: 1;
-  //     transition: opacity 0.4s ease, transform 0.4s ease;
-  //     opacity: 0;
-  //   }
-
-  //   .event_img1 {
-  //     z-index: 2;
-  //     transition: transform 0.3s ease;
-
-  //     @media (max-width:991px) {
-  //       position: relative;
-  //       left: 50%;
-  //       transform: translateX(-50%);
-
-  //     }
-  //   }
-
-  //   .event_img2 {
-  //     height: 39rem;
-  //     left: -16%;
-  //     transition: opacity 0.4s ease, transform 0.4s ease;
-  //     opacity: 0;
-  //     z-index: -1;
-
-  //   }
-
-  //   .event_img3 {
-  //     left: 4%;
-  //     height: 40rem;
-  //     top: 36px;
-  //     transition: opacity 0.4s ease, transform 0.4s ease;
-  //     opacity: 0;
-  //     z-index: -1;
-
-  //   }
-
-  //   &:hover {
-
-  //     .event_img2 {
-  //       opacity: 1;
-  //       transform: translateX(-11%) rotate(-27deg);
-  //     }
-
-  //     .event_img3 {
-  //       opacity: 1;
-  //       transform: translateX(67%) rotate(20deg);
-  //     }
-  //   }
-  // }
-
   &_content {
     display: grid;
     grid-template-columns: repeat(3, minmax(250px, 1fr));
@@ -85,61 +16,61 @@
 
     @media (max-width:991px) {
       grid-template-columns: repeat(2, minmax(250px, 1fr));
-
     }
 
     @media (max-width:575px) {
       grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
 
+    h4 {
+      font-size: 2.8rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.3rem;
+      font-weight: 500;
     }
 
     >div {
-
       position: relative;
       z-index: 9;
       overflow: hidden;
 
-      img {
-        width: 100%;
-        height: auto;
+      .event_images {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         border-radius: 2rem;
 
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.07);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
           border-radius: 2rem;
-
         }
       }
 
-      .orverlay {
+      .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-image: url("../../../../assets/images/eventsbg.png");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
         z-index: 1;
         overflow: clip;
         border-radius: 2rem;
-
-        pointer-events: none;
+        opacity: 0.8;
       }
 
       .overlay_text {
         position: absolute;
         color: $white;
-        left: 50%;
-        transform: translateX(-50%);
         bottom: 1rem;
         z-index: 2;
         border-radius: 2rem;
-
-        .heaing {
-          font-size: 2.4rem;
-          font-weight: 700;
-        }
+        padding: 0 1.6rem;
 
         .text {
           line-height: normal;

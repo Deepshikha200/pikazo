@@ -89,7 +89,6 @@ export const Graphics = [
   Graphics13,
   Graphics14,
   Graphics10,
-
   Graphics9,
   Graphics15,
   Graphics16,
@@ -97,15 +96,30 @@ export const Graphics = [
   Graphics6,
   Graphics4,
   Graphics5,
-
   // Graphics17,
   // Graphics12,
   Graphics8,
   Graphics7,
   Graphics1,
   Graphics2,
-
-
+];
+export const GraphicsNew = [
+  // Graphics13,
+  // Graphics14,
+  // Graphics10,
+  // Graphics9,
+  // Graphics15,
+  // Graphics16,
+  Graphics3,
+  Graphics6,
+  Graphics4,
+  Graphics5,
+  // Graphics17,
+  // Graphics12,
+  Graphics8,
+  Graphics7,
+  Graphics1,
+  Graphics2,
 ];
 
 import placement1 from "./Placements/placement1.png";
