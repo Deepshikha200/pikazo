@@ -68,18 +68,18 @@
     }
 
     &.test1 {
-      top: -4.8rem;
-      left: 0; // transform: rotate(20deg);
+      top: -6.8rem;
+      left: 1%; // transform: rotate(20deg);
     }
 
     &.test2 {
-      top: 6.6rem;
-      left: 15%;
+      top: 8.6rem;
+      left: 22%;
     }
 
     &.test3 {
-      top: -3.5rem;
-      left: 33%;
+      top: -0.5rem;
+      left: 44.6%;
       // transform: rotate(10deg);
 
       @media (max-width:768px) {
@@ -90,7 +90,7 @@
 
     &.test4 {
       top: -4.8rem;
-      left: 52%;
+      right: 20%;
       // transform: rotate(-13deg);
 
       @media (max-width:768px) {
@@ -100,8 +100,7 @@
 
     &.test5 {
       top: -4.8rem;
-      left: 72%;
-      // transform: rotate(-14deg);
+      right: 0%;
 
       @media (max-width:768px) {
         top: 0;
@@ -109,14 +108,13 @@
     }
 
     &.test6 {
-      top: 4.8rem;
-      right: 2%;
-      // transform: rotate(14deg);
+      top: 24.8rem;
+      left: 1%;
     }
 
     &.test7 {
-      top: 26rem;
-      right: -3%;
+      top: 23rem;
+      right: 14%;
       // transform: rotate(11deg);
 
       @media (max-width:768px) {
@@ -127,39 +125,34 @@
     }
 
     &.test8 {
-      top: 26rem;
-      right: 11%;
-      // transform: rotate(-14deg);
+      top: 51rem;
+      right: 37%;
     }
 
     &.test9 {
-      top: 16rem;
-      right: 26%;
+      top: 43rem;
+      left: 21%;
+
       // transform: rotate(-12deg);
     }
 
-    &.test9 {
-      top: 16rem;
-      right: 26%;
-    // transform: rotate(-12deg);
-    }
 
     &.test10 {
-      top: 15rem;
-      right: 45%;
+      top: 36rem;
+      right: -2%;
       // transform: rotate(15deg);
     }
 
     &.test11 {
-      top: 15rem;
-      right: 62%;
+      top: 61rem;
+      left: 1%;
       // transform: rotate(13deg);
 
     }
 
     &.test12 {
-      top: 16rem;
-      left: 6%;
+      top: 63rem;
+      left: 31%;
       // transform: rotate(17deg);
 
 
@@ -168,14 +161,16 @@
         height: 12rem;
       }
     }
+
     &.test13 {
-      top: 24rem;
-      left: -3%;
+      top: 64rem;
+      left: 62%;
       // transform: rotate(-4deg);
     }
+
     &.test14 {
-      top: 30rem;
-      left: 14%;
+      bottom: -9rem;
+      right: -21px;
       // transform: rotate(8deg);
     }
 

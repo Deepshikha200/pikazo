@@ -10,10 +10,6 @@ import {
 import "./OurStudent.scss";
 import CommonButton from "../../../../common/CommonButton/CommonButton";
 import { useNavigate } from "react-router-dom";
-import {
-  LeftArrow,
-  RightArrow,
-} from "../../../../assets/images/Icons/SvgIcons";
 
 const OurStudent = () => {
   const settings = {
