@@ -35,7 +35,7 @@ const OurStudent = () => {
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -56,15 +56,14 @@ const OurStudent = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 1000,
     responsive: [
       {
         breakpoint: 991,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          dots: false,
         },
       },
       {
@@ -73,7 +72,6 @@ const OurStudent = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
-          centerPadding: "150px",
         },
       },
     ],
