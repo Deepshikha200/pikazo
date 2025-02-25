@@ -5,7 +5,7 @@ import test1 from "../../../../assets/images/Testimonials/test1.png";
 import test2 from "../../../../assets/images/Testimonials/test2.png";
 import test3 from "../../../../assets/images/Testimonials/test3.png";
 import test4 from "../../../../assets/images/Testimonials/test4.png";
-import test5 from "../../../../assets/images/Testimonials/test5.png";
+import test5 from "../../../../assets/images/Testimonials/test45.png";
 import test6 from "../../../../assets/images/Testimonials/test6.png";
 import test7 from "../../../../assets/images/Testimonials/test7.png";
 import test8 from "../../../../assets/images/Testimonials/test8.png";
@@ -15,11 +15,8 @@ import test11 from "../../../../assets/images/Testimonials/test11.png";
 import test12 from "../../../../assets/images/Testimonials/test12.png";
 import test13 from "../../../../assets/images/Testimonials/test13.png";
 import test14 from "../../../../assets/images/Testimonials/test14.png";
-import test15 from "../../../../assets/images/Testimonials/test15.png";
-import test16 from "../../../../assets/images/Testimonials/test16.png";
-import test17 from "../../../../assets/images/Testimonials/test17.png";
-import test18 from "../../../../assets/images/Testimonials/test18.png";
-import blur_test from "../../../../assets/images/Testimonials/blur_test.png";
+// import test15 from "../../../../assets/images/Testimonials/test15.png";
+
 import Slider from "react-slick";
 
 const Testimonial = () => {
@@ -35,23 +32,9 @@ const Testimonial = () => {
     test9,
     test10,
     test11,
-    // blur_test,
     test12,
     test13,
-    // blur_test,
     test14,
-    test15,
-    test16,
-    test17,
-    test18,
-    test11,
-    test3,
-    test4,
-    test7,
-    test15,
-    
-    // blur_test,
-    // blur_test,
   ];
   const testimonials_slider = [
     test1,
@@ -68,10 +51,6 @@ const Testimonial = () => {
     test12,
     test13,
     test14,
-    test15,
-    test16,
-    test17,
-    test18,
   ];
   const settings = {
     dots: true,

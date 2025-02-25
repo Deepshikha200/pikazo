@@ -30,12 +30,12 @@ const Placements = () => {
             <CommonHeading heading="Our Top Placements" className="heading" />
           </Col>
           <Col lg={9} sm={12}>
-            <div className="placement_img">
+            <div className="placement_img ">
               <motion.div
                 key={currentPage}
-                initial={{ rotateY: 0, opacity: 0 }}
-                animate={{ rotateY: 0, opacity: 1 }}
-                exit={{ rotateY: 0, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0, opacity: 0 }}
                 transition={{ duration: 0.8 }}
               >
                 {pages[currentPage].map((image, index) => (
@@ -43,9 +43,9 @@ const Placements = () => {
                     key={index}
                     src={image}
                     alt={`placement-${index}`}
-                    initial={{ rotate: 180, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    transition={{ delay: index * 0.1, duration: 0.2 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.1, duration: 0.5 }}
                     height={200}
                     width={200}
                   />

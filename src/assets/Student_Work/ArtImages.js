@@ -64,7 +64,6 @@ export const VectorArt = [
   VectorImg8,
   VectorImg9,
   VectorImg10,
-
 ];
 
 
@@ -78,12 +77,10 @@ import Graphics7 from "./Graphics/Artboard7.png";
 import Graphics8 from "./Graphics/Artboard8.png";
 import Graphics9 from "./Graphics/graphicnew1.jpeg";
 import Graphics10 from "./Graphics/graphicnew2.jpeg";
-import Graphics12 from "./Graphics/img2.png";
 import Graphics13 from "./Graphics/img3.png";
 import Graphics14 from "./Graphics/img4.png";
 import Graphics15 from "./Graphics/img5.png";
 import Graphics16 from "./Graphics/img6.png";
-import Graphics17 from "./Graphics/img7.png";
 
 export const Graphics = [
   Graphics13,
@@ -96,26 +93,16 @@ export const Graphics = [
   Graphics6,
   Graphics4,
   Graphics5,
-  // Graphics17,
-  // Graphics12,
   Graphics8,
   Graphics7,
   Graphics1,
   Graphics2,
 ];
 export const GraphicsNew = [
-  // Graphics13,
-  // Graphics14,
-  // Graphics10,
-  // Graphics9,
-  // Graphics15,
-  // Graphics16,
   Graphics3,
   Graphics6,
   Graphics4,
   Graphics5,
-  // Graphics17,
-  // Graphics12,
   Graphics8,
   Graphics7,
   Graphics1,

@@ -1,16 +1,19 @@
 import React from "react";
 import "./EventAndActivity.scss";
-import event1 from "../../../../assets/images/event1.jpeg";
-import event2 from "../../../../assets/images/event2.jpeg";
-import event3 from "../../../../assets/images/event3.jpeg";
-import event4 from "../../../../assets/images/event4.jpeg";
-import event5 from "../../../../assets/images/event5.jpeg";
-import event6 from "../../../../assets/images/event6.jpeg";
+import event1 from "../../../../assets/images/event1.png";
+import event2 from "../../../../assets/images/event2.png";
+import event3 from "../../../../assets/images/event3.png";
+import event4 from "../../../../assets/images/event4.png";
+import event5 from "../../../../assets/images/event5.png";
+import event6 from "../../../../assets/images/event6.png";
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading";
 import { Container } from "react-bootstrap";
 import logo1 from "../../../../assets/images/eventone.png";
 import logo2 from "../../../../assets/images/eventtwo.png";
 import logo3 from "../../../../assets/images/eventthree.png";
+import logo4 from "../../../../assets/images/eventfour.png";
+import logo5 from "../../../../assets/images/eventfive.png";
+import logo6 from "../../../../assets/images/eventsix.png";
 
 const EventAndActivity = () => {
   return (
@@ -47,12 +50,12 @@ const EventAndActivity = () => {
           <div>
             <div className="overlay"></div>
             <div className="overlay_text">
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 align-items-center">
                 <img
                   src={logo2}
                   alt="Event Logo"
                   className="event_logo"
-                  width="120px"
+                  // width="120px"
                 />
                 <div>
                   <h4>Comic Con 2024</h4>
@@ -66,11 +69,10 @@ const EventAndActivity = () => {
             </div>
             <img src={event1} alt="Comic Con 2024" className="event_images" />
           </div>
-
           <div>
             <div className="overlay"></div>
             <div className="overlay_text">
-              <div className="d-flex gap-3">
+              <div className="d-flex gap-3 align-items-center">
                 <img
                   src={logo3}
                   alt="Event Logo"
@@ -98,6 +100,7 @@ const EventAndActivity = () => {
           <div>
             <div className="overlay"></div>
             <div className="overlay_text">
+              <img src={logo4} alt="" />
               <h4>Ramoji Filmcity</h4>
               <p>
                 A thrilling journey through the world’s largest film city!
@@ -112,12 +115,17 @@ const EventAndActivity = () => {
           <div>
             <div className="overlay"></div>
             <div className="overlay_text">
-              <h4>Motion Capture Workshop</h4>
-              <p>
-                Bringing characters to life! Participants explored real-time
-                motion tracking, animation, and performance capture, gaining
-                hands-on experience in industry-standard mocap technology.
-              </p>
+              <div className="d-flex gap-3 align-items-center">
+                <img src={logo5} alt="" style={{ height: "87px" }} />
+                <div>
+                  <h4>Motion Capture Workshop</h4>
+                  <p>
+                    Bringing characters to life! Participants explored real-time
+                    motion tracking, animation, and performance capture, gaining
+                    hands-on experience in industry-standard mocap technology.
+                  </p>
+                </div>
+              </div>
             </div>
             <img
               src={event5}
@@ -129,12 +137,22 @@ const EventAndActivity = () => {
           <div>
             <div className="overlay"></div>
             <div className="overlay_text">
-              <h4>Virtual Production Workshop</h4>
-              <p>
-                A deep dive into next-gen filmmaking! Participants explored
-                real-time VFX, LED walls, and motion capture, gaining hands-on
-                experience in cutting-edge virtual production techniques.
-              </p>
+              <div className="d-flex gap-3 align-items-center">
+                <img
+                  src={logo6}
+                  alt=""
+                  style={{ height: "60px", width: "100px" }}
+                />
+                <div>
+                  <h4>Virtual Production Workshop</h4>
+                  <p>
+                    A deep dive into next-gen filmmaking! Participants explored
+                    real-time VFX, LED walls, and motion capture, gaining
+                    hands-on experience in cutting-edge virtual production
+                    techniques.
+                  </p>
+                </div>
+              </div>
             </div>
             <img
               src={event6}
