@@ -10,6 +10,7 @@ import OurStudent from "./OurStudent/OurStudent";
 import EventAndActivity from "./EventAndActivity/EventAndActivity";
 import Testimonial from "./Testimonial/Testimonial";
 import GetInTocuh from "../../../common/GetInTocuh/GetInTocuh";
+import DegreeBanner from "./DegreeBanner/DegreeBanner";
 
 const Home = () => {
   return (
@@ -17,9 +18,9 @@ const Home = () => {
       <BannerSection />
       <FormPage />
       <Awards />
+      <DegreeBanner />
       <Course />
       <CoursePreview />
-      {/* <Projects /> */}
       <OurStudent />
       <EventAndActivity />
       <Placements />

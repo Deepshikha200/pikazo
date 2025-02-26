@@ -399,8 +399,19 @@ export const RightArrow = () => (
   </svg>
 );
 
-// export const EventOneLogo = () => {
-//   return (
-
-//   )
-// }
+export const ButtonArrow = () => {
+  return (
+    <svg
+      width="42"
+      height="41"
+      viewBox="0 0 42 41"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.1122 28.1804L13.4027 26.4951L23.5149 16.2381L14.179 16.3045L14.1619 13.8941L27.6055 13.7986L27.7011 27.2422L25.2907 27.2593L25.2244 17.9235L15.1122 28.1804Z"
+        fill="white"
+      />
+    </svg>
+  );
+};

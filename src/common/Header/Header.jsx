@@ -51,20 +51,13 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
             </Link>
           </Navbar.Brand>
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Navbar.Brand>
-              <img
-                src={logo}
-                alt="logo"
-                className="logo_img d-lg-none d-block"
-              />
-            </Navbar.Brand>
             <Nav className="mx-auto">
               <NavLink to="/" className="nav-link" onClick={handleNavLinkClick}>
                 Home
               </NavLink>
 
               <li
-                className="nav-link course_menu me-5"
+                className="nav-link course_menu me-lg-5 me-0"
                 onMouseEnter={() => setIsDropdownVisible(true)}
                 onMouseLeave={() => setIsDropdownVisible(false)}
               >
@@ -156,6 +149,10 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
               </NavLink>
             </Nav>
           </Navbar.Collapse>
+          <Navbar.Toggle
+            aria-controls="responsive-navbar-nav"
+            className="custom-toggler"
+          />
           <div className="navbar-buttons ms-auto">
             <CommonButton
               text="Let's Talk"
@@ -167,10 +164,6 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
               handleClose={() => setShowModal(false)}
             />
           </div>
-          <Navbar.Toggle
-            aria-controls="responsive-navbar-nav"
-            className="custom-toggler"
-          />
         </Container>
       </Navbar>
     </header>

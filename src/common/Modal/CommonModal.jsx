@@ -4,7 +4,6 @@ import { CrossIcon } from "../../assets/images/Icons/SvgIcons";
 
 
 const CommonModal = (props) => {
-  console.log(props.show, props.handleClose);
   return (
     <>
       <Modal

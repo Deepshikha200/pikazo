@@ -2,9 +2,8 @@
 
 .testimonial {
   margin: 5.6rem;
-  border-radius: 4rem;
   position: relative;
-  min-height: 83rem;
+  height: 86.4rem;
   position: relative;
   margin-bottom: 20rem;
 
@@ -12,6 +11,7 @@
     background-image: url("../../../../assets/images/testinoilbg.png");
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 4rem;
   }
 
   @media (max-width:991px) {
@@ -32,9 +32,9 @@
     margin-bottom: 2rem;
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 42%;
     transform: translate(-50%);
-    font-size: 7rem;
+    font-size: 8rem;
     z-index: 2;
     font-family: $baseFont;
     color: $white;
@@ -69,7 +69,7 @@
 
     &.test1 {
       top: -6.8rem;
-      left: 1%; // transform: rotate(20deg);
+      left: 1%;
     }
 
     &.test2 {
@@ -80,7 +80,6 @@
     &.test3 {
       top: -0.5rem;
       left: 44.6%;
-      // transform: rotate(10deg);
 
       @media (max-width:768px) {
         top: 0;
@@ -91,7 +90,6 @@
     &.test4 {
       top: -4.8rem;
       right: 20%;
-      // transform: rotate(-13deg);
 
       @media (max-width:768px) {
         top: 0;
@@ -115,7 +113,6 @@
     &.test7 {
       top: 23rem;
       right: 14%;
-      // transform: rotate(11deg);
 
       @media (max-width:768px) {
 
@@ -133,27 +130,23 @@
       top: 43rem;
       left: 21%;
 
-      // transform: rotate(-12deg);
     }
 
 
     &.test10 {
       top: 36rem;
       right: -2%;
-      // transform: rotate(15deg);
     }
 
     &.test11 {
       top: 61rem;
       left: 1%;
-      // transform: rotate(13deg);
 
     }
 
     &.test12 {
       top: 63rem;
       left: 31%;
-      // transform: rotate(17deg);
 
 
       @media (max-width:1199px) {
@@ -165,26 +158,22 @@
     &.test13 {
       top: 64rem;
       left: 62%;
-      // transform: rotate(-4deg);
     }
 
     &.test14 {
       bottom: -9rem;
       right: -21px;
-      // transform: rotate(8deg);
     }
 
     &.test15 {
       top: 49%;
       left: 40%;
-      // transform: translate(-50%, -50%) rotate(10deg);
 
     }
 
     &.test16 {
       top: 30rem;
       left: 14%;
-      // transform: rotate(8deg);
     }
 
     .test {
