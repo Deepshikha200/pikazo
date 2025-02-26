@@ -1,88 +1,87 @@
 @use "../../../../assets/theme/var" as *;
 
-.degree_banner {
-  &_col {
-    .img_con {
-      margin-bottom: 8rem;
-    }
 
-    h2 {
-      font-size: 7rem;
-      font-weight: 700;
-      max-width: 79.7rem;
-      width: 100%;
-      margin-bottom: 14.6rem;
-
-      @media (max-width:991px) {
-        font-size: 5rem;
-        max-width: 100%;
-        margin-bottom: 3rem;
-      }
-
-      p {
-        color: #FFA600;
-        display: inline;
-      }
-    }
-
-    .enroll_btn {
-      position: relative;
-
-      button {
-        min-width: 20.5rem;
-        border-radius: 1rem;
-        font-size: 2.5rem;
-        color: $white;
-        background-color: #FFA600;
-        border: none;
-        padding: 1.4rem 0;
-      }
-
-      span {
-        position: absolute;
-
-        left: 16rem;
-      }
-
-      &.one {
-        span {
-          top: 50%;
-          transform: translateY(-50%);
-        }
-      }
+.degree_banner_col {
+  .img_con {
+    img {
+      margin-top: 4.5rem;
+      margin-bottom: 7.8rem;
     }
   }
 
-  &_row-two {
-    // margin-top: 6rem;
-    position: relative;
-    z-index: 2;
-    color: $white;
-    padding-bottom: 15rem;
+  h2 {
+    font-size: 7rem;
+    font-weight: 700;
+    max-width: 79.7rem;
+    width: 100%;
+    margin-bottom: 14.6rem;
 
-    .dark_text {
-      padding-left: 16.6rem;
+    @media (max-width:991px) {
+      font-size: 5rem;
+      max-width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    p {
+      color: #FFA600;
+      display: inline;
+    }
+  }
+
+  .enroll_btn {
+    position: relative;
+
+    button {
+      min-width: 20.5rem;
+      border-radius: 1rem;
+      font-size: 2.5rem;
+      color: $white;
+      background-color: #FFA600;
+      border: none;
+      padding: 1.4rem 0;
     }
 
     span {
-      font-size: 2rem;
-      max-width: 70rem;
-      margin-top: 1rem;
-      margin-bottom: 16.5rem;
+      position: absolute;
+      left: 16rem;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("../../../../assets/images/degree_banner.png");
-      background-size: cover;
-      z-index: -1;
+    &.one {
+      span {
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
+}
+
+.degree_banner_row-two {
+  position: relative;
+  z-index: 2;
+  color: $white;
+  padding-bottom: 8rem;
+  display: flex;
+  align-items: center;
+  background-image: url("../../../../assets/images/degree_banner.png");
+  background-size: cover;
+  background-position: right;
+
+  .dark_text {
+    padding-left: 16.6rem;
+
+    h2 {
+      margin-top: 8rem;
+    }
+  }
+
+
+
+  span {
+    font-size: 2rem;
+    max-width: 70rem;
+    margin-top: 1rem;
+    margin-bottom: 16.5rem;
+  }
+
+
 }

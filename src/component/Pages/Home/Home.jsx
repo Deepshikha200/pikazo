@@ -11,6 +11,7 @@ import EventAndActivity from "./EventAndActivity/EventAndActivity";
 import Testimonial from "./Testimonial/Testimonial";
 import GetInTocuh from "../../../common/GetInTocuh/GetInTocuh";
 import DegreeBanner from "./DegreeBanner/DegreeBanner";
+import BannerTwo from "./DegreeBanner/BannerTwo";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Awards />
       <DegreeBanner />
       <Course />
+      <BannerTwo />
       <CoursePreview />
       <OurStudent />
       <EventAndActivity />
