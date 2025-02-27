@@ -91,9 +91,9 @@ header {
         position: absolute;
         top: 7.6rem;
         background: linear-gradient(270.29deg, rgba(7, 77, 140, 0.375) 0.24%, rgba(2, 21, 38, 0.5625) 31.09%, rgba(2, 21, 38, 0.75) 73.88%);
-        width: 38rem;
-        left: -100%;
-        backdrop-filter: blur(10px);
+        width: 100%;
+        left: -100%;                                                                  
+        backdrop-filter: blur(19px);
         padding-left: 0.3rem;
         transition: transform 0.2s ease-in-out;
         transform: translateX(-100%);

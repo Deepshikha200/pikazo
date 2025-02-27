@@ -112,3 +112,38 @@
     content: url('../../../../assets/Images/Icons/left.svg');
   }
 }
+
+
+.insta_con {
+  overflow: hidden;
+  width: 100%;
+
+}
+
+.instagram_flex {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.instagram_scroll {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.instagram_scroll img {
+  // max-width: 200px;
+  margin-right: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

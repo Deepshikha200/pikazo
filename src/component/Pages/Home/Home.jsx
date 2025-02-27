@@ -19,7 +19,7 @@ const Home = () => {
       <BannerSection />
       <FormPage />
       <Awards />
-      <DegreeBanner />
+      {/* <DegreeBanner /> */}
       <Course />
       <BannerTwo />
       <CoursePreview />

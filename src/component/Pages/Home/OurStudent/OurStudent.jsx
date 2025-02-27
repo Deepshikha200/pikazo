@@ -6,6 +6,7 @@ import {
   ArtImages,
   VectorArt,
   GraphicsNew,
+  AllImages,
 } from "../../../../assets/Student_Work/ArtImages";
 import "./OurStudent.scss";
 import CommonButton from "../../../../common/CommonButton/CommonButton";
@@ -17,7 +18,7 @@ const OurStudent = () => {
     arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1,
 
     responsive: [
@@ -45,34 +46,6 @@ const OurStudent = () => {
     ],
   };
 
-  const settings2 = {
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-        },
-      },
-    ],
-  };
-
   const navigate = useNavigate();
   const allImages = [...ArtImages, ...VectorArt, ...GraphicsNew];
 
@@ -95,26 +68,22 @@ const OurStudent = () => {
 
   return (
     <section className="our-student">
-      <Container>
-        <CommonHeading heading="Our Students Work" className="heading mb-4" />
-        <Slider {...settings2}>
-          {allImages.map((image, index) => (
-            <div key={index} className="slider-item">
-              <div className="image-container">
-                <div className="img-wrap">
-                  <img src={image} alt={`Artwork ${index + 1}`} />
-                </div>
-                <div className="overlay">
-                  <CommonButton
-                    text="View More"
-                    className="view-more-btn"
-                    onClick={() => navigate("/student-work")}
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
+      <CommonHeading heading="Our Students Work" className="heading mb-4" />
+      <section className="insta_con">
+        <div className="instagram_flex">
+          <div className="instagram_scroll">
+            {AllImages.concat(AllImages).map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt=""
+                onClick={() => navigate("/student-work")}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      <>
         <div className="mt-5 py-5">
           <Slider {...settings}>
             {motionGraphicsLinks.map((image, index) => (
@@ -133,7 +102,7 @@ const OurStudent = () => {
             ))}
           </Slider>
         </div>
-      </Container>
+      </>
     </section>
   );
 };

@@ -27,13 +27,7 @@ const EventAndActivity = () => {
           <div>
             <div className="overlay"></div>
             <div className="overlay_text">
-              <img
-                src={logo1}
-                alt="Event Logo"
-                className="event_logo"
-                height="55px"
-                width="140px"
-              />
+              <img src={logo1} alt="Event Logo" className="event_logo amd" />
               <h4>Collaboration with AMD</h4>
               <p>
                 We’re thrilled to collaborate with AMD to bring high-performance
@@ -54,7 +48,7 @@ const EventAndActivity = () => {
                 <img
                   src={logo2}
                   alt="Event Logo"
-                  className="event_logo"
+                  className="event_logo comic"
                   // width="120px"
                 />
                 <div>
@@ -67,7 +61,7 @@ const EventAndActivity = () => {
                 </div>
               </div>
             </div>
-            <img src={event1} alt="Comic Con 2024" className="event_images" />
+            <img src={event1} alt="Comic Con 2024" className="event_images " />
           </div>
           <div>
             <div className="overlay"></div>
@@ -76,9 +70,7 @@ const EventAndActivity = () => {
                 <img
                   src={logo3}
                   alt="Event Logo"
-                  className="event_logo"
-                  height="55px"
-                  width="100px"
+                  className="event_logo unreal"
                 />
                 <div>
                   <h4>Unreal Engine Workshop</h4>
@@ -116,7 +108,7 @@ const EventAndActivity = () => {
             <div className="overlay"></div>
             <div className="overlay_text">
               <div className="d-flex gap-3 align-items-center">
-                <img src={logo5} alt="" style={{ height: "87px" }} />
+                <img src={logo5} alt="" className="event_logo mocap" />
                 <div>
                   <h4>Motion Capture Workshop</h4>
                   <p>
@@ -138,11 +130,7 @@ const EventAndActivity = () => {
             <div className="overlay"></div>
             <div className="overlay_text">
               <div className="d-flex gap-3 align-items-center">
-                <img
-                  src={logo6}
-                  alt=""
-                  style={{ height: "60px", width: "100px" }}
-                />
+                <img src={logo6} alt="" className="event_logo vfx" />
                 <div>
                   <h4>Virtual Production Workshop</h4>
                   <p>

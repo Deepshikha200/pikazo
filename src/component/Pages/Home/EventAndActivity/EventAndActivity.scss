@@ -29,7 +29,6 @@
 
     p {
       font-size: 1.2rem;
-      // font-weight: 500;
     }
 
     >div {
@@ -48,10 +47,28 @@
         }
       }
 
+      .event_logo {
+        &.amd {
+          width: 19.4rem;
+        }
+
+        &.unreal {
+          width: 100px;
+        }
+
+        &.mocap {
+          height: 87px;
+        }
+
+        &.vfx {
+          height: 69px;
+        }
+      }
+
       .overlay_text {
         position: absolute;
         color: $white;
-        bottom: 1rem;
+        bottom: 2rem;
         z-index: 2;
         border-radius: 2rem;
         padding: 0 1.6rem;

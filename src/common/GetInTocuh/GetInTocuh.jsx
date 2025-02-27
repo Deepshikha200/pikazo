@@ -19,7 +19,7 @@ const GetInTocuh = () => {
     { value: "photography", label: "Photography" },
     { value: "videoediting", label: "Video Editing" },
     { value: "digitalmarketting", label: "Digital Marketing" },
-    { value: "ai", label: "AI Content Creation"},
+    { value: "ai", label: "AI Content Creation" },
   ];
 
   const validate = (values) => {
@@ -48,10 +48,7 @@ const GetInTocuh = () => {
       setResult("Sending....");
       const formData = new FormData();
       formData.append("access_key", "bb345f89-5331-4375-8bd4-2b09315e4945", "");
-      // formData.append(
-      //   "to",
-      //   "493deepshikha@gmail.com, deepshikhap9877@gmail.com"
-      // );
+
       formData.append("name", values.name);
       formData.append("email", values.email);
       formData.append("phone", values.phone);

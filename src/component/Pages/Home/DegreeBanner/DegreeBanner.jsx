@@ -22,12 +22,12 @@ const DegreeBanner = () => {
               <h2>
                 Build Your Future with Our <p> Degree Programs! </p>
               </h2>
-              <div className="enroll_btn one">
+              {/* <div className="enroll_btn one">
                 <button>Enroll Now</button>
                 <span>
                   <ButtonArrow />
                 </span>
-              </div>
+              </div> */}
             </div>
           </Col>
           <Col lg={4}>

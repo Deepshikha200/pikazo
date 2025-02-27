@@ -148,3 +148,40 @@ export const PlacementImg = [
 
 
 
+export const AllImages = [
+  Graphics4,
+  Graphics7,
+  Graphics1,
+  VectorImg7,
+  VectorImg8,
+  DigitalArt2,
+  DigitalArt3,
+  Graphics5,
+  Graphics8,
+  DigitalArt16,
+  DigitalArt17,
+  DigitalArt18,
+
+  DigitalArt4,
+  DigitalArt5,
+  DigitalArt7,
+  DigitalArt8,
+  DigitalArt9,
+  DigitalArt10,
+  DigitalArt11,
+  VectorImg9,
+  VectorImg10,
+  VectorImg1,
+  VectorImg2,
+  VectorImg3,
+  VectorImg4,
+  VectorImg5,
+  VectorImg6,
+  DigitalArt12,
+  DigitalArt13,
+  DigitalArt14,
+  DigitalArt15,
+
+  DigitalArt20,
+  DigitalArt21,
+]
