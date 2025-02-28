@@ -52,11 +52,11 @@ const Placements = () => {
       y: (index) => positions[index].y,
       ease: "sine.inOut",
       scrollTrigger: {
-        trigger: ".placements",
+        trigger: ".placements_section",
         start: "top 40%",
         // end: "bottom 20%",
         // scrub: 5,
-        markers: true,
+        // markers: true,
       },
       onComplete: () => {
         gsap.to(".box", {
@@ -73,7 +73,7 @@ const Placements = () => {
 
   return (
     <>
-      <section className="d-lg-block d-none">
+      <section className="d-lg-block d-none placements_section">
         <div className="placements ">
           <CommonHeading heading="Our Placements" className="place_heading" />
           <img src={placement1} alt="" className="box" />

@@ -17,11 +17,11 @@ const FormPage = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".form_col_img.first img", {
-        scrollTrigger: {
-          trigger: ".form_col_img.first img",
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
+        // scrollTrigger: {
+        //   trigger: ".form_col_img.first img",
+        //   start: "top 80%",
+        //   toggleActions: "play none none none",
+        // },
         opacity: 0,
         x: -50,
         duration: 1.2,
@@ -29,11 +29,11 @@ const FormPage = () => {
       });
 
       gsap.from(".form_col_img.second img", {
-        scrollTrigger: {
-          trigger: ".form_col_img.second img",
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
+        // scrollTrigger: {
+        //   trigger: ".form_col_img.second img",
+        //   start: "top 80%",
+        //   toggleActions: "play none none none",
+        // },
         opacity: 0,
         x: 50,
         duration: 1.2,
@@ -41,11 +41,11 @@ const FormPage = () => {
       });
 
       gsap.from(".form_col_text", {
-        scrollTrigger: {
-          trigger: ".form_col_text",
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
+        // scrollTrigger: {
+        //   trigger: ".form_col_text",
+        //   start: "top 80%",
+        //   toggleActions: "play none none none",
+        // },
         opacity: 0,
         y: 50,
         duration: 1.5,
@@ -53,11 +53,11 @@ const FormPage = () => {
       });
 
       gsap.from(".form_col_text h2", {
-        scrollTrigger: {
-          trigger: ".form_col_text h2",
-          start: "top 90%",
-          toggleActions: "play none none none",
-        },
+        // scrollTrigger: {
+        //   trigger: ".form_col_text h2",
+        //   start: "top 90%",
+        //   toggleActions: "play none none none",
+        // },
         opacity: 0,
         scale: 0.9,
         duration: 1,

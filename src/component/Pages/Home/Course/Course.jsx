@@ -40,11 +40,11 @@ const Course = () => {
 
   useGSAP(() => {
     gsap.from(".course-container .course_col", {
-      scrollTrigger: {
-        trigger: ".course-container",
-        start: "top 70%",
-        end: "top 90%",
-      },
+      // scrollTrigger: {
+      //   trigger: ".course-container",
+      //   start: "top 70%",
+      //   end: "top 90%",
+      // },
       y: -100,
       opacity: 0,
       stagger: 0.3,

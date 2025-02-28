@@ -38,12 +38,12 @@ const EventsAndActivites = () => {
         x: -100,
         opacity: 0,
         duration: 1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          end: "top 30%",
-          toggleActions: "play none none reverse",
-        },
+        // scrollTrigger: {
+        //   trigger: sectionRef.current,
+        //   start: "top 80%",
+        //   end: "top 30%",
+        //   toggleActions: "play none none reverse",
+        // },
       });
     },
     { scope: sectionRef }
@@ -63,12 +63,12 @@ const EventsAndActivites = () => {
           duration: 1,
           ease: "power2.out",
           stagger: 0.2,
-          scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            end: "top 30%",
-            toggleActions: "play none none reverse",
-          },
+          // scrollTrigger: {
+          //   trigger: section,
+          //   start: "top 80%",
+          //   end: "top 30%",
+          //   toggleActions: "play none none reverse",
+          // },
         }
       );
     });

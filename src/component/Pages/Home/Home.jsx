@@ -18,13 +18,13 @@ const Home = () => {
     <>
       <BannerSection />
       <FormPage />
+      <Placements />
       <Awards />
       {/* <DegreeBanner /> */}
       <Course />
       <BannerTwo />
       <CoursePreview />
       <OurStudent />
-      <Placements />
       <EventAndActivity />
       <Testimonial />
     </>
