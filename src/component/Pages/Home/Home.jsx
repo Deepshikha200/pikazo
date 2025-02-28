@@ -24,8 +24,8 @@ const Home = () => {
       <BannerTwo />
       <CoursePreview />
       <OurStudent />
-      <EventAndActivity />
       <Placements />
+      <EventAndActivity />
       <Testimonial />
     </>
   );

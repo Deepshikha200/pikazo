@@ -1,39 +1,54 @@
-@use "../../../../assets/theme/var" as *;
-
 .placements {
-  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
 
-  @media (max-width:991px) {
-    padding: 3rem 0;
+
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  position: absolute;
+  opacity: 0.8;
+}
+
+.place_heading {
+  margin-top: -12rem;
+}
+
+
+.place_con {
+  overflow: hidden;
+  width: 100%;
+
+  .place_flex {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
   }
 
-  .heading {
-    display: inline-block;
-    border-bottom: 2px solid $yellow;
-    padding-bottom: 0.8rem;
-    line-height: 5rem;
-    max-width: 23rem;
-    text-align: start;
-
-    @media (max-width:991px) {
-      text-align: center;
-      max-width: 100%;
-    }
+  .place_scroll {
+    display: flex;
+    animation: scroll 15s linear infinite;
   }
 
-  img {
-    border: 1px solid transparent;
-    border-radius: 2rem;
-    transition: all 0.2s ease-in-out;
+  .place_scroll img {
+    height: 250px;
+    width: 250px;
+    cursor: pointer;
+  }
 
-    @media (max-width:991px) {
-      width: 150px;
-      height: 150px;
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
     }
 
-    // &:hover {
-    //   border-color: $yellow;
-    //   transition: all 0.2s ease-in-out;
-    // }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }

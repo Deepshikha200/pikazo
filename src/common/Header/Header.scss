@@ -14,7 +14,6 @@ header {
     padding-inline: 0.6rem;
   }
 
-
   .navbar {
     padding-block: 1.5rem;
 
@@ -34,9 +33,9 @@ header {
     .nav-link {
       font-size: 1.8rem;
       font-weight: 600;
-      color: $white;
       margin-right: 2rem;
       padding-inline: 0 !important;
+      color: $white;
       padding-bottom: 1rem;
       position: relative;
 
@@ -92,7 +91,7 @@ header {
         top: 7.6rem;
         background: linear-gradient(270.29deg, rgba(7, 77, 140, 0.375) 0.24%, rgba(2, 21, 38, 0.5625) 31.09%, rgba(2, 21, 38, 0.75) 73.88%);
         width: 100%;
-        left: -100%;                                                                  
+        left: -100%;
         backdrop-filter: blur(19px);
         padding-left: 0.3rem;
         transition: transform 0.2s ease-in-out;
@@ -200,170 +199,93 @@ header {
     }
   }
 
-  .dropdown-menu {
 
-    .dropdown-toggle.nav-link {
-      color: $black ;
-      padding-left: 1.5rem !important;
-      font-weight: 400;
-      font-size: 1.6rem;
+  .course_menu {
+    position: relative;
 
-      &:hover {
-        // background-color: $navyblue;
-        color: $grey;
-      }
-
-      &::before {
-        height: 0;
-      }
-    }
-  }
-
-  #nested-dropdown {
-    color: $black;
-    padding-left: 1.5rem !important;
-  }
-
-  @media (min-width: 991px) {
-    .navbar .dropdown-menu {
+    &::after {
+      content: "";
+      background-image: url("../../assets/images/droparrow.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1rem;
+      height: 1rem;
       position: absolute;
-      left: 0;
-      top: 4rem;
-      margin-top: 0;
-    }
+      right: -1.5rem;
+      top: 1.5rem;
 
-    .navbar .dropdown-menu .dropdown-menu {
-      left: 100%;
-      top: 0;
+      @media (max-width:991px) {
+        right: 20.5rem;
+        top: 2rem;
 
-      @media (max-width: 991px) {
-        left: 0;
-        top: 5rem;
       }
     }
-
-    // Hover behavior for large screens (laptop and above)
-    .navbar .dropdown:hover>.dropdown-menu {
-      display: block;
-
-      @media (min-width: 991px) {
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-
-  .dropdown-item {
-    font-size: 1.6rem;
-    padding: 1.5rem;
-
-    &:hover,
-    &.active,
-    &:focus {
-      color: $grey;
-      background-color: transparent;
-    }
-  }
-
-  .dropdown-toggle.nav-link::after {
-    display: none;
-  }
-
-  .dropdown-menu {
-    position: absolute;
-
-    @media (max-width: 991px) {
-      border-color: $white;
-    }
-  }
-
-  .navbar .dropdown:hover>.dropdown-menu {
-    @media (min-width: 991px) {
-      display: block;
-    }
-  }
-
-  .dropdown-toggle::after {
-    display: inline-block !important;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "" !important;
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0 !important;
-    border-left: 0.3em solid transparent;
-  }
-}
-
-.course_menu {
-  position: relative;
-
-  &::after {
-    content: "";
-    background-image: url("../../assets/images/droparrow.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 1rem;
-    height: 1rem;
-    position: absolute;
-    right: -1.5rem;
-    top: 1.5rem;
-
-    @media (max-width:991px) {
-      right: 20.5rem;
-      top: 2rem;
-
-    }
-  }
-
-  .items_list {
-    display: flex;
-    gap: 10rem;
-  }
-
-  &_dropdown {
-    border-top: 3px solid $primary;
-    position: absolute;
-    top: 4rem;
-    padding: 1rem 2rem 3rem 2rem;
-    background-color: rgba($navyblue, $alpha: 0.9);
-    color: $white;
-    min-width: 4vw;
-    left: -7rem;
 
     .items_list {
-      .heading {
-        span {
-          border-bottom: 1px solid $grey;
-          margin-block: 1rem;
-          padding: 0.7rem 1rem;
-          font-size: 1.8rem;
+      display: flex;
+      gap: 10rem;
+    }
 
-          &:hover {
-            color: $primary;
-            cursor: pointer;
-          }
-        }
+    &_dropdown {
+      border-top: 3px solid $primary;
+      position: absolute;
+      top: 4rem;
+      padding: 1rem 2rem 3rem 2rem;
+      background-color: rgba($navyblue, $alpha: 0.9);
+      color: $white;
+      min-width: 4vw;
+      left: -7rem;
 
-        ul {
-          margin-top: 2rem;
+      .items_list {
+        .heading {
+          span {
+            border-bottom: 1px solid $grey;
+            margin-block: 1rem;
+            padding: 0.7rem 1rem;
+            font-size: 1.8rem;
 
-          li {
-            a {
-              padding: 1rem;
-              white-space: nowrap;
-              font-weight: 400;
-              transition: all 0.3s ease-in-out;
-              border-radius: 0.7rem;
+            &:hover {
+              color: $primary;
               cursor: pointer;
-              color: $white;
+            }
+          }
 
-              &:hover {
-                background-color: $primary;
-                color: $black;
+          ul {
+            margin-top: 1rem;
+
+            li {
+              a {
+                margin: 1rem;
+                white-space: nowrap;
+                font-weight: 400;
                 transition: all 0.3s ease-in-out;
+                border-radius: 0.7rem;
+                cursor: pointer;
+                color: $white;
+                padding-bottom: 1rem;
+                position: relative;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 0;
+                  height: 2px;
+                  bottom: 0;
+                  left: 0;
+                  transition: width 0.5s ease-in-out;
+                  background-color: $primary;
+                }
+
+                &:hover {
+                  color: $primary;
+
+                  &::before {
+                    border-color: $primary;
+                    width: 100%;
+                    transition: width 0.5s ease-in-out;
+                  }
+                }
               }
             }
           }
@@ -371,5 +293,4 @@ header {
       }
     }
   }
-
 }
