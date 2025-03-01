@@ -53,7 +53,7 @@ const Placements = () => {
       ease: "sine.inOut",
       scrollTrigger: {
         trigger: ".placements_section",
-        start: "top 40%",
+        start: "top 41%",
         // end: "bottom 20%",
         // scrub: 5,
         // markers: true,
