@@ -1,0 +1,88 @@
+@use "../../../assets/theme/_var.scss" as *;
+
+.certificate {
+  font-family: $baseFont;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 15rem;
+
+  & h2 {
+    font-size: 3.6rem;
+    color: $navyblue;
+    font-weight: 600;
+
+    @media (max-width:1679px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width:767px) {
+      font-size: 2.6rem;
+    }
+  }
+
+  & .customInput {
+    input {
+      border: none;
+      min-width: 50rem;
+      background-color: #F6F4F4;
+      border-radius: 2.8rem;
+      height: 5.4rem;
+      margin-top: 3.2rem;
+      width: 100%;
+
+      &::placeholder {
+        color: #C4BFBF;
+
+      }
+
+      @media (max-width:1679px) {
+        min-width: 40rem;
+        font-size: 1.4rem;
+      }
+
+      @media (max-width:767px) {
+        min-width: 30rem;
+      }
+    }
+  }
+
+  button {
+    display: block;
+    margin: 4rem auto 0 auto;
+    background-color: $navyblue;
+    color: $white;
+    font-size: 1.8rem;
+    border: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: $navyblue;
+      color: $white;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    @media (max-width:1679px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .certificateImg {
+    margin-top: 23rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 6.6rem;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+    @media (max-width:1679px) {
+      margin-top: 15rem;
+      gap: 4rem;
+    }
+  }
+}

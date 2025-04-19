@@ -1,0 +1,48 @@
+@use "../../../../assets/theme/var" as *;
+
+.admission_open_container {
+
+  .moving_text {
+    padding: 1rem 0;
+    animation: blinker 1s linear infinite;
+
+    div {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      background: linear-gradient(90deg, #0799c1, #6098dd); // Blue gradient
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+  .admission_open {
+    position: relative;
+    z-index: 99;
+    padding-bottom: 6rem;
+
+
+    &_col {
+      & img {
+        max-height: 30rem;
+      }
+    }
+
+    &_form {
+      .form-page {
+        margin-top: 4rem;
+
+        h2 {
+          display: none;
+        }
+      }
+    }
+  }
+}
