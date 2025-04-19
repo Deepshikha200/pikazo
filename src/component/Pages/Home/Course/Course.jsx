@@ -10,6 +10,7 @@ import {
   ThreeYear,
 } from "../../../../assets/images/Icons/SvgIcons";
 import { Col, Container, Row } from "react-bootstrap";
+import ContactUsModal from "../../../../common/Modal/ContactUsModal";
 
 const Course = () => {
   const data = [
@@ -36,6 +37,8 @@ const Course = () => {
       desc: "A degree course in Animation, VFX, or Game Design (3 years) offers comprehensive training in design principles, advanced tools, and creative storytelling. It includes practical projects, internships, and portfolio development, preparing students for high-level careers in the entertainment and gaming industries.",
     },
   ];
+
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <section className="course py-60">
@@ -79,6 +82,10 @@ const Course = () => {
                   </div>
                 </div>
               </motion.div>
+              <ContactUsModal
+                show={showModal}
+                handleClose={() => setShowModal(false)}
+              />
             </Col>
           ))}
         </Row>
