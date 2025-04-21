@@ -39,7 +39,7 @@ const Placements = () => {
       { x: "-68rem", y: "-10rem" },
       { x: "-5rem", y: "-29rem" },
       { x: "-39rem", y: "5rem" },
-      { x: "-4rem", y: "29rem" },
+    { x: "-4rem", y: "29rem" },
       { x: "75rem", y: "21rem" },
       { x: "69rem", y: "-10rem" },
       { x: "40rem", y: "-10rem" },

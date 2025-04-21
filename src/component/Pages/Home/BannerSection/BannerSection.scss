@@ -22,11 +22,12 @@
 
       @media (max-width:991px) {
         font-size: 3rem;
+        white-space: wrap;
+
       }
 
       @media (max-width:575px) {
         font-size: 2rem;
-        white-space: wrap;
       }
 
       &::before {
