@@ -7,10 +7,34 @@ import {
   Youtube,
 } from "../../assets/images/Icons/SvgIcons";
 import locationicon from "../../assets/images/locationIcon_dark.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Footer.scss";
 
 const Footer = () => {
+  const handleNavLinkClick = (path, offset = 0) => {
+    setNavbarExpanded(false);
+    onNavbarToggle(false);
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        scrollToSection(path, offset);
+      }, 100);
+    } else {
+      scrollToSection(path, offset);
+    }
+  };
+  const scrollToSection = (path, offset) => {
+    const element = document.getElementById(path);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop + offset,
+        behavior: "smooth",
+      });
+    }
+  };
+  const location = useLocation();
+  const pathname = location.pathname;
   return (
     <footer className="footer">
       <Container>
@@ -68,20 +92,27 @@ const Footer = () => {
             <div className="footer-links_ul">
               <ul>
                 <li>
-                  <a href="#banner"> Home</a>
+                  {pathname === "/" ? (
+                    <a href="#banner"> Home</a>
+                  ) : (
+                    <Link to="/">Home</Link>
+                  )}
                 </li>
                 <li>
-                  <a href="#about-us">About Us</a>
-                </li>
-                <li>
-                  <a href="#placements">Placement</a>
-                </li>
-                <li>
-                  {/* <Link to="/certificate-verification"> */}
-                  {/* Certificate Verification */}
-                  {/* </Link> */}
+                  {pathname === "/" ? (
+                    <a href="#about-us">About Us</a>
+                  ) : (
+                    <Link to="/">About Us</Link>
+                  )}
                 </li>
 
+                <li>
+                  {pathname === "/" ? (
+                    <a href="#placements">Placement</a>
+                  ) : (
+                    <Link to="/">Placement</Link>
+                  )}
+                </li>
                 <li>
                   <Link to="/students-work">Student Work</Link>
                 </li>

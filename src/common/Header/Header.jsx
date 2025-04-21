@@ -14,7 +14,7 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
 
   // const handleNavLinkClick = () => {};
 
-  const handleNavLinkClick = (path, offset = -100) => {
+  const handleNavLinkClick = (path, offset = 0) => {
     setNavbarExpanded(false);
     onNavbarToggle(false);
 
