@@ -21,8 +21,8 @@ const Footer = () => {
             </div>
             <div className="footer-content-text">
               <p>
-                Pikazo Institute, based in Chandigarh, is a premier hub for 2D &
-                3D Animation, VFX, Motion Graphics, Photography, and Film
+                Pikazzo Institute, based in Chandigarh, is a premier hub for 2D
+                & 3D Animation, VFX, Motion Graphics, Photography, and Film
                 Making. With over 5 years of experience in industrial training,
                 we now offer a commercial platform to help students build
                 thriving careers guided by seasoned professionals.

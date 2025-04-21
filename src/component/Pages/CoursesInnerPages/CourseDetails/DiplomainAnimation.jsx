@@ -19,7 +19,7 @@ const DiplomainAnimation = () => {
               <h4>Best Diploma in Animation and VFX</h4>
 
               <p>
-                At Pikazo Institute, we offer Diploma in Animation and VFX and
+                At Pikazzo Institute, we offer Diploma in Animation and VFX and
                 its time period is two years. During this time period we provide
                 proper training to the students by which they gets knowledge
                 about technical skills that really matter in the industry. At

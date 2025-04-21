@@ -98,7 +98,7 @@
   }
 
   .enroll_btn_con {
-    margin-top: auto; // push to bottom
+    margin-top: auto;
     padding: 0 3rem 2rem 3rem;
 
     .enroll_btn {
@@ -114,10 +114,9 @@
         border: none;
         border-radius: 1.5rem;
         height: 4rem;
-        background-color: #FFA600;
+        background-color: $navyblue;
         flex-shrink: 0;
       }
-
     }
   }
 }

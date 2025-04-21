@@ -19,11 +19,11 @@ const BVocAnimation = () => {
             <div className="b_voc_content">
               <h3>Degree in B.Voc Animation & Multimedia</h3>
               <p className="b_voc_text">
-                At <strong> Pikazo Institute,</strong> Step into the captivating
-                world of Animation and Visual Effects (VFX) with Pikazo, where
-                creativity and technology merge to breathe life into
-                imaginations. Today, let’s delve deep into a dedicated degree
-                program in this dynamic field. Join us as we uncover the
+                At <strong> Pikazzo Institute,</strong> Step into the
+                captivating world of Animation and Visual Effects (VFX) with
+                Pikazo, where creativity and technology merge to breathe life
+                into imaginations. Today, let’s delve deep into a dedicated
+                degree program in this dynamic field. Join us as we uncover the
                 intricacies of pursuing a degree in Animation & VFX.
               </p>
 

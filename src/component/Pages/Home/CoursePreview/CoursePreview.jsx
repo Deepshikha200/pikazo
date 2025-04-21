@@ -49,7 +49,7 @@ const CoursePreview = () => {
       title: "Digital Marketing",
       url: market,
       description:
-        "Pikazo offers certified SEO courses. This course provides full-fledged SEO services and is affordable for any student.",
+        "Pikazzo offers certified SEO courses. This course provides full-fledged SEO services and is affordable for any student.",
       thumbnail: thumbnail2,
     },
     {

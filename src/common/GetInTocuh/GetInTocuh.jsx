@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast from "react-hot-toast";
 import CustomInput from "./../UI/CustomInput/CustomInput";
 import CommonButton from "../CommonButton/CommonButton";
 import { Col, Form, Row } from "react-bootstrap";
@@ -57,22 +56,6 @@ const GetInTocuh = () => {
       errors.course = "Please select a course";
     }
 
-    if (!values.name) {
-      errors.name = "Please enter your name";
-    }
-    if (!values.email) {
-      errors.email = "Required";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-      errors.email = "Invalid email address";
-    }
-    if (!values.phone) {
-      errors.phone = "Please enter your phone number";
-    }
-    if (!values.course) {
-      errors.course = "Please select a course";
-    }
-
-    // ✅ Add CAPTCHA validation here
     if (!userCaptcha) {
       errors.userCaptcha = "Please enter the CAPTCHA";
     } else if (userCaptcha !== captcha) {
@@ -88,29 +71,35 @@ const GetInTocuh = () => {
     onSubmit: async (values, { resetForm }) => {
       setResult("Sending....");
       const formData = new FormData();
-      formData.append("access_key", "a6baaa41-ff5b-45a6-8e46-ffff5b66245e");
-      // formData.append("access_key", "bb345f89-5331-4375-8bd4-2b09315e4945");
 
       formData.append("name", values.name);
       formData.append("email", values.email);
       formData.append("phone", values.phone);
       formData.append("course", values.course);
 
+      formData.append("_cc", "deepshikhap9877@gmail.com");
+      formData.append("_subject", "New Enquiry Submitted from Website");
+      formData.append("_template", "table");
+
       try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData,
-        });
+        const response = await fetch(
+          "https://formsubmit.co/ajax/493deepshikha@gmail.com",
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
         const data = await response.json();
-        if (data.success) {
+        if (data.success === "true") {
           setResult("Form Submitted Successfully");
           toast.success("Form Submitted Successfully!");
-          resetForm(); // Reset Formik fields
-          setUserCaptcha(""); // ✅ Reset CAPTCHA input
-          setCaptcha(generateCaptcha()); // ✅ Generate new CAPTCHA
+
+          resetForm();
+          setUserCaptcha("");
+          setCaptcha(generateCaptcha());
         } else {
-          setResult(data.message);
-          toast.error(data.message);
+          setResult(data.message || "Submission failed");
+          toast.error(data.message || "Submission failed");
         }
       } catch (error) {
         setResult("Error submitting form");
@@ -121,7 +110,7 @@ const GetInTocuh = () => {
 
   return (
     <div className="form-page">
-      <h2 className="mb-3">Enquiry </h2>
+      <h2 className="mb-3">Enquiry</h2>
       <Form onSubmit={formik.handleSubmit} className="form-contact">
         <CustomInput
           label="Name"
@@ -180,14 +169,10 @@ const GetInTocuh = () => {
           {formik.errors.userCaptcha && (
             <p className="error">{formik.errors.userCaptcha}</p>
           )}
-          <Row className="align-items-center ">
+          <Row className="align-items-center">
             <Col lg={8}>
               <div className="captcha">
-                <span
-                  
-                >
-                  {captcha}
-                </span>
+                <span>{captcha}</span>
                 <button
                   type="button"
                   onClick={() => {

@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 const FaqsSection = () => {
   const faqs = [
     {
-      question: "Why Choose Pikazo Institute?",
+      question: "Why Choose Pikazzo Institute?",
       answer: (
         <>
           <p>
-            Pikazo Institute is the{" "}
+            Pikazzo Institute is the{" "}
             <strong>
               best animation and multimedia institute in Chandigarh,
             </strong>{" "}
@@ -85,7 +85,7 @@ const FaqsSection = () => {
       ),
     },
     {
-      question: "Will Pikazo Institute help me get a job?",
+      question: "Will Pikazzo Institute help me get a job?",
       answer: (
         <p>
           Yes, we offer job placement support for careers in{" "}
