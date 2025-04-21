@@ -49,33 +49,18 @@ const ContactUsModal = ({ show, handleClose }) => {
     { value: "4:00pm - 5:00pm", label: "4:00pm - 5:00pm" },
     { value: "5:00pm - 6:00pm", label: "5:00pm - 6:00pm" },
   ];
-  const initial = {
-    name: "",
-    email: "",
-    phone: "",
-    course: "",
-    timeSlot: "",
-  };
 
   const validate = (values) => {
     const errors = {};
-    if (!values.name) {
-      errors.name = "Please enter your name";
-    }
+    if (!values.name) errors.name = "Please enter your name";
     if (!values.email) {
       errors.email = "Required";
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
       errors.email = "Invalid email address";
     }
-    if (!values.phone) {
-      errors.phone = "Please enter your phone number";
-    }
-    if (!values.course) {
-      errors.course = "Please select a course";
-    }
-    if (!values.timeSlot) {
-      errors.timeSlot = "Please select a time slot";
-    }
+    if (!values.phone) errors.phone = "Please enter your phone number";
+    if (!values.course) errors.course = "Please select a course";
+    if (!values.timeSlot) errors.timeSlot = "Please select a time slot";
     if (!userCaptcha) {
       errors.userCaptcha = "Please enter the CAPTCHA";
     } else if (userCaptcha !== captcha) {
@@ -92,35 +77,46 @@ const ContactUsModal = ({ show, handleClose }) => {
     handleSubmit,
     errors,
     setFieldValue,
+    resetForm,
   } = useFormik({
-    initialValues: initial,
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      course: "",
+      timeSlot: "",
+    },
     validate,
-    onSubmit: async (values, { resetForm }) => {
+    onSubmit: async (values) => {
       const formData = new FormData();
-      formData.append("access_key", "a6baaa41-ff5b-45a6-8e46-ffff5b66245e");
-      // formData.append("access_key", "bb345f89-5331-4375-8bd4-2b09315e4945");
-
+      // formData.append("access_key", "a6baaa41-ff5b-45a6-8e46-ffff5b66245e");
       formData.append("name", values.name);
       formData.append("email", values.email);
       formData.append("phone", values.phone);
       formData.append("course", values.course);
-      formData.append("timeSlot", values.timeSlot); // 🆕 Append time slot
-      try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData,
-        });
+      formData.append("timeSlot", values.timeSlot);
+      formData.append("_cc", "growdigitalpreneur@gmail.com");
+      formData.append("_subject", "New Enquiry Submitted from Website");
+      formData.append("_template", "table");
 
+      try {
+        const response = await fetch(
+          "https://formsubmit.co/ajax/amitrathore5550@gmail.com",
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
         const data = await response.json();
-        if (data.success) {
-          toast.success("Form Submitted Successfully!");
+        if (data.success === "true") {
           setResult("Form Submitted Successfully");
+          toast.success("Form Submitted Successfully!");
           resetForm();
           setUserCaptcha("");
           setCaptcha(generateCaptcha());
         } else {
-          setResult(data.message);
-          toast.error(data.message);
+          setResult(data.message || "Submission failed");
+          toast.error(data.message || "Submission failed");
         }
       } catch (error) {
         setResult("Error submitting form");
@@ -209,9 +205,9 @@ const ContactUsModal = ({ show, handleClose }) => {
                 onChange={(e) => setUserCaptcha(e.target.value)}
               />
               {errors.userCaptcha && (
-                <p className="error">{formik.errors.userCaptcha}</p>
+                <p className="error">{errors.userCaptcha}</p>
               )}
-              <Row className="align-items-center ">
+              <Row className="align-items-center">
                 <Col lg={8}>
                   <div className="captcha">
                     <span>{captcha}</span>
@@ -231,7 +227,7 @@ const ContactUsModal = ({ show, handleClose }) => {
                   <CommonButton
                     text="Submit"
                     type="submit"
-                    className="mt-4 "
+                    className="mt-4"
                     disabled={userCaptcha !== captcha}
                   />
                 </Col>
@@ -240,6 +236,7 @@ const ContactUsModal = ({ show, handleClose }) => {
           </Form>
         </div>
       </CommonModal>
+      <ToastContainer />
     </>
   );
 };

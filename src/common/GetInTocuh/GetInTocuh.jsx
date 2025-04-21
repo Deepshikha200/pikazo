@@ -77,13 +77,13 @@ const GetInTocuh = () => {
       formData.append("phone", values.phone);
       formData.append("course", values.course);
 
-      formData.append("_cc", "deepshikhap9877@gmail.com");
+      formData.append("_cc", "growdigitalpreneur@gmail.com");
       formData.append("_subject", "New Enquiry Submitted from Website");
       formData.append("_template", "table");
 
       try {
         const response = await fetch(
-          "https://formsubmit.co/ajax/493deepshikha@gmail.com",
+          "https://formsubmit.co/ajax/amitrathore5550@gmail.com",
           {
             method: "POST",
             body: formData,
