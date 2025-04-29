@@ -4,12 +4,11 @@ import { motion } from "motion/react";
 const CommonButton = (props) => {
   return (
     <motion.button
-      initial={{
-      }}
+      initial={{}}
       whileHover={{
         scale: 1.02,
         transition: { duration: 0.2 },
-        
+
         ease: [0, 0.71, 0.2, 1.01],
       }}
       transition={{}}
