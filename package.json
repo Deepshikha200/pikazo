@@ -13,6 +13,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "bootstrap": "^5.3.3",
+    "firebase": "^9.23.0",
     "formik": "^2.4.6",
     "gsap": "^3.12.7",
     "motion": "^11.15.0",
@@ -32,6 +33,7 @@
     "react-toastify": "^11.0.5",
     "sass": "^1.83.0",
     "slick-carousel": "^1.8.1",
+    "tabletop": "^1.6.3",
     "yup": "^1.6.1"
   },
   "devDependencies": {

@@ -12,9 +12,7 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
   const [showModal, setShowModal] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
-  // const handleNavLinkClick = () => {};
-
-  const handleNavLinkClick = (path, offset = 0) => {
+  const handleNavLinkClick = (path, offset = -100) => {
     setNavbarExpanded(false);
     onNavbarToggle(false);
 
@@ -294,13 +292,20 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
                 Students Work
               </NavLink>
 
-              <a
+              {/* <a
                 href="
               https://pikazoinstitute.com/blog"
                 className="nav-link"
               >
                 Blogs
-              </a>
+              </a> */}
+              <NavLink
+                to="/blog"
+                className="nav-link"
+                onClick={handleNavLinkClick}
+              >
+                blog
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
 

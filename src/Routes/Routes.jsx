@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../component/MainLayout/Layout";
+import BlogPage from "../component/Pages/BlogPage/BlogPage";
 
 // Lazy load components
 const Home = lazy(() => import("../component/Pages/Home/Home"));
@@ -131,6 +132,10 @@ const router = createBrowserRouter([
       {
         path: "animation-and-multimedia-institute-in-chandigarh",
         element: <BVocAnimation />,
+      },
+      {
+        path: "blog",
+        element: <BlogPage />,
       },
     ],
   },
