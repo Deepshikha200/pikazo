@@ -1,0 +1,156 @@
+@use "../../assets/theme/var" as *;
+
+.footer {
+  background-color: $navyblue;
+  color: $white;
+  position: relative; // Normal positioning
+  bottom: 0;
+  left: 0;
+  width: 100%; // Ensure it spans the entire width
+  z-index: 1; // Lower than the overlay z-index
+  padding-bottom: 4rem;
+
+  .contact-number {
+    font-size: 1.8rem;
+    margin-left: 6.7rem;
+  }
+
+
+  &-logo {
+    img {
+      height: 60px;
+      width: 190px;
+
+      @media (max-width:1679px) {
+        height: 40px;
+        width: 120px;
+      }
+    }
+  }
+
+  &-container {
+    padding: 7.2rem 0 5.2rem;
+    display: flex;
+
+    @media (max-width:1119px) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    >div {
+      margin-right: 20rem;
+
+      @media (max-width:1679px) {
+        margin-right: 13rem;
+      }
+
+      @media (max-width:1119px) {
+        margin-right: 0;
+        margin-top: 3rem;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-content {
+    max-width: 45rem;
+    width: 100%;
+
+    @media (max-width:1119px) {
+      max-width: 100%;
+    }
+
+    &-text {
+      & p {
+        padding: 2rem 0 2rem;
+
+        @media (max-width:1679px) {
+          padding: 2rem 0;
+          font-size: 1.4rem;
+        }
+
+        @media (max-width:575px) {
+          padding: 1rem 0;
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    &-icons {
+      cursor: pointer;
+      margin-bottom: 3.9rem;
+
+      & svg {
+        path {
+          fill: #f1f1f1;
+        }
+      }
+
+      @media (max-width:991px) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-location {
+
+      margin-bottom: 2.2rem;
+    }
+
+
+  }
+
+  &-links {
+    h5 {
+      padding-bottom: 4rem;
+
+      @media (max-width:1679px) {
+        padding-bottom: 1rem;
+
+      }
+    }
+
+    &_ul {
+      display: flex;
+      gap: 6rem;
+    }
+
+    ul {
+      li {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+
+        @media (max-width:1679px) {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+        }
+
+        @media (max-width:768px) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+
+  &-bottom-links {
+    background-color: $navyblue;
+
+    p {
+      color: $white;
+      padding: 2.8rem 0;
+
+      @media (max-width:768px) {
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  a {
+    color: $white;
+  }
+}

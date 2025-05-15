@@ -1,0 +1,118 @@
+@use "../../../assets/theme/var" as *;
+
+.student {
+  padding-top: 7.6rem;
+  padding-bottom: 6rem;
+
+  &_img {
+    position: relative;
+    z-index: 4;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+
+    .student_heading {
+      text-align: center;
+      color: $navyblue;
+      font-family: $baseFont;
+      font-weight: 600;
+      left: 4rem;
+      font-size: 6rem;
+      padding-top: 4rem;
+      z-index: 44;
+
+      @media (max-width:1679px) {
+        font-size: 4rem;
+        padding-top: 2rem;
+      }
+
+      @media (max-width:480px) {
+        font-size: 2.3rem;
+      }
+    }
+  }
+
+  @media (max-width:767px) {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+
+    .container {
+      padding-inline: 1rem;
+      max-width: 100%;
+    }
+  }
+
+  &_con {
+    padding-inline: 4rem;
+
+    @media (max-width:991px) {
+      padding-inline: 2rem;
+
+    }
+  }
+
+  &_btn {
+    text-align: center;
+    padding-block: 4rem;
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap;
+
+    @media (max-width:991px) {
+      overflow-x: scroll;
+      padding-block: 1rem;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(53, 50, 50);
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+
+
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 2rem;
+      padding: 0.5rem 2rem;
+
+      @media (max-width:767px) {
+        font-size: 1.6rem;
+        padding: 0.1rem 1rem;
+
+      }
+
+      @media (max-width:575px) {
+        font-size: 1.4rem;
+        padding: 0.1rem 1rem;
+
+      }
+
+      &.active {
+        font-weight: 500;
+        border-radius: 1rem;
+        background-color: $primary;
+      }
+    }
+  }
+
+  .artboard {
+    border-radius: 2rem;
+
+    @media (max-width:575px) {
+      border-radius: 1rem;
+
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../assets/theme/var" as *;
+
+.common-heading {
+  padding-bottom: 3rem;
+  text-align: center;
+  
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+    padding: 1.5rem 3rem;
+  }
+
+}
