@@ -48,10 +48,18 @@
       font-weight: 600;
       border: 1px solid #000000;
       height: 4rem;
-      min-width: 12.6rem;
+      min-width: 13.6rem;
       background-color: transparent;
       // padding: 1rem;
       border-radius: 1rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        border: none;
+        background-color: $navyblue;
+        color: $white;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
 }

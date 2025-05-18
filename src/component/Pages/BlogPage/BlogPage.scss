@@ -1,0 +1,66 @@
+@use "../../../assets/theme/_var.scss" as *;
+
+.blog {
+  padding: 19rem 0 5rem;
+  max-width: 116rem;
+  width: 100%;
+  margin: 0 auto;
+
+  &_title {
+    margin-bottom: 10rem;
+    text-align: center;
+
+    & h1 {
+      font-size: 4.8rem;
+      font-weight: 800;
+    }
+  }
+
+  &_row {
+    border-bottom: 2px solid #000000;
+    display: flex;
+    gap: 2.8rem;
+    padding-bottom: 10rem;
+
+    &_img {
+      flex: 0 0 calc(50% - 2.8rem);
+
+      img {
+        max-width: 86.3rem;
+        width: 100%;
+        border-radius: 2rem;
+      }
+    }
+
+    & h3 {
+      margin: 1.5rem 0 2rem;
+    }
+  }
+
+  &_top {
+    display: grid;
+    grid-template-columns: repeat(3, 30rem);
+    justify-content: space-between;
+
+    &_col {
+      border-radius: 1.5rem;
+      margin-bottom: 5rem;
+
+      img {
+        max-width: 28.8rem;
+      }
+    }
+  }
+
+  .recent_post,
+  .top_title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .top_title {
+    margin-top: 4.5rem;
+    font-weight: 600;
+  }
+}
