@@ -1,0 +1,114 @@
+@use "../../../../assets/theme/var" as *;
+
+.faqs {
+  margin-bottom: 9rem;
+
+  @media (max-width:1679px) {
+    margin-bottom: 4rem;
+  }
+
+  .accordion {
+    background-color: transparent;
+
+    .accordion-item {
+      background-color: transparent;
+      margin-bottom: 3rem;
+      border: 1px solid $grey;
+      border-radius: 1rem;
+
+      @media (max-width:768px) {
+        margin-bottom: 1rem;
+      }
+
+      .accordion-header {
+        padding: 0;
+        padding-top: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-family: $baseFont !important;
+      }
+
+      .accordion-button {
+
+        font-size: 2rem;
+        font-weight: 500;
+        background-color: transparent;
+        box-shadow: none;
+
+        @media (max-width:1679px) {
+          font-size: 1.6rem;
+          font-weight: 600;
+
+        }
+
+        @media (max-width:991px) {
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+
+        span {
+
+          svg {
+            margin-right: 1rem;
+            transition: all 0.1s ease-in-out;
+            flex-shrink: 0;
+            max-width: 2.5rem;
+            max-height: 2.5rem;
+
+            @media (max-width:1679px) {
+              max-width: 2.5rem;
+            }
+          }
+        }
+
+        &.collapsed {
+          span {
+            svg {
+              transform: rotate(225deg);
+              transition: all 0.1s ease-in-out;
+            }
+          }
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .accordion-body {
+        color: var(--darktextgrey);
+        padding-left: 5.7rem;
+        padding-bottom: 2rem;
+        font-size: 1.7rem;
+
+        @media (max-width:1679px) {
+          font-size: 1.6rem;
+        }
+
+        strong {
+          a {
+            text-decoration: underline;
+            color: blue;
+          }
+        }
+
+        ul {
+          margin-top: 1rem;
+
+          li {
+            list-style: square;
+          }
+        }
+
+        @media (max-width:575px) {
+          font-size: 14px;
+          padding-left: 31px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}

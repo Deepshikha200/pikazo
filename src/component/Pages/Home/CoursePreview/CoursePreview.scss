@@ -1,0 +1,232 @@
+@use "../../../../assets/theme/var" as *;
+
+.course_preview {
+  background-image: url("../../../../assets/images/videobg.jpg");
+  background-size: contain;
+  background-attachment: fixed;
+  // margin-top: 5rem;
+  position: relative;
+  z-index: 5;
+  padding: 6rem 0;
+
+
+  @media (max-width:1199px) {
+    padding: 3rem 0;
+    margin-top: 2rem;
+  }
+
+  .course-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    
+  }
+
+  .react-player {
+    height: 350px !important;
+
+    // @media (max-width:1199px) {
+    //   height: 284px !important;
+    // }
+
+    // @media (max-width:768px) {
+    //   height: 321px !important;
+    // }
+
+    // @media (max-width:575px) {
+    //   height: 346px !important;
+    // }
+
+    // @media (max-width:375px) {
+    //   height: 294px !important;
+    // }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262B44;
+    z-index: -1;
+    opacity: 0.94;
+  }
+
+  &_item {
+    padding-bottom: 2rem;
+    height: 100%;
+    background-color: $white;
+    max-width: 36rem;
+    width: 100%;
+    height: 100%;
+    padding: 0 2.13rem 2.13rem 2.13rem;
+    border-radius: 2rem;
+    transition: all 0.4s ease-in-out;
+
+
+
+    // &:hover {
+    //   transform: rotate3d(0, 1, 0, 30deg) !important;
+    //   transition: all 0.4s ease-in-out;
+
+    // }
+
+    @media (max-width:767px) {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      // max-width: 100%
+
+    }
+
+    & h4 {
+      font-size: 2.4rem;
+      font-family: Inter;
+
+      @media (max-width:767px) {
+        font-size: 1.8rem;
+      }
+
+    }
+
+    &_text {
+      padding: 1rem;
+
+      & p {
+        font-size: 1.7rem;
+        min-height: 13rem;
+        height: 100%;
+
+        @media (max-width:767px) {
+          font-size: 1.5rem;
+        }
+
+        @media (max-width:575px) {
+          min-height: 0;
+
+        }
+      }
+
+      @media (max-width:1199px) {
+        // padding-inline: 1rem;
+        padding-top: 0;
+
+      }
+    }
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.07);
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width:991px) {
+      &:hover {
+        transform: scale(1);
+
+      }
+    }
+  }
+
+  .thumbnail-overlay {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    @media (max-height:767px) {
+      display: none !important;
+    }
+  }
+
+  .thumbnail {
+    max-width: 100%;
+    border-radius: 2rem;
+  }
+
+  .play-button {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+
+  }
+
+  .react-player {
+    position: relative;
+    z-index: 1;
+    // border-radius: 15px;
+    overflow: hidden;
+    display: block;
+
+    video,
+    iframe {
+      width: 100%;
+      height: 317px !important;
+      margin-top: 2rem !important;
+      border-radius: 2rem;
+
+      @media (max-width:991px) {
+        border-radius: 0;
+
+      }
+
+      @media (max-width:575px) {
+        // height: 286px !important;
+        // border-radius:0 0 3rem 3rem;
+        // margin-top: 3.3rem !important;
+      }
+    }
+  }
+}
+
+.read-more-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+}
+
+.read-more-box {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-out, opacity 0.3s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &.active {
+    max-height: 200px;
+    opacity: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    p {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

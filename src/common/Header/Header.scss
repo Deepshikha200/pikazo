@@ -1,0 +1,353 @@
+@use "../../assets/theme/var" as *;
+
+header {
+  padding: 0;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $navyblue;
+  font-family: 'Poppins';
+
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  .navbar {
+    padding-block: 1.5rem;
+
+    @media (max-width: 768px) {
+      padding-block: 1rem;
+    }
+
+    .logo_img {
+      max-height: 6rem;
+
+      @media (max-width:1679px) {
+        max-height: 5rem;
+      }
+
+      @media (max-width:991px) {
+        max-height: 4rem;
+      }
+    }
+
+    .nav-link {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-right: 2rem;
+      padding-inline: 0 !important;
+      color: $white;
+      padding-bottom: 1rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transition: width 0.5s ease-in-out;
+        background-color: $primary;
+      }
+
+      @media (max-width:1659px) {
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 991px) {
+        padding: 1rem;
+        font-size: 2rem;
+        // margin: 0 auto;
+      }
+
+      &:hover::before {
+        border-color: $primary;
+        width: 100%;
+        transition: width 0.5s ease-in-out;
+        color: $primary !important;
+
+        @media (max-width: 1199px) {
+          width: 0;
+        }
+      }
+
+      &.active {
+        color: $white;
+      }
+
+      // &.active,
+      &:hover {
+        color: $primary;
+      }
+
+      &.show {
+        color: $white;
+      }
+    }
+
+    .navbar-collapse {
+      @media (max-width: 991px) {
+        position: absolute;
+        top: 7.6rem;
+        background: linear-gradient(270.29deg, rgba(7, 77, 140, 0.375) 0.24%, rgba(2, 21, 38, 0.5625) 31.09%, rgba(2, 21, 38, 0.75) 73.88%);
+        width: 100%;
+        left: -100%;
+        backdrop-filter: blur(19px);
+        padding-left: 0.3rem;
+        transition: transform 0.2s ease-in-out;
+        transform: translateX(-100%);
+        height: 100vh;
+        padding-bottom: 4rem;
+        overflow-y: auto;
+
+        &.show {
+          transform: translateX(0);
+          left: 0;
+
+          ~.navbar-toggler {
+
+            .navbar-toggler-icon {
+
+              background-color: transparent;
+              transition: all 0.2s ease-in-out;
+
+              &::before {
+                transform: rotate(45deg) translate(5px, 5px);
+                transition: all 0.2s ease-in-out;
+              }
+
+              &::after {
+                transform: rotate(-45deg) translate(9px, -10px);
+                transition: all 0.2s ease-in-out;
+              }
+            }
+          }
+        }
+
+        .navbar-nav {
+          padding-inline: 1.5rem;
+        }
+      }
+
+      @media (max-width:768px) {
+        top: 6.6rem;
+      }
+
+      @media (max-width:575px) {
+        top: 6.3rem;
+        width: 100%;
+      }
+
+
+    }
+
+    .navbar-toggler {
+      padding: 0;
+      border: 0;
+      box-shadow: none !important;
+      position: relative;
+      z-index: 999;
+
+      &-icon {
+        background-image: none;
+        width: 26px;
+        height: 2px;
+        background-color: #fff;
+        position: relative;
+        transition: all ease-in-out 0.1s;
+
+        &::after,
+        &::before {
+          content: "";
+          background-color: #fff;
+          width: 26px;
+          height: 2px;
+          position: absolute;
+          transition: all ease-in-out 0.1s;
+        }
+
+        &::after {
+          top: 10px;
+          right: 0;
+        }
+
+        &::before {
+          top: -10px;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .header_btn {
+    min-width: 14.6rem;
+    height: 4.6rem;
+    margin-top: 0;
+
+    &:hover {
+      color: $white;
+    }
+
+    @media (max-width:1679px) {
+      min-width: 9.6rem;
+      height: 3.6rem;
+    }
+
+    @media (max-width: 768px) {
+      min-width: 10rem;
+      height: 3rem;
+    }
+
+    @media (max-width:575px) {
+      min-width: 3rem;
+      height: 2.5rem;
+      min-height: 2rem;
+      padding: 13px;
+    }
+  }
+
+
+  .course_menu {
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url("../../assets/images/droparrow.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      right: -1.5rem;
+      top: 1.5rem;
+
+      @media (max-width:991px) {
+        right: 20.5rem;
+        top: 2rem;
+
+      }
+    }
+
+    &_dropdown {
+      border-top: 3px solid $primary;
+      position: absolute;
+      top: 4rem;
+      padding: 1rem 2rem 3rem 2rem;
+      background-color: rgba($navyblue, $alpha: 0.9);
+      color: $white;
+      min-width: 4vw;
+      left: -7rem;
+
+      @media (max-width:1679px) {
+        width: 92rem;
+        left: -24rem;
+        top: 3rem;
+        z-index: 2;
+      }
+
+      @media (max-width:991px) {
+        left: -1.5rem;
+        padding: 0;
+      }
+
+      .items_list {
+        display: flex;
+        gap: 10rem;
+
+        @media (max-width:991px) {
+          display: block;
+        }
+
+        .heading {
+          span {
+            border-bottom: 1px solid $grey;
+            margin-block: 1rem;
+            padding: 0.7rem 1rem;
+            font-size: 1.8rem;
+
+            @media (max-width:1679px) {
+              margin-block: 0.5rem;
+              padding: 0.7rem 0;
+              font-size: 1.6rem;
+            }
+
+            &:hover {
+              color: $primary;
+              cursor: pointer;
+            }
+
+            .active {
+
+              ul {
+                display: block;
+              }
+            }
+          }
+
+          ul {
+            margin-top: 1rem;
+
+            @media (max-width:991px) {
+              display: none;
+            }
+
+            li {
+              a {
+                margin: 1rem;
+                white-space: nowrap;
+                font-weight: 400;
+                transition: all 0.3s ease-in-out;
+                border-radius: 0.7rem;
+                cursor: pointer;
+                color: $white;
+                padding-bottom: 1rem;
+                position: relative;
+
+                @media (max-width:1679px) {
+                  padding-bottom: 0.5rem;
+                  margin: 0.5rem;
+                  font-size: 1.4rem;
+                }
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 0;
+                  height: 2px;
+                  bottom: 0;
+                  left: 0;
+                  transition: width 0.5s ease-in-out;
+                  background-color: $primary;
+                }
+
+                &:hover {
+                  color: $primary;
+
+                  &::before {
+                    border-color: $primary;
+                    width: 100%;
+                    transition: width 0.5s ease-in-out;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-menu.show {
+    background-color: $navyblue;
+    padding-left: 1rem;
+    margin-left: -1rem;
+
+    .dropdown-item {
+      color: $white ;
+      padding: 1rem 0;
+    }
+  }
+}

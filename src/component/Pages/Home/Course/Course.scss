@@ -1,0 +1,122 @@
+@use "../../../../assets/theme/var" as *;
+
+
+.course {
+
+  .moving_text {
+    .rfm-child {
+      font-size: 7rem;
+      font-weight: 700;
+      color: rgba($navyblue, $alpha: 0.89);
+
+      @media (max-width:1679px) {}
+
+      @media (max-width:575px) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .course-container {
+    .course-box {
+      // border-radius: 2rem;
+      // border: 1px solid $borderclr;
+      // height: 100%;
+      border-radius: 2rem;
+      border: 1px solid $borderclr;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 2rem;
+    }
+
+    .heading_text {
+      background-color: $navyblue;
+      padding: 2.6rem 3.6rem;
+      color: $white;
+      border-radius: 2rem 2rem 0 0;
+      gap: 3rem;
+      position: relative;
+
+      @media (max-width:1679px) {
+        padding: 1.6rem 2.6rem;
+
+      }
+
+      .image {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      }
+
+      & h4 {
+        font-size: 3.8rem;
+        font-family: Inter;
+        max-width: 27rem;
+        margin-top: 4rem;
+
+        @media (max-width:1679px) {
+          font-size: 2.5rem;
+          margin-top: 0;
+        }
+
+        @media (max-width:1300px) {
+          font-size: 2.6rem;
+        }
+
+        @media (max-width:1199px) {
+          font-size: 2rem;
+        }
+      }
+
+      >div {
+        height: 42px;
+        width: 42px;
+
+        @media (max-width:1300px) {
+          width: 30px;
+        }
+      }
+    }
+
+    .description {
+      padding: 2rem 3rem;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+
+      @media (max-width:1679px) {
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+      }
+
+      @media (max-width:767px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .enroll_btn_con {
+    margin-top: auto;
+    padding: 0 3rem 2rem 3rem;
+
+    .enroll_btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      button {
+        width: auto;
+        padding: 0 2rem;
+        color: #fff;
+        border: none;
+        border-radius: 1.5rem;
+        height: 4rem;
+        background-color: $navyblue;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@use "../../../../assets/theme/var" as *;
+
+.form {
+  padding-top: 7rem;
+  margin-bottom: 6rem;
+  position: relative;
+  z-index: 88;
+
+  @media (max-width:1679px) {
+    padding-top: 9rem;
+  }
+
+  @media (max-width:1199px) {
+    padding-top: 7rem;
+    margin-bottom: 5rem;
+  }
+
+  @media (max-width:767px) {
+    padding-top: 0;
+    margin-bottom: 3rem;
+  }
+
+
+  &_col {
+    position: relative;
+
+    &_img {
+      position: absolute;
+      height: auto;
+      max-width: 100%;
+
+      img {
+        max-height: 32rem;
+        max-width: 32rem;
+        width: 100%;
+
+        @media (max-width:1679px) {
+          max-width: 26rem;
+        }
+      }
+
+      @media (max-width:991px) {
+        position: relative;
+        text-align: center;
+      }
+    }
+
+    .second {
+      @media (max-width:1199px) {
+        display: none;
+      }
+    }
+
+    .first {
+      top: 14rem;
+      right: 6rem;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        right: 8px;
+        bottom: 8px;
+        background-color: $white;
+        z-index: -1;
+      }
+
+      @media (max-width:1199px) {
+        position: static;
+      }
+    }
+
+    &_text {
+      padding-left: 3rem;
+      padding-right: 5rem;
+
+      @media (max-width:1679px) {
+        padding-left: 0;
+        padding-right: 3rem;
+      }
+
+      @media (max-width:991px) {
+        padding-left: 0;
+        text-align: center;
+      }
+
+      @media (max-width:767px) {
+        margin-top: 3rem;
+
+      }
+
+      h2 {
+        position: relative;
+      }
+
+      & p {
+        color: $grey
+      }
+
+      .learn_more_btn {
+        min-width: 19rem;
+        width: 19rem;
+
+        @media (max-width:767px) {}
+      }
+    }
+  }
+
+  .customInput {
+    margin-bottom: 0;
+    margin-top: 1rem;
+
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+}

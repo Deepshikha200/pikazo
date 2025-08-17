@@ -1,0 +1,169 @@
+@use "../../../../assets/theme/var" as *;
+
+.our-student {
+  background-color: $greybg;
+  padding-top: 9rem;
+  padding-bottom: 2rem;
+
+  @media (max-width: 991px) {
+    padding-top: 5rem;
+  }
+
+  .youtube_slider {
+    margin-top: 6rem;
+    padding: 0 5rem;
+  }
+
+  .slider-item {
+    position: relative;
+    padding: 0 1rem;
+
+    @media (max-width:575px) {
+      // left: 10%;
+      // padding: 0;
+    }
+
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.5rem;
+
+      .img-wrap {
+        overflow: hidden;
+
+        position: relative;
+
+        img {
+          border-radius: 2rem;
+
+          @media (max-width:575px) {
+            border-radius: 1rem;
+          }
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        .view-more-btn {
+          background-color: #fff;
+          color: #551010;
+          border: none;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: $primary;
+          }
+
+          @media (max-width: 767px) {
+            width: 11rem;
+            min-width: 11rem;
+          }
+        }
+      }
+
+      &:hover {
+        .overlay {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .slick-slide img {
+    display: inline !important;
+  }
+
+  // .slick-arrow.slick-prev,
+  // .slick-arrow.slick-next {
+  //   top: 23rem;
+  //   left: 50%;
+  // }
+
+  .slick-arrow.slick-prev {
+    left: -3rem;
+    top: 36%;
+
+
+    // @media (max-width:991px) {
+    //   left: 42%;
+    // }
+
+    // @media (max-width:575px) {
+    //   left: 38%;
+    // }
+  }
+
+  .slick-arrow.slick-next {
+    right: -2rem;
+    top: 36%;
+
+  }
+
+  .slick-next:before {
+    color: $black;
+  }
+
+  .slick-prev:before {
+    color: $black;
+  }
+}
+
+.insta_con {
+  overflow: hidden;
+  width: 100vw;
+}
+
+.instagram_flex {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.instagram_scroll {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  min-width: 200%; // Ensures enough content for animation
+}
+
+.instagram_scroll img {
+  width: 52rem;
+  height: 51.2rem;
+  object-fit: cover;
+  margin-right: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  @media (max-width:1679px) {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  @media (max-width:767px) {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
