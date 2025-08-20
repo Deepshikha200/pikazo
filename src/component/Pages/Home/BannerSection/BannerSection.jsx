@@ -6,7 +6,6 @@ import img3 from "../../../../assets/images/banner_update.jpg";
 import degree from "../../../../assets/images/banner_in1.jpeg";
 import degree2 from "../../../../assets/images/banner_in2.jpeg";
 import Slider from "react-slick";
-import { motion } from "framer-motion";
 import "./BannerSection.scss";
 import GetInTocuh from "../../../../common/GetInTocuh/GetInTocuh";
 
@@ -50,26 +49,6 @@ const BannerSection = () => {
     beforeChange: (current, next) => setCurrentSlide(next),
   };
 
-  const textAnimation = {
-    initial: { opacity: 0, y: 100 },
-    animate: { opacity: 1, y: 0 },
-    transition: {
-      delay: 0.2,
-      duration: 1.2,
-      ease: "easeInOut",
-    },
-  };
-
-  const ButtonAnimation = {
-    initial: { opacity: 0, y: 100 },
-    animate: { opacity: 1, y: 0 },
-    transition: {
-      delay: 0.2,
-      duration: 1.2,
-      ease: "easeInOut",
-    },
-  };
-
   return (
     <section className="banner" id="banner">
       <h1 className="d-block d-md-none mt-4">
@@ -85,14 +64,6 @@ const BannerSection = () => {
               className="banner-container"
               style={{ backgroundImage: `url(${item.image})` }}
             >
-              <div className="overlay-text">
-                <motion.div
-                  key={`button-${index}-${currentSlide}`}
-                  initial="initial"
-                  animate="animate"
-                  {...ButtonAnimation}
-                ></motion.div>
-              </div>
             </div>
           </div>
         ))}

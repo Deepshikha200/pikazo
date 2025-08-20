@@ -1,6 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Container, Form, Row, Col } from "react-bootstrap";
-import bannerImg from "../../../../assets/images/landingimg.png";
+import img1 from "../../../../assets/images/banner.jpg";
+import unreal from "../../../../assets/images/bannerf1.jpg";
+import amd from "../../../../assets/images/banner1.jpeg";
+import img3 from "../../../../assets/images/banner_update.jpg";
+import degree from "../../../../assets/images/banner_in1.jpeg";
+import degree2 from "../../../../assets/images/banner_in2.jpeg";
 import CustomInput from "../../../../common/UI/CustomInput/CustomInput";
 import { useFormik } from "formik";
 import CustomSelect from "../../../../common/UI/Select/CustomSelect";
@@ -8,13 +13,44 @@ import { RefreshButton } from "../../../../assets/images/Icons/SvgIcons";
 import CommonButton from "../../../../common/CommonButton/CommonButton";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
 import "./LandingBanner.scss";
 
 const LandingBanner = () => {
   const [captcha, setCaptcha] = useState("");
   const [userCaptcha, setUserCaptcha] = useState("");
   const navigate = useNavigate();
+  const sliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Slider Images
+  const content = [
+    { image: amd },
+    { image: degree },
+    { image: unreal },
+    { image: degree2 },
+    { image: img1 },
+    { image: img3 },
+  ];
+
+  // Slider settings
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    vertical: true,
+    verticalSwiping: true,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    arrows: false,
+    beforeChange: (current, next) => setCurrentSlide(next),
+  };
+
+  // Captcha
   const generateCaptcha = () => {
     const chars =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -29,6 +65,7 @@ const LandingBanner = () => {
     setCaptcha(generateCaptcha());
   }, []);
 
+  // Form Options
   const courseOptions = [
     { value: "degreeprogram", label: "Degree Program" },
     { value: "animation", label: "Animation" },
@@ -49,6 +86,7 @@ const LandingBanner = () => {
     { value: "5:00pm - 6:00pm", label: "5:00pm - 6:00pm" },
   ];
 
+  // Validation
   const validate = (values) => {
     const errors = {};
     if (!values.firstName) errors.firstName = "Please enter your first name";
@@ -75,6 +113,7 @@ const LandingBanner = () => {
     return errors;
   };
 
+  // Formik
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -129,13 +168,26 @@ const LandingBanner = () => {
       }
     },
   });
+
   return (
     <section className="landing_banner">
       <Container>
         <div className="landing_banner_con">
-          <div className="landing_banner_img">
-            <img src={bannerImg} alt="team-img" />
+          {/* Slider Section */}
+          <div className="landing_banner_slider">
+            <Slider ref={sliderRef} {...settings}>
+              {content.map((item, index) => (
+                <div key={index}>
+                  <div
+                    className="banner-container"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  ></div>
+                </div>
+              ))}
+            </Slider>
           </div>
+
+          {/* Form Section */}
           <div className="landing_banner_form">
             <h2>Start Your Creative Journey</h2>
             <p>
@@ -144,119 +196,7 @@ const LandingBanner = () => {
             </p>
             <Form onSubmit={formik.handleSubmit} className="form-contact">
               <Row>
-                <Col lg={6}>
-                  <CustomInput
-                    type="text"
-                    name="firstName"
-                    placeholder="First Name"
-                    value={formik.values.firstName}
-                    onChange={formik.handleChange}
-                  />
-                  {formik.errors.firstName && (
-                    <p className="error">{formik.errors.firstName}</p>
-                  )}</Col>
-
-                <Col lg={6}>
-                  <CustomInput
-                    type="text"
-                    name="lastName"
-                    placeholder="Last Name"
-                    value={formik.values.lastName}
-                    onChange={formik.handleChange}
-                  />
-                  {formik.errors.lastName && (
-                    <p className="error">{formik.errors.lastName}</p>
-                  )}</Col>
-                <Col lg={6}>
-                  <CustomInput
-                    type="email"
-                    name="email"
-                    placeholder="Email address"
-                    value={formik.values.email}
-                    onChange={formik.handleChange}
-                  />
-                  {formik.errors.email && (
-                    <p className="error">{formik.errors.email}</p>
-                  )}</Col>
-                <Col lg={6}>
-                  <CustomInput
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    value={formik.values.phone}
-                    onChange={formik.handleChange}
-                  />
-                  {formik.errors.phone && (
-                    <p className="error">{formik.errors.phone}</p>
-                  )}
-
-                </Col>
-                <Col lg={6}>
-                  <CustomSelect
-                    options={courseOptions}
-                    name="course"
-                    placeholder="Select Course"
-                    value={
-                      courseOptions.find(
-                        (option) => option.value === formik.values.course
-                      ) || ""
-                    }
-                    onChange={(selectedOption) => {
-                      formik.setFieldValue("course", selectedOption.value);
-                    }}
-                  />
-                  {formik.errors.course && (
-                    <p className="error">{formik.errors.course}</p>
-                  )}
-                </Col>
-                <Col lg={6}>
-                  <CustomSelect
-                    options={timeSlots}
-                    name="timeSlot"
-                    placeholder="Select Time Slot"
-                    value={
-                      timeSlots.find(
-                        (slot) => slot.value === formik.values.timeSlot
-                      ) || ""
-                    }
-                    onChange={(selectedOption) =>
-                      formik.setFieldValue("timeSlot", selectedOption.value)
-                    }
-                  />
-                  {formik.errors.timeSlot && (
-                    <p className="error">{formik.errors.timeSlot}</p>
-                  )}
-                </Col>
-
-                <Col lg={6}>
-                  <div className="captcha-box">
-                    <CustomInput
-                      type="text"
-                      className="captcha-box-input"
-                      placeholder="Enter CAPTCHA"
-                      value={userCaptcha}
-                      onChange={(e) => setUserCaptcha(e.target.value)}
-                    />
-                    {formik.errors.userCaptcha && (
-                      <p className="error">{formik.errors.userCaptcha}</p>
-                    )}
-                  </div>
-                </Col>
-                <Col lg={6}>
-                  <div className="captcha">
-                    <span>{captcha}</span>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setCaptcha(generateCaptcha());
-                        setUserCaptcha("");
-                      }}
-                      className="refresh-button"
-                    >
-                      <RefreshButton />
-                    </button>
-                  </div>
-                </Col>
+                <Col lg={6}> <CustomInput type="text" name="firstName" placeholder="First Name" value={formik.values.firstName} onChange={formik.handleChange} /> {formik.errors.firstName && (<p className="error">{formik.errors.firstName}</p>)}</Col> <Col lg={6}> <CustomInput type="text" name="lastName" placeholder="Last Name" value={formik.values.lastName} onChange={formik.handleChange} /> {formik.errors.lastName && (<p className="error">{formik.errors.lastName}</p>)}</Col> <Col lg={6}> <CustomInput type="email" name="email" placeholder="Email address" value={formik.values.email} onChange={formik.handleChange} /> {formik.errors.email && (<p className="error">{formik.errors.email}</p>)}</Col> <Col lg={6}> <CustomInput type="tel" name="phone" placeholder="Phone Number" value={formik.values.phone} onChange={formik.handleChange} /> {formik.errors.phone && (<p className="error">{formik.errors.phone}</p>)} </Col> <Col lg={6}> <CustomSelect options={courseOptions} name="course" placeholder="Select Course" value={courseOptions.find((option) => option.value === formik.values.course) || ""} onChange={(selectedOption) => { formik.setFieldValue("course", selectedOption.value); }} /> {formik.errors.course && (<p className="error">{formik.errors.course}</p>)} </Col> <Col lg={6}> <CustomSelect options={timeSlots} name="timeSlot" placeholder="Select Time Slot" value={timeSlots.find((slot) => slot.value === formik.values.timeSlot) || ""} onChange={(selectedOption) => formik.setFieldValue("timeSlot", selectedOption.value)} /> {formik.errors.timeSlot && (<p className="error">{formik.errors.timeSlot}</p>)} </Col> <Col lg={6}> <div className="captcha-box"> <CustomInput type="text" className="captcha-box-input" placeholder="Enter CAPTCHA" value={userCaptcha} onChange={(e) => setUserCaptcha(e.target.value)} /> {formik.errors.userCaptcha && (<p className="error">{formik.errors.userCaptcha}</p>)} </div> </Col> <Col lg={6}> <div className="captcha"> <span>{captcha}</span> <button type="button" onClick={() => { setCaptcha(generateCaptcha()); setUserCaptcha(""); }} className="refresh-button" > <RefreshButton /> </button> </div> </Col>
               </Row>
               <div className="form_btn">
                 <CommonButton

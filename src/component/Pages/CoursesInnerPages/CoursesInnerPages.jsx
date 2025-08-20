@@ -3,7 +3,6 @@ import "./CoursesInnerPages.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { RedCross } from "../../../assets/images/Icons/SvgIcons";
-import { motion } from "motion/react";
 import GetInTocuh from "./../../../common/GetInTocuh/GetInTocuh";
 
 const CoursesInnerPages = ({
