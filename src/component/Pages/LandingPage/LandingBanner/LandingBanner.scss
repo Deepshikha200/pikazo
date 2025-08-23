@@ -181,6 +181,10 @@
       min-height: 60vh;
     }
 
+    @media (max-width:767px) {
+      min-height: 50vh;
+    }
+
     .banner-container {
       min-height: 80vh;
       background-size: cover;
@@ -191,6 +195,11 @@
         min-height: 60vh;
         border-radius: 2rem;
       }
+
+      @media (max-width:767px) {
+        min-height: 50vh;
+      }
+
     }
   }
 }

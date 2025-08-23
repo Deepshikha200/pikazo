@@ -29,7 +29,7 @@ const LandingBanner = () => {
     { image: degree },
     { image: unreal },
     { image: degree2 },
-    { image: img1 },
+    // { image: img1 },
     { image: img3 },
   ];
 
@@ -40,7 +40,7 @@ const LandingBanner = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1500,
     vertical: true,
     verticalSwiping: true,
@@ -78,6 +78,8 @@ const LandingBanner = () => {
     { value: "ai", label: "AI Content Creation" },
   ];
 
+  // Commented Time Slot options
+  /*
   const timeSlots = [
     { value: "11:00am - 12:00pm", label: "11:00am - 12:00pm" },
     { value: "12:00pm - 1:00pm", label: "12:00pm - 1:00pm" },
@@ -85,6 +87,7 @@ const LandingBanner = () => {
     { value: "4:00pm - 5:00pm", label: "4:00pm - 5:00pm" },
     { value: "5:00pm - 6:00pm", label: "5:00pm - 6:00pm" },
   ];
+  */
 
   // Validation
   const validate = (values) => {
@@ -102,7 +105,7 @@ const LandingBanner = () => {
 
     if (!values.phone) errors.phone = "Please enter your phone number";
     if (!values.course) errors.course = "Please select a course";
-    if (!values.timeSlot) errors.timeSlot = "Please select a time slot";
+    // if (!values.timeSlot) errors.timeSlot = "Please select a time slot";
 
     if (!userCaptcha) {
       errors.userCaptcha = "Please enter the CAPTCHA";
@@ -121,7 +124,7 @@ const LandingBanner = () => {
       email: "",
       phone: "",
       course: "",
-      timeSlot: "",
+      // timeSlot: "",
     },
     validate,
     onSubmit: async (values, { resetForm }) => {
@@ -133,7 +136,7 @@ const LandingBanner = () => {
       formData.append("email", values.email);
       formData.append("phone", values.phone);
       formData.append("course", values.course);
-      formData.append("timeSlot", values.timeSlot);
+      // formData.append("timeSlot", values.timeSlot);
 
       formData.append(
         "_cc",
@@ -150,6 +153,7 @@ const LandingBanner = () => {
             body: formData,
           }
         );
+
         const data = await response.json();
         toast.dismiss(toastId);
 
@@ -194,15 +198,123 @@ const LandingBanner = () => {
               Fill out the form and our counsellors will get in touch with you
               soon.
             </p>
+
             <Form onSubmit={formik.handleSubmit} className="form-contact">
               <Row>
-                <Col lg={6}> <CustomInput type="text" name="firstName" placeholder="First Name" value={formik.values.firstName} onChange={formik.handleChange} /> {formik.errors.firstName && (<p className="error">{formik.errors.firstName}</p>)}</Col> <Col lg={6}> <CustomInput type="text" name="lastName" placeholder="Last Name" value={formik.values.lastName} onChange={formik.handleChange} /> {formik.errors.lastName && (<p className="error">{formik.errors.lastName}</p>)}</Col> <Col lg={6}> <CustomInput type="email" name="email" placeholder="Email address" value={formik.values.email} onChange={formik.handleChange} /> {formik.errors.email && (<p className="error">{formik.errors.email}</p>)}</Col> <Col lg={6}> <CustomInput type="tel" name="phone" placeholder="Phone Number" value={formik.values.phone} onChange={formik.handleChange} /> {formik.errors.phone && (<p className="error">{formik.errors.phone}</p>)} </Col> <Col lg={6}> <CustomSelect options={courseOptions} name="course" placeholder="Select Course" value={courseOptions.find((option) => option.value === formik.values.course) || ""} onChange={(selectedOption) => { formik.setFieldValue("course", selectedOption.value); }} /> {formik.errors.course && (<p className="error">{formik.errors.course}</p>)} </Col> <Col lg={6}> <CustomSelect options={timeSlots} name="timeSlot" placeholder="Select Time Slot" value={timeSlots.find((slot) => slot.value === formik.values.timeSlot) || ""} onChange={(selectedOption) => formik.setFieldValue("timeSlot", selectedOption.value)} /> {formik.errors.timeSlot && (<p className="error">{formik.errors.timeSlot}</p>)} </Col> <Col lg={6}> <div className="captcha-box"> <CustomInput type="text" className="captcha-box-input" placeholder="Enter CAPTCHA" value={userCaptcha} onChange={(e) => setUserCaptcha(e.target.value)} /> {formik.errors.userCaptcha && (<p className="error">{formik.errors.userCaptcha}</p>)} </div> </Col> <Col lg={6}> <div className="captcha"> <span>{captcha}</span> <button type="button" onClick={() => { setCaptcha(generateCaptcha()); setUserCaptcha(""); }} className="refresh-button" > <RefreshButton /> </button> </div> </Col>
+                {/* First Name */}
+                <Col lg={6}>
+                  <CustomInput
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    value={formik.values.firstName}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.errors.firstName && (
+                    <p className="error">{formik.errors.firstName}</p>
+                  )}
+                </Col>
+
+                {/* Last Name */}
+                <Col lg={6}>
+                  <CustomInput
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                    value={formik.values.lastName}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.errors.lastName && (
+                    <p className="error">{formik.errors.lastName}</p>
+                  )}
+                </Col>
+
+                {/* Email */}
+                <Col lg={6}>
+                  <CustomInput
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.errors.email && (
+                    <p className="error">{formik.errors.email}</p>
+                  )}
+                </Col>
+
+                {/* Phone */}
+                <Col lg={6}>
+                  <CustomInput
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    value={formik.values.phone}
+                    onChange={formik.handleChange}
+                  />
+                  {formik.errors.phone && (
+                    <p className="error">{formik.errors.phone}</p>
+                  )}
+                </Col>
+
+                {/* Course Select */}
+                <Col lg={12}>
+                  <CustomSelect
+                    options={courseOptions}
+                    name="course"
+                    placeholder="Select Course"
+                    value={
+                      courseOptions.find(
+                        (option) => option.value === formik.values.course
+                      ) || ""
+                    }
+                    onChange={(selectedOption) =>
+                      formik.setFieldValue("course", selectedOption.value)
+                    }
+                  />
+                  {formik.errors.course && (
+                    <p className="error">{formik.errors.course}</p>
+                  )}
+                </Col>
+
+                <Col lg={6}>
+                  <div className="captcha-box">
+                    <CustomInput
+                      type="text"
+                      className="captcha-box-input"
+                      placeholder="Enter CAPTCHA"
+                      value={userCaptcha}
+                      onChange={(e) => setUserCaptcha(e.target.value)}
+                    />
+                    {formik.errors.userCaptcha && (
+                      <p className="error">{formik.errors.userCaptcha}</p>
+                    )}
+                  </div>
+                </Col>
+
+                {/* Captcha Display */}
+                <Col lg={6}>
+                  <div className="captcha">
+                    <span>{captcha}</span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setCaptcha(generateCaptcha());
+                        setUserCaptcha("");
+                      }}
+                      className="refresh-button"
+                    >
+                      <RefreshButton />
+                    </button>
+                  </div>
+                </Col>
               </Row>
+
               <div className="form_btn">
                 <CommonButton
                   text="Submit"
                   type="submit"
-                  className="mt-5 form_btn_text "
+                  className="mt-5 form_btn_text"
                 />
               </div>
             </Form>
