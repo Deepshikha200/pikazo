@@ -137,6 +137,15 @@
   display: flex;
   animation: scroll 25s linear infinite;
   min-width: 200%; // Ensures enough content for animation
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  @media (max-width: 575px) {
+    animation: scroll 5s linear infinite;
+
+  }
 }
 
 .instagram_scroll img {
