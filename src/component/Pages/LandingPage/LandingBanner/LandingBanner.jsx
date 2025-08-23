@@ -40,7 +40,7 @@ const LandingBanner = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 1500,
     vertical: true,
     verticalSwiping: true,
