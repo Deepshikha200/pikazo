@@ -1,5 +1,7 @@
 import { Container } from "react-bootstrap";
-import logo from "../../assets/images/PIKAZZO-logo.png";
+// import logo from "../../assets/images/PIKAZZO-logo.png";
+import logo from "../../assets/images/Pikazzo logo.png";
+
 import {
   Instagram,
   Linkdin,
