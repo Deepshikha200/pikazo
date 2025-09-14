@@ -29,6 +29,10 @@
       flex-direction: column;
       justify-content: space-between;
       padding-bottom: 2rem;
+
+      @media (max-width:1199px) {
+        border-radius: 1.4rem;
+      }
     }
 
     .heading_text {
@@ -41,13 +45,20 @@
 
       @media (max-width:1679px) {
         padding: 1.6rem 2.6rem;
+      }
 
+      @media (max-width:1199px) {
+        border-radius: 1.4rem 1.4rem 0 0;
       }
 
       .image {
         position: absolute;
         top: 2rem;
         right: 2rem;
+
+        @media (max-width:1199px) {
+          top: 1.4rem;
+        }
       }
 
       & h4 {
@@ -116,7 +127,14 @@
         height: 4rem;
         background-color: $navyblue;
         flex-shrink: 0;
+        @media (max-width:575px) {
+          border-radius: 1rem;
+        }
       }
+    }
+
+    @media (max-width:1199px) {
+      padding: 3rem 0rem 0rem 0rem;
     }
   }
 }

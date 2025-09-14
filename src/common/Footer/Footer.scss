@@ -8,11 +8,11 @@
   left: 0;
   width: 100%; // Ensure it spans the entire width
   z-index: 1; // Lower than the overlay z-index
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 
   .contact-number {
     font-size: 1.8rem;
-    margin-left: 6.7rem;
+    // margin-left: 6.7rem;
   }
 
 
@@ -39,10 +39,11 @@
     }
 
     >div {
-      margin-right: 20rem;
+      margin-right: 13rem;
+      width: 100%;
 
       @media (max-width:1679px) {
-        margin-right: 13rem;
+        margin-right: 10rem;
       }
 
       @media (max-width:1119px) {

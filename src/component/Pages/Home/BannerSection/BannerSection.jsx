@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import img1 from "../../../../assets/images/banner.jpg";
+import { useState, useRef } from "react";
+// import img1 from "../../../../assets/images/banner.jpg";
 import unreal from "../../../../assets/images/bannerf1.jpg";
 import amd from "../../../../assets/images/banner1.jpeg";
 import img3 from "../../../../assets/images/banner_update.jpg";
@@ -23,9 +23,9 @@ const BannerSection = () => {
     {
       image: degree2,
     },
-    {
-      image: img1,
-    },
+    // {
+    //   image: img1,
+    // },
     {
       image: img3,
     },

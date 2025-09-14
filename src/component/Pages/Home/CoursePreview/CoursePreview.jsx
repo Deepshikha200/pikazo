@@ -41,7 +41,7 @@ const CoursePreview = () => {
       title: "UI/UX ",
       url: ui,
       description:
-        "This course includes environment making, character creation, gaming visual effects, and learning software like Unreal Engine and Unity.",
+        "This course focuses on designing intuitive and engaging user experiences and interfaces for digital products. Learn principles of user research, wireframing, prototyping, usability testing, and visual design to create user-friendly websites, mobile apps, and software. Master industry-standard tools for creating impactful and accessible digital experiences.",
       thumbnail: thumbnail6,
     },
     {
@@ -145,9 +145,8 @@ const CoursePreview = () => {
                 </div>
                 <div className="description-add">
                   <div
-                    className={`read-more-box ${
-                      expandedCourses[course.id] ? "active" : ""
-                    }`}
+                    className={`read-more-box ${expandedCourses[course.id] ? "active" : ""
+                      }`}
                   >
                     <p>
                       {expandedCourses[course.id] ? course.description : ``}

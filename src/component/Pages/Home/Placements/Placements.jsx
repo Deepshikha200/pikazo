@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import "./Placements.scss";
 import { PlacementImg } from "../../../../assets/Student_Work/ArtImages.js";
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading.jsx";
 import { gsap } from "gsap";
@@ -21,6 +20,7 @@ import placement13 from "../../../../assets/images/Placements/placement13.png";
 import placement14 from "../../../../assets/images/Placements/placement14.png";
 import placement15 from "../../../../assets/images/Placements/placement15.png";
 import placement16 from "../../../../assets/images/Placements/placement16.png";
+import "./Placements.scss";
 
 const Placements = () => {
   gsap.registerPlugin(ScrollTrigger);

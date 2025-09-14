@@ -63,7 +63,7 @@ const Footer = () => {
               </span>
               <span>
                 <Link
-                  to="https://www.instagram.com/pikazoinstitute/"
+                  to="https://www.instagram.com/pikazzoinstitute/"
                   target="_blank"
                 >
                   <Instagram />
@@ -71,7 +71,7 @@ const Footer = () => {
               </span>
               <span>
                 <Link
-                  to="https://www.youtube.com/@pikazoinstitute"
+                  to="https://www.youtube.com/@pikazzoinstitute"
                   target="_blank"
                 >
                   <Youtube />
@@ -161,14 +161,31 @@ const Footer = () => {
                 SCO 176, (TOP FLOOR) <br /> Sector 39-D, Chandigarh.
               </a>
             </div>
-            <a href="tel:+919569473492" className="contact-number ">
-              +91 95694-73492
-            </a>
+            <div className="d-flex align-items-center flex-wrap gap-3  gap-xl-5 mb-5">
+              <a href="tel:+919569473492" className="contact-number ">
+                +91 95694-73492
+              </a>
+              <a href="tel:+919569473492" className="contact-number ">
+                +91 9056513316
+              </a>
+            </div>
 
-            <a href="tel:+919569473492" className="contact-number ">
-              +91 9056513316
-            </a>
+            {/* Embedded Google Map */}
+            <div className="footer-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.1092426969517!2d76.72523821102091!3d30.743432785009652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed5e02ccbbcf%3A0xfa77da377849463f!2sPikazzo%20Institute%20-%20Best%20Animation%20%26%20VFX%20Institute!5e0!3m2!1sen!2sin!4v1757826976220!5m2!1sen!2sin"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Pikazzo Location"
+              ></iframe>
+            </div>
           </div>
+
+
         </div>
       </Container>
     </footer>

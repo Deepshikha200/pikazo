@@ -20,7 +20,7 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    
+
   }
 
   .react-player {
@@ -95,7 +95,7 @@
 
       & p {
         font-size: 1.7rem;
-        min-height: 13rem;
+        min-height: 12rem;
         height: 100%;
 
         @media (max-width:767px) {
@@ -220,7 +220,7 @@
   padding-bottom: 0;
 
   &.active {
-    max-height: 200px;
+    max-height: 29rem;
     opacity: 1;
     padding-top: 1rem;
     padding-bottom: 1rem;

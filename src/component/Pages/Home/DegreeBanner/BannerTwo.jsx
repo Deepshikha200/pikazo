@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import light_logo from "../../../../assets/images/light_logo.png";
 import happy_student from "../../../../assets/images/happy_student.png";
 // import update from "../../../../assets/images/updateimg.png";
-import dark_logo from "../../../../assets/images/dark_logo.png";
+import dark_logo from "../../../../assets/images/Pikazzo logo dark.png";
 
 import { ButtonArrow } from "../../../../assets/images/Icons/SvgIcons";
 import "./DegreeBanner.scss";

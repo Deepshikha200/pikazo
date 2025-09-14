@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import CommonButton from "../CommonButton/CommonButton";
-import logo from "../../assets/images/PIKAZZO-logo.png";
+import logo from "../../assets/images/Pikazzo logo.png";
 import ContactUsModal from "../Modal/ContactUsModal";
 
 import "./Header.scss";
 
-const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
+const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
@@ -292,13 +292,13 @@ const Header = ({ onNavbarToggle = () => {}, isScrolled }) => {
                 Students Work
               </NavLink>
 
-              <a
+              {/* <a
                 href="
               https://pikazoinstitute.com/blog"
                 className="nav-link"
               >
                 Blogs
-              </a>
+              </a> */}
               {/* <NavLink
                 to="/blogs"
                 className="nav-link"

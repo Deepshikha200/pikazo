@@ -148,16 +148,16 @@ const router = createBrowserRouter([
       // },
     ],
   },
-  {
-    path: "/landing-page",
-    element: <LandingPageLayout />,
-    children: [
-      {
-        index: "/landing-page",
-        element: <LandingPage />,
-      },
-    ],
-  }
+  // {
+  //   path: "/landing-page",
+  //   element: <LandingPageLayout />,
+  //   children: [
+  //     {
+  //       index: "/landing-page",
+  //       element: <LandingPage />,
+  //     },
+  //   ],
+  // }
 ]);
 
 const Routes = () => <RouterProvider router={router} />;

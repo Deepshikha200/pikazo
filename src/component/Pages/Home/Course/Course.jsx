@@ -59,6 +59,7 @@ const Course = () => {
               sm={6}
               xs={12}
               className="mb-5 course_col"
+              key={index}
             >
               <motion.div
                 className="course-box mx-2"

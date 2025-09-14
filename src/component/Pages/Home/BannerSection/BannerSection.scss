@@ -82,6 +82,11 @@
 
   }
 
+  .slick-slider {
+    @media (max-width:767px) {
+      margin-top: 3rem;
+    }
+  }
 
   .slick-vertical .slick-slide {
     border: none !important;
