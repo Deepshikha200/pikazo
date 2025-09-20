@@ -109,7 +109,7 @@ const FormPage = () => {
                 Pikazzo is an institute experienced with 2D & 3D Animation,
                 Visual effects (VFX), Motion Graphics, Video editing,
                 photography, and Film making and is based in Chandigarh. We have
-                been providing students industrial training for 5+ years and now
+                been providing students industrial training for 9+ years and now
                 we are offering a commercial platform for students to help build
                 a career.
               </p>
@@ -118,7 +118,7 @@ const FormPage = () => {
                 We offer 2D & 3D animation, Visual effects (VFX), Graphic
                 Designing, Photography, Cinematography, Film making, Gaming, and
                 much more with trained professional artists who have worked in
-                the industry for more than 5+ years.
+                the industry for more than 9+ years.
               </p>
               {/* <CommonButton text="Learn More" className="learn_more_btn" /> */}
               <div className=" d-flex gap-3 justify-content-center  justify-content-lg-start   mt-5">
