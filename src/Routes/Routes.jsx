@@ -1,9 +1,7 @@
 import { lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../component/MainLayout/Layout";
-import LandingPageLayout from "../component/MainLayout/LandingPageLayout";
-import LandingPage from "../component/Pages/LandingPage/LandingPage";
-// import BlogPage from "../component/Pages/BlogPage/BlogPage";
+import { ROUTES } from "../utils/Constants";
 
 // Lazy load components
 const Home = lazy(() => import("../component/Pages/Home/Home"));
@@ -63,101 +61,57 @@ const BVocAnimation = lazy(() =>
   )
 );
 
-// Loading component
-
+// Router setup using ROUTES
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: ROUTES.HOME,
     element: <Layout />,
     children: [
+      { index: true, element: <Home /> },
+      { path: ROUTES.STUDENTS_WORK.replace("/", ""), element: <StudentWork /> },
+      { path: ROUTES.GO_BACK.replace("/", ""), element: <ThankyouPage /> },
       {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "students-work",
-        element: <StudentWork />,
-      },
-      {
-        path: "thank-you",
-        element: <ThankyouPage />,
-      },
-      {
-        path: "certificate-verification",
+        path: ROUTES.CERTIFICATE_VERIFICATION.replace("/", ""),
         element: <CertificatePage />,
       },
+      { path: ROUTES.EVENTS.replace("/", ""), element: <EventsAndActivites /> },
       {
-        path: "events-and-activities",
-        element: <EventsAndActivites />,
-      },
-      {
-        path: "graphic-designing-institute-in-chandigarh",
+        path: ROUTES.GRAPHIC_DESIGN.replace("/", ""),
         element: <GraphicDesign />,
       },
+      { path: ROUTES.ANIMATION.replace("/", ""), element: <AnimationCourse /> },
       {
-        path: "best-3d-animation-degree-courses-in-chandigarh",
-        element: <AnimationCourse />,
-      },
-      {
-        path: "cinematography-course",
+        path: ROUTES.CINEMATOGRAPHY.replace("/", ""),
         element: <Cinematography />,
       },
       {
-        path: "digital-marketing-institute-in-chandigarh",
+        path: ROUTES.DIGITAL_MARKETING.replace("/", ""),
         element: <DigitalMarketing />,
       },
       {
-        path: "diploma-in-animation",
+        path: ROUTES.DIPLOMA_ANIMATION.replace("/", ""),
         element: <DiplomainAnimation />,
       },
+      { path: ROUTES.FILM_MAKING.replace("/", ""), element: <FlimMaking /> },
+      { path: ROUTES.GAME_DESIGN.replace("/", ""), element: <GameDesign /> },
       {
-        path: "film-making-institute-in-chandigarh",
-        element: <FlimMaking />,
-      },
-      {
-        path: "game-design-course",
-        element: <GameDesign />,
-      },
-      {
-        path: "motion-graphics-course",
+        path: ROUTES.MOTION_GRAPHICS.replace("/", ""),
         element: <MotionGraphics />,
       },
+      { path: ROUTES.PHOTOGRAPHY.replace("/", ""), element: <Photography /> },
+      { path: ROUTES.UI_UX.replace("/", ""), element: <UiUx /> },
+      { path: ROUTES.VFX.replace("/", ""), element: <VFXCourse /> },
       {
-        path: "photography-course",
-        element: <Photography />,
-      },
-      {
-        path: "ui-ux-course",
-        element: <UiUx />,
-      },
-      {
-        path: "vfx-institute-in-chandigarh",
-        element: <VFXCourse />,
-      },
-      {
-        path: "video-editing-course",
+        path: ROUTES.VIDEO_EDITING.replace("/", ""),
         element: <VideoEditing />,
       },
       {
-        path: "animation-and-multimedia-institute-in-chandigarh",
+        path: ROUTES.DEGREE_ANIMATION.replace("/", ""),
         element: <BVocAnimation />,
       },
-      // {
-      //   path: "blogs",
-      //   element: <BlogPage />,
-      // },
+      // Add other routes here if needed
     ],
   },
-  // {
-  //   path: "/landing-page",
-  //   element: <LandingPageLayout />,
-  //   children: [
-  //     {
-  //       index: "/landing-page",
-  //       element: <LandingPage />,
-  //     },
-  //   ],
-  // }
 ]);
 
 const Routes = () => <RouterProvider router={router} />;

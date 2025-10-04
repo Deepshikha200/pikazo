@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { motion } from "framer-motion";
-import "./Awards.scss";
 import Artboard1 from "../../../../assets/images/Artboard1.png";
 import Artboard2 from "../../../../assets/images/Artboard2.png";
 import Artboard3 from "../../../../assets/images/Artboard3.png";
@@ -9,6 +8,7 @@ import Artboard4 from "../../../../assets/images/Artboard4.png";
 import Artboard5 from "../../../../assets/images/Artboard5.png";
 import Artboard6 from "../../../../assets/images/Artboard6.png";
 import Artboard7 from "../../../../assets/images/Artboard7.png";
+import "./Awards.scss";
 
 const Awards = () => {
   const boxes = [

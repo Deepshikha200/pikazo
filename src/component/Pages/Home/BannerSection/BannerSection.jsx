@@ -1,13 +1,12 @@
 import { useState, useRef } from "react";
-// import img1 from "../../../../assets/images/banner.jpg";
 import unreal from "../../../../assets/images/bannerf1.jpg";
 import amd from "../../../../assets/images/banner1.jpeg";
 import img3 from "../../../../assets/images/banner_update.jpg";
 import degree from "../../../../assets/images/banner_in1.jpeg";
 import degree2 from "../../../../assets/images/banner_in2.jpeg";
 import Slider from "react-slick";
-import "./BannerSection.scss";
 import GetInTocuh from "../../../../common/GetInTocuh/GetInTocuh";
+import "./BannerSection.scss";
 
 const BannerSection = () => {
   const content = [
@@ -23,9 +22,7 @@ const BannerSection = () => {
     {
       image: degree2,
     },
-    // {
-    //   image: img1,
-    // },
+
     {
       image: img3,
     },

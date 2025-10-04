@@ -4,7 +4,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import CommonButton from "../CommonButton/CommonButton";
 import logo from "../../assets/images/Pikazzo logo.png";
 import ContactUsModal from "../Modal/ContactUsModal";
-
+import { ROUTES } from "../../utils/Constants";
 import "./Header.scss";
 
 const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
@@ -37,61 +37,34 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
   };
   const location = useLocation();
   const pathname = location.pathname;
+
+
   const certificateCourses = [
-    {
-      path: "/graphic-designing-institute-in-chandigarh",
-      name: "Graphic Design Course",
-    },
-    { path: "/motion-graphics-course", name: "Motion Graphics Course" },
-    { path: "/video-editing-course", name: "Video Editing Course" },
-    {
-      path: "/best-3d-animation-degree-courses-in-chandigarh",
-      name: "Animation Course",
-    },
-    {
-      path: "/vfx-institute-in-chandigarh",
-      name: "VFX Course",
-    },
-    { path: "/photography-course", name: "Photography" },
-    {
-      path: "/film-making-institute-in-chandigarh",
-      name: "Film Making",
-    },
-    { path: "/cinematography-course", name: "Cinematography" },
-    {
-      path: "/digital-marketing-institute-in-chandigarh",
-      name: "Digital Marketing",
-    },
-    { path: "/game-design-course", name: "Game Design" },
-    { path: "/ui-ux-course", name: "UI/UX Design Course" },
+    { path: ROUTES.GRAPHIC_DESIGN, name: "Graphic Design Course" },
+    { path: ROUTES.MOTION_GRAPHICS, name: "Motion Graphics Course" },
+    { path: ROUTES.VIDEO_EDITING, name: "Video Editing Course" },
+    { path: ROUTES.ANIMATION, name: "Animation Course" },
+    { path: ROUTES.VFX, name: "VFX Course" },
+    { path: ROUTES.PHOTOGRAPHY, name: "Photography Course" },
+    { path: ROUTES.FILM_MAKING, name: "Film Making Course" },
+    { path: ROUTES.CINEMATOGRAPHY, name: "Cinematography Course" },
+    { path: ROUTES.DIGITAL_MARKETING, name: "Digital Marketing Course" },
+    { path: ROUTES.GAME_DESIGN, name: "Game Design Course" },
+    { path: ROUTES.UI_UX, name: "UI/UX Design Course" },
   ];
 
   const diplomaCourses = [
-    {
-      path: "/vfx-institute-in-chandigarh",
-      name: "Diploma in VFX ",
-    },
-    {
-      path: "/graphic-designing-institute-in-chandigarh",
-      name: "Diploma in Graphic Design",
-    },
-    { path: "/game-design-course", name: "Diploma in Game Design" },
-    {
-      path: "/best-3d-animation-degree-courses-in-chandigarh",
-      name: "Diploma in Animation",
-    },
-    {
-      path: "/film-making-institute-in-chandigarh/",
-      name: "Diploma in Film Making",
-    },
+    { path: ROUTES.DIPLOMA_VFX, name: "Diploma in VFX " },
+    { path: ROUTES.DIPLOMA_GRAPHIC, name: "Diploma in Graphic Design" },
+    { path: ROUTES.DIPLOMA_GAME, name: "Diploma in Game Design" },
+    { path: ROUTES.DIPLOMA_ANIMATION, name: "Diploma in Animation" },
+    { path: ROUTES.DIPLOMA_FILM, name: "Diploma in Film Making" },
   ];
 
   const degreePrograms = [
-    {
-      path: "/animation-and-multimedia-institute-in-chandigarh",
-      name: "B. Voc Animation & Multimedia",
-    },
+    { path: ROUTES.DEGREE_ANIMATION, name: "B. Voc Animation & Multimedia" },
   ];
+
 
   return (
     <header className={`site-header ${isScrolled ? "scrolled" : ""}`}>

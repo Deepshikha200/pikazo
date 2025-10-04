@@ -84,6 +84,10 @@ header {
 
       &.show {
         color: $white;
+
+        @media (max-width: 991px) {
+          color: $primary;
+        }
       }
     }
 
@@ -280,7 +284,6 @@ header {
             }
 
             .active {
-
               ul {
                 display: block;
               }
@@ -336,6 +339,15 @@ header {
             }
           }
         }
+      }
+    }
+  }
+
+  .dropend .dropdown-toggle {
+    &.show {
+      &::after {
+        transform: rotate(90deg);
+        transition: all 0.3s ease-in-out;
       }
     }
   }

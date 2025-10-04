@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import { useRef, useState } from "react";
 import Slider from "react-slick";
 import { Shimmer } from "react-shimmer";
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading";
 import { AllImages } from "../../../../assets/Student_Work/ArtImages";
-import "./OurStudent.scss";
 import { useNavigate } from "react-router-dom";
+import { useStudent } from "../../../../hooks/useAnimate";
+import "./OurStudent.scss";
 
 const OurStudent = () => {
+  const navigate = useNavigate();
+  const [loadedVideos, setLoadedVideos] = useState({});
   const settings = {
     dots: false,
     arrows: true,
@@ -40,8 +43,6 @@ const OurStudent = () => {
     ],
   };
 
-  const navigate = useNavigate();
-  const [loadedVideos, setLoadedVideos] = useState({});
   const motionGraphicsLinks = [
     "https://www.youtube.com/embed/4WLDBVRUsUE",
     "https://www.youtube.com/embed/1KdOjq70N9k",
@@ -59,34 +60,57 @@ const OurStudent = () => {
     "https://www.youtube.com/embed/RqRXKwdALyQ",
   ];
 
+  const settings_img = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 5000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    pauseOnHover: true,
+
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+
   return (
-    <section className="our-student">
+    <section className="our_student">
       <CommonHeading heading="Our Students Work" className="heading mb-4" />
-      <section className="insta_con">
-        <div className="instagram_flex">
-          <div className="instagram_scroll">
-            {/* {AllImages.map((src, index) => (
+      <div className="infinite-slider">
+        <Slider {...settings_img}>
+          {AllImages.map((src, index) => (
+            <div key={index} className="slide-img">
               <img
-                key={index}
                 src={src}
-                alt=""
+                alt={`students_work_${index}`}
                 onClick={() => navigate("/students-work")}
               />
-            ))} */}
-            {Array(10)
-              .fill(AllImages)
-              .flat()
-              .map((src, index) => (
-                <img
-                  key={index}
-                  src={src}
-                  alt=""
-                  onClick={() => navigate("/students-work")}
-                />
-              ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          ))}
+        </Slider>
+      </div>
       <>
         <div className=" youtube_slider">
           <Slider {...settings}>

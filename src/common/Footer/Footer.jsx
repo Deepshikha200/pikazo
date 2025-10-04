@@ -11,39 +11,19 @@ import {
 import locationicon from "../../assets/images/locationIcon_dark.png";
 import { Link, useLocation } from "react-router-dom";
 import "./Footer.scss";
+import { ROUTES } from "../../utils/Constants";
 
 const Footer = () => {
-  const handleNavLinkClick = (path, offset = 0) => {
-    setNavbarExpanded(false);
-    onNavbarToggle(false);
-
-    if (location.pathname !== "/") {
-      navigate("/");
-      setTimeout(() => {
-        scrollToSection(path, offset);
-      }, 100);
-    } else {
-      scrollToSection(path, offset);
-    }
-  };
-  const scrollToSection = (path, offset) => {
-    const element = document.getElementById(path);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop + offset,
-        behavior: "smooth",
-      });
-    }
-  };
   const location = useLocation();
   const pathname = location.pathname;
+
   return (
     <footer className="footer">
       <Container>
         <div className="footer-container">
           <div className="footer-content">
             <div className="footer-logo">
-              <img src={logo} alt="" />
+              <img src={logo} alt="Pikazzo Logo" />
             </div>
             <div className="footer-content-text">
               <p>
@@ -56,104 +36,125 @@ const Footer = () => {
             </div>
             <div className="footer-content-icons d-flex gap-4">
               <span>
-                <Link
-                  to="https://www.linkedin.com/company/pikazoinstitute/"
+                <a
+                  href="https://www.linkedin.com/company/pikazoinstitute/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Linkdin />
-                </Link>
+                </a>
               </span>
               <span>
-                <Link
-                  to="https://www.instagram.com/pikazzoinstitute/"
+                <a
+                  href="https://www.instagram.com/pikazzoinstitute/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Instagram />
-                </Link>
+                </a>
               </span>
               <span>
-                <Link
-                  to="https://www.youtube.com/@pikazzoinstitute"
+                <a
+                  href="https://www.youtube.com/@pikazzoinstitute"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Youtube />
-                </Link>
+                </a>
               </span>
               <span>
-                <Link
-                  to="https://www.facebook.com/PikazoInstitute/"
+                <a
+                  href="https://www.facebook.com/PikazoInstitute/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaceBookIcon />
-                </Link>
+                </a>
               </span>
             </div>
           </div>
+
           <div className="footer-links">
             <h5>Quick Links</h5>
             <div className="footer-links_ul">
               <ul>
                 <li>
-                  {pathname === "/" ? (
-                    <a href="#banner"> Home</a>
+                  {pathname === ROUTES.HOME ? (
+                    <a href="#banner">Home</a>
                   ) : (
-                    <Link to="/">Home</Link>
+                    <Link to={ROUTES.HOME}>Home</Link>
                   )}
                 </li>
                 <li>
-                  {pathname === "/" ? (
+                  {pathname === ROUTES.HOME ? (
                     <a href="#about-us">About Us</a>
                   ) : (
-                    <Link to="/">About Us</Link>
+                    <Link to={ROUTES.ABOUT_US}>About Us</Link>
                   )}
                 </li>
-
                 <li>
-                  {pathname === "/" ? (
+                  {pathname === ROUTES.HOME ? (
                     <a href="#placements">Placement</a>
                   ) : (
-                    <Link to="/">Placement</Link>
+                    <Link to={ROUTES.PLACEMENTS}>Placement</Link>
                   )}
                 </li>
                 <li>
-                  <Link to="/students-work">Student Work</Link>
+                  <Link to={ROUTES.STUDENTS_WORK}>Student Work</Link>
                 </li>
                 <li>
-                  <Link to="/events-and-activities">Events</Link>
+                  <Link to={ROUTES.EVENTS}>Events</Link>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <Link to={ROUTES.GRAPHIC_DESIGN}>Graphic Design Course</Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.MOTION_GRAPHICS}>
+                    Motion Graphics Course
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.VFX}>VFX Course</Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.ANIMATION}>Animation Course</Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.DEGREE_ANIMATION}>
+                    B. Voc Animation & Multimedia
+                  </Link>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <Link to="/graphic-designing-institute-in-chandigarh">
-                    Graphic Design Course
+                  <Link to={ROUTES.DIPLOMA_VFX}>Diploma in VFX</Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.DIPLOMA_GRAPHIC}>
+                    Diploma in Graphic Design
                   </Link>
                 </li>
                 <li>
-                  <Link to="/motion-graphics-course">
-                    Motion Graphics Course
-                  </Link>{" "}
+                  <Link to={ROUTES.DIPLOMA_GAME}>Diploma in Game Design</Link>
                 </li>
                 <li>
-                  <Link to="/vfx-institute-in-chandigarh">VFX Course</Link>{" "}
+                  <Link to={ROUTES.DIPLOMA_ANIMATION}>Diploma in Animation</Link>
                 </li>
-
                 <li>
-                  <Link to="/best-3d-animation-degree-courses-in-chandigarh">
-                    Animation Course
-                  </Link>
-                </li>
-
-                <li>
-                  <Link to="/animation-and-multimedia-institute-in-chandigarh">
-                    B. Voc Animation & Multimedia
+                  <Link to={ROUTES.DIPLOMA_FILM}>
+                    Diploma in Film Making
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
+
           <div className="footer-links">
             <div className="d-flex align-items-center flex-wrap gap-3 footer-content-location">
-              <img src={locationicon} alt="" />
+              <img src={locationicon} alt="Location" />
               <a
                 href="https://www.google.com/maps/search/SCO+176,+Sector+39-D,+Chandigarh/"
                 target="_blank"
@@ -163,16 +164,16 @@ const Footer = () => {
                 SCO 176, (TOP FLOOR) <br /> Sector 39-D, Chandigarh.
               </a>
             </div>
-            <div className="d-flex align-items-center flex-wrap gap-3  gap-xl-5 mb-5">
-              <a href="tel:+919569473492" className="contact-number ">
+
+            <div className="d-flex align-items-center flex-wrap gap-3 gap-xl-5 mb-5">
+              <a href="tel:+919569473492" className="contact-number">
                 +91 95694-73492
               </a>
-              <a href="tel:+919569473492" className="contact-number ">
-                +91 9056513316
+              <a href="tel:+919056513316" className="contact-number">
+                +91 90565-13316
               </a>
             </div>
 
-            {/* Embedded Google Map */}
             <div className="footer-map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.1092426969517!2d76.72523821102091!3d30.743432785009652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed5e02ccbbcf%3A0xfa77da377849463f!2sPikazzo%20Institute%20-%20Best%20Animation%20%26%20VFX%20Institute!5e0!3m2!1sen!2sin!4v1757826976220!5m2!1sen!2sin"
@@ -186,8 +187,6 @@ const Footer = () => {
               ></iframe>
             </div>
           </div>
-
-
         </div>
       </Container>
     </footer>

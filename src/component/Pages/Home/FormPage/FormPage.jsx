@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { motion } from "framer-motion";
 import "./FormPage.scss";
 import img2 from "../../../../assets/images/aboutimg11.jpg";
 import img1 from "../../../../assets/images/aboutimg12.jpg";
@@ -12,45 +11,12 @@ import {
   Linkdin,
   Youtube,
 } from "../../../../assets/images/Icons/SvgIcons";
+import { useAnimation } from "../../../../hooks/useAnimate";
 
 const FormPage = () => {
   const formRef = useRef(null);
 
-  const fadeInLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 1.2, ease: "easeOut" },
-    },
-  };
-
-  const fadeInRight = {
-    hidden: { opacity: 0, x: 50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 1.2, ease: "easeOut" },
-    },
-  };
-
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.5, ease: "easeOut" },
-    },
-  };
-
-  const scaleIn = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 1, ease: "easeOut" },
-    },
-  };
+  useAnimation(formRef);
 
   return (
     <section className="form" id="about-us" ref={formRef}>
@@ -58,53 +24,32 @@ const FormPage = () => {
         <Row>
           <Col lg={4} md={6}>
             <div className="form_col">
-              <motion.div
+              <div
                 className="form_col_img first mt-md-0 mt-3"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInLeft}
               >
-                <motion.img
-                  initial={{ scale: 1 }}
-                  whileHover={{ scale: 1.04 }}
-                  transition={{ duration: 0.3 }}
+                <img
                   src={img1}
-                  alt=""
                 />
-              </motion.div>
-              <motion.div
+              </div>
+              <div
                 className="form_col_img second"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInRight}
               >
-                <motion.img
-                  initial={{ scale: 1 }}
-                  whileHover={{ scale: 1.04 }}
-                  transition={{ duration: 0.3 }}
+                <img
                   src={img2}
-                  alt=""
                 />
-              </motion.div>
+              </div>
             </div>
           </Col>
           <Col lg={5} md={6}>
-            <motion.div
+            <div
               className="form_col_text"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
             >
-              <motion.h2
+              <h2
                 data-content="One of the Most "
                 className="mb-20"
-                variants={scaleIn}
               >
                 WHO WE ARE?
-              </motion.h2>
+              </h2>
               <p>
                 Pikazzo is an institute experienced with 2D & 3D Animation,
                 Visual effects (VFX), Motion Graphics, Video editing,
@@ -155,7 +100,7 @@ const FormPage = () => {
                   </a>
                 </span>
               </div>
-            </motion.div>
+            </div>
           </Col>
           <Col lg={3} md={12} className="d-md-block d-none">
             <GetInTocuh />

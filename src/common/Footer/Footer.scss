@@ -12,9 +12,7 @@
 
   .contact-number {
     font-size: 1.8rem;
-    // margin-left: 6.7rem;
   }
-
 
   &-logo {
     img {
@@ -39,11 +37,11 @@
     }
 
     >div {
-      margin-right: 13rem;
+      margin-right: 5rem;
       width: 100%;
 
       @media (max-width:1679px) {
-        margin-right: 10rem;
+        margin-right: 4rem;
       }
 
       @media (max-width:1119px) {
@@ -97,11 +95,8 @@
     }
 
     &-location {
-
       margin-bottom: 2.2rem;
     }
-
-
   }
 
   &-links {
@@ -116,7 +111,12 @@
 
     &_ul {
       display: flex;
-      gap: 6rem;
+      gap: 1rem;
+      justify-content: space-between;
+
+      @media (max-width:575px) {
+        flex-wrap: wrap;
+      }
     }
 
     ul {

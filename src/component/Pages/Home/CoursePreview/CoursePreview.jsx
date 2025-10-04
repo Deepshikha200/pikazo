@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import  { useState } from "react";
+import {  Container, Row } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import vfx from "../../../../assets/images/vfx.mp4";
 import ui from "../../../../assets/images/UIUX.mp4";
@@ -7,15 +7,14 @@ import market from "../../../../assets/images/market.mp4";
 import web from "../../../../assets/images/web.mp4";
 import "./CoursePreview.scss";
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading";
-import thumbnail1 from "../../../../assets/images/Website thumbnails/Animtation.jpg";
-import thumbnail2 from "../../../../assets/images/Website thumbnails/DigtialMarketing.jpg";
-import thumbnail3 from "../../../../assets/images/Website thumbnails/FilmMaking.jpg";
-import thumbnail4 from "../../../../assets/images/Website thumbnails/GameDesign.jpg";
-import thumbnail5 from "../../../../assets/images/Website thumbnails/vfx.jpeg";
-import thumbnail6 from "../../../../assets/images/Website thumbnails/UiUX.jpg";
-import thumbnail7 from "../../../../assets/images/Website thumbnails/VideoEditing.jpg";
-import thumbnail8 from "../../../../assets/images/Website thumbnails/WebGraphics.jpg";
-// import { motion } from "framer-motion";
+import thumbnail1 from "../../../../assets/images/thumbnails/Animtation.jpg";
+import thumbnail2 from "../../../../assets/images/thumbnails/DigtialMarketing.jpg";
+import thumbnail3 from "../../../../assets/images/thumbnails/FilmMaking.jpg";
+import thumbnail4 from "../../../../assets/images/thumbnails/GameDesign.jpg";
+import thumbnail5 from "../../../../assets/images/thumbnails/vfx.jpeg";
+import thumbnail6 from "../../../../assets/images/thumbnails/UiUX.jpg";
+import thumbnail7 from "../../../../assets/images/thumbnails/VideoEditing.jpg";
+import thumbnail8 from "../../../../assets/images/thumbnails/WebGraphics.jpg";
 
 const CoursePreview = () => {
   const [playingVideo, setPlayingVideo] = useState(null);

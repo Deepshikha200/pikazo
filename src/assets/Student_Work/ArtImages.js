@@ -289,8 +289,10 @@ export const StudentUpdate = [
   stu15,
 ]
 
-
 export const AllImages = [
+  stu1,
+  stu2,
+  stu15,
   stuu1,
   stuu2,
   stuu3,
@@ -298,10 +300,7 @@ export const AllImages = [
   stuu5,
   stuu6,
   stuu7,
-  stu1,
   Graphics4,
-  stu2,
-  stu15,
   // Graphics1,
   stu3,
   // Graphics7,

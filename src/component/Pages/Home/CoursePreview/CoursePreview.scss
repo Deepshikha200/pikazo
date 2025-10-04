@@ -26,21 +26,6 @@
   .react-player {
     height: 350px !important;
 
-    // @media (max-width:1199px) {
-    //   height: 284px !important;
-    // }
-
-    // @media (max-width:768px) {
-    //   height: 321px !important;
-    // }
-
-    // @media (max-width:575px) {
-    //   height: 346px !important;
-    // }
-
-    // @media (max-width:375px) {
-    //   height: 294px !important;
-    // }
   }
 
   &:after {
@@ -66,18 +51,8 @@
     border-radius: 2rem;
     transition: all 0.4s ease-in-out;
 
-
-
-    // &:hover {
-    //   transform: rotate3d(0, 1, 0, 30deg) !important;
-    //   transition: all 0.4s ease-in-out;
-
-    // }
-
     @media (max-width:767px) {
       padding: 0 1.5rem 1.5rem 1.5rem;
-      // max-width: 100%
-
     }
 
     & h4 {
@@ -186,11 +161,6 @@
 
       }
 
-      @media (max-width:575px) {
-        // height: 286px !important;
-        // border-radius:0 0 3rem 3rem;
-        // margin-top: 3.3rem !important;
-      }
     }
   }
 }
