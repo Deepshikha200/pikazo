@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../../assets/images/banner/Artboard14.png";
+import img from "../../../../assets/images/banner/Photography Banner.webp";
 import CoursesInnerPages from "../CoursesInnerPages";
 const Photography = () => {
   const faqData = [

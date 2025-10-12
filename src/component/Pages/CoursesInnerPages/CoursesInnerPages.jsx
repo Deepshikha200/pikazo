@@ -16,7 +16,7 @@ const CoursesInnerPages = ({
   return (
     <section className="inner-courses">
       <div>
-        <img src={src} alt="" className="inner-courses-img" />
+        <img src={src} alt="" className="inner-courses-img" loading="lazy" />
       </div>
       <div className="inner-courses-preview">
         <Container>

@@ -25,7 +25,7 @@ const CertificatePage = () => {
 
       <div className="certificateImg">
         {certificateImg.map((item, index) => (
-          <img src={item} alt="certificateImg" key={index} />
+          <img src={item} alt="certificateImg" key={index} loading="lazy" />
         ))}
       </div>
     </section>

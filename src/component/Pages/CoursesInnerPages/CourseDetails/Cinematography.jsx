@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../../../../assets/Student_Work/Graphics/Artboard1.png";
 import CoursesInnerPages from "../CoursesInnerPages";
 import cinemato from "../../../../assets/images/banner/cinemato.png";
 

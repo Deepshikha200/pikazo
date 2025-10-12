@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../../assets/images/banner/Artboard3.png";
+import img from "../../../../assets/images/banner/Animation Banner.webp";
 import CoursesInnerPages from "../CoursesInnerPages";
 const AnimationCourse = () => {
   const faqData = [

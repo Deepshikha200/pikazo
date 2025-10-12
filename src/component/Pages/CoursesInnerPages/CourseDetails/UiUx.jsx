@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../../assets/images/banner/Artboard24.png";
+import img from "../../../../assets/images/banner/UI UX Banner.webp";
 import CoursesInnerPages from "../CoursesInnerPages";
 const UiUx = () => {
   const faqData = [

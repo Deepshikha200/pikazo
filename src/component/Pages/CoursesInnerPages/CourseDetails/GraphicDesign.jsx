@@ -1,10 +1,9 @@
 import React from "react";
 import CoursesInnerPages from "../CoursesInnerPages";
-import img from "../../../../assets/Student_Work/Graphics/Artboard1.png";
 import { Col, Container, Row } from "react-bootstrap";
 import { Graphics } from "../../../../assets/Student_Work/ArtImages";
 import { AnimatePresence, motion } from "framer-motion";
-import img1 from "../../../../assets/images/banner/Artboard11.png";
+import img1 from "../../../../assets/images/banner/Graphic Design Banner.webp";
 
 const GraphicDesign = () => {
   const faqData = [
@@ -150,8 +149,7 @@ const GraphicDesign = () => {
     <section className="pb-5">
       <CoursesInnerPages
         subtitle="Graphics Designing"
-        description="This course explores the principles of visual communication and design, focusing on creating impactful and professional designs. Students will learn branding, typography, layout design, and color theory while mastering tools like Adobe Photoshop, Illustrator, and InDesign. By the end, learners will create logos, brochures, posters, packaging, and digital content.
-"
+        description="This course explores the principles of visual communication and design, focusing on creating impactful and professional designs. Students will learn branding, typography, layout design, and color theory while mastering tools like Adobe Photoshop, Illustrator, and InDesign. By the end, learners will create logos, brochures, posters, packaging, and digital content."
         src={img1}
         faqData={faqData}
         jobs={jobs}

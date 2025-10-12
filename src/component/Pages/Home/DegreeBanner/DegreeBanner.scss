@@ -162,6 +162,12 @@
 
   .enroll_btn {
     padding-bottom: 6.3rem;
+    display: flex;
+
+    .btn {
+      transform: scale(0.9) !important;
+      display: inline-block;
+    }
 
     @media (max-width:768px) {
       padding-bottom: 4rem;

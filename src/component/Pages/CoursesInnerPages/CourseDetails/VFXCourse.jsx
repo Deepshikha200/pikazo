@@ -1,6 +1,6 @@
 import React from "react";
 import CoursesInnerPages from "../CoursesInnerPages";
-import img from "../../../../assets/images/banner/Artboard1.png";
+import img from "../../../../assets/images/banner/VFX Banner.webp";
 
 const VFXCourse = () => {
   const faqData = [

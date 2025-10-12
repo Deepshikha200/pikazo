@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-content">
             <div className="footer-logo">
-              <img src={logo} alt="Pikazzo Logo" />
+              <img src={logo} alt="Pikazzo Logo" loading="lazy" />
             </div>
             <div className="footer-content-text">
               <p>
@@ -154,7 +154,7 @@ const Footer = () => {
 
           <div className="footer-links">
             <div className="d-flex align-items-center flex-wrap gap-3 footer-content-location">
-              <img src={locationicon} alt="Location" />
+              <img src={locationicon} alt="Location" loading="lazy"/>
               <a
                 href="https://www.google.com/maps/search/SCO+176,+Sector+39-D,+Chandigarh/"
                 target="_blank"

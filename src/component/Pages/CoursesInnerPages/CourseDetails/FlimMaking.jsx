@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../../assets/images/banner/Artboard5.png";
+import img from "../../../../assets/images/banner/Film Making Banner.webp";
 import CoursesInnerPages from "../CoursesInnerPages";
 const FlimMaking = () => {
   const faqData = [

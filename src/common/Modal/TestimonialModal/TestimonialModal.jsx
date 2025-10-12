@@ -14,28 +14,28 @@ const TestimonialModal = ({ show, handleClose }) => {
     >
       <Row>
         <Col lg={3} sm={3} xs={4}>
-          <img src={test} alt="" />
+          <img src={test} alt="" loading="lazy" />
         </Col>
         <Col lg={3} sm={3} xs={4}>
-          <img src={test} alt="" />
+          <img src={test} alt="" loading="lazy" />
         </Col>
         <Col lg={3} sm={3} xs={4}>
-          <img src={test} alt="" />
+          <img src={test} alt="" loading="lazy" />
         </Col>
         <Col lg={3} sm={3} xs={4}>
-          <img src={test} alt="" />
+          <img src={test} alt="" loading="lazy" />
         </Col>
         <Col lg={3} sm={3} xs={4}>
-          <img src={test} alt="" />
+          <img src={test} alt="" loading="lazy" />
         </Col>
         <Col lg={3} sm={3} xs={4}>
-          <img src={test} alt="" />
+          <img src={test} alt="" loading="lazy" />
         </Col>
         <Col lg={3} sm={3} xs={4}>
-          <img src={test} alt="" />
+          <img src={test} alt="" loading="lazy"/>
         </Col>
         <Col lg={3} sm={3} xs={4}>
-          <img src={test} alt="" />
+          <img src={test} alt="" loading="lazy"/>
         </Col>
       </Row>
     </CommonModal>
