@@ -1,33 +1,14 @@
-import React, { useEffect, useState } from "react";
-import light_logo from "../../../../assets/images/light_logo.png";
+import { useState } from "react";
 import happy_student from "../../../../assets/images/happy_student.png";
-// import update from "../../../../assets/images/updateimg.png";
 import dark_logo from "../../../../assets/images/Pikazzo logo dark.png";
-
 import { ButtonArrow } from "../../../../assets/images/Icons/SvgIcons";
-import "./DegreeBanner.scss";
 import { Container } from "react-bootstrap";
 import ContactUsModal from "../../../../common/Modal/ContactUsModal";
-import gsap from "gsap";
+import "./DegreeBanner.scss";
 
 const BannerTwo = () => {
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    // GSAP breathing effect
-    gsap.fromTo(
-      ".enroll_btn",
-      { scale: 0.95 },
-      {
-        scale: 1,
-        duration: 3,
-        ease: "power1.inOut",
-        repeat: -1,
-        yoyo: true,
-        transformOrigin: "left",
-      }
-    );
-  }, []);
 
   return (
     <>
@@ -40,16 +21,14 @@ const BannerTwo = () => {
                   <img src={dark_logo} alt="logo" loading="lazy" />
                 </div>
                 <h2 className="mb-0 ">
-                  <h2 className="mb-0 ">
-                    Build Your Future with Our <p> Degree Programs! </p>
-                  </h2>
+                  Build Your Future with Our <p> Degree Programs! </p>
                 </h2>
                 <span>
                   Earn a degree in Animation, VFX, Game Design, or Film Making
                   and build a successful creative career.
                 </span>
                 <div className="enroll_btn" onClick={() => setShowModal(true)}>
-                  <button>Enroll Now</button>
+                  <button>Enroll Now </button>
                   <span>
                     <ButtonArrow />
                   </span>
@@ -73,9 +52,7 @@ const BannerTwo = () => {
             <div className=" degree_banner_col">
               <div className="dark_text">
                 <h2 className="mb-0 ">
-                  <h2 className="mb-0 ">
-                    Build Your Future with Our <p> Degree Programs! </p>
-                  </h2>
+                  Build Your Future with Our <p> Degree Programs! </p>
                 </h2>
                 <span>
                   Earn a degree in Animation, VFX, Game Design, or Film Making

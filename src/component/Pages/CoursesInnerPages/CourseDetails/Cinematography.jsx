@@ -1,6 +1,6 @@
 import React from "react";
 import CoursesInnerPages from "../CoursesInnerPages";
-import cinemato from "../../../../assets/images/banner/cinemato.png";
+import cinemato from "../../../../assets/images/banner/Cinematographer.jpg";
 
 const Cinematography = () => {
   const faqData = [

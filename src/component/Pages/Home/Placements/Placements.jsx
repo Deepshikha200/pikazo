@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading.jsx";
 import placement1 from "../../../../assets/images/Placements/placement1.png";
 import placement3 from "../../../../assets/images/Placements/placement3.png";
@@ -51,7 +51,7 @@ const Placements = () => {
         <div className="place_flex">
           <div className="place_scroll">
             {[...Array(2)].map((_, i) => (
-              <>
+              <React.Fragment key={i}>
                 <img src={placement1} alt="" key={`p1-${i}`} />
                 <img src={placement3} alt="" key={`p3-${i}`} />
                 <img src={placement4} alt="" key={`p4-${i}`} />
@@ -59,14 +59,14 @@ const Placements = () => {
                 <img src={placement6} alt="" key={`p6-${i}`} />
                 <img src={placement8} alt="" key={`p8-${i}`} />
                 <img src={placement9} alt="" key={`rp9-${i}`} />
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>
         <div className="place_flex revese">
           <div className="place_scroll">
             {[...Array(2)].map((_, i) => (
-              <>
+              <React.Fragment key={i}>
                 <img src={placement10} alt="" key={`rp10-${i}`} />
                 <img src={placement11} alt="" key={`rp11-${i}`} />
                 <img src={placement12} alt="" key={`rp12-${i}`} />
@@ -74,7 +74,8 @@ const Placements = () => {
                 <img src={placement14} alt="" key={`rp14-${i}`} />
                 <img src={placement15} alt="" key={`rp15-${i}`} />
                 <img src={placement16} alt="" key={`rp16-${i}`} />
-              </>
+              </React.Fragment>
+
             ))}
           </div>
         </div>

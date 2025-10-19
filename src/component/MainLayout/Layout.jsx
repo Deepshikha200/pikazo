@@ -19,6 +19,7 @@ const Layout = () => {
   return (
     <div className="d-flex flex-column min-vh-100 justify-content-between">
       <Header onNavbarToggle={toggleNavbar} />
+
       <main
         className={`outlet ${isNavbarOpen ? "" : ""}`}
         onClick={() => isNavbarOpen && toggleNavbar(false)}

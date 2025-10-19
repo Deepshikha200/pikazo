@@ -1,6 +1,6 @@
-import React from "react";
-import img from "../../../../assets/images/banner/Artboard22.png";
+import img from "../../../../assets/images/banner/Digital Marketing.jpg";
 import CoursesInnerPages from "../CoursesInnerPages";
+
 const DigitalMarketing = () => {
   const faqData = [
     {

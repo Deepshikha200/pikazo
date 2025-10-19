@@ -31,27 +31,27 @@ export const useAnimation = (containerRef) => {
         },
       });
 
-      gsap.from(".fade-up", {
-        y: 50,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".fade-up",
-          start: "top 85%",
-        },
-      });
+      // gsap.from(".fade-up", {
+      //   y: 50,
+      //   opacity: 0,
+      //   duration: 1.5,
+      //   ease: "power2.out",
+      //   scrollTrigger: {
+      //     trigger: ".fade-up",
+      //     start: "top 85%",
+      //   },
+      // });
 
-      gsap.from(".scale-in", {
-        scale: 0.9,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".scale-in",
-          start: "top 85%",
-        },
-      });
+      // gsap.from(".scale-in", {
+      //   scale: 0.9,
+      //   opacity: 0,
+      //   duration: 1,
+      //   ease: "power2.out",
+      //   scrollTrigger: {
+      //     trigger: ".scale-in",
+      //     start: "top 85%",
+      //   },
+      // });
     }, containerRef);
 
     return () => ctx.revert();

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import {  useState } from "react";
 import Slider from "react-slick";
 import { Shimmer } from "react-shimmer";
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading";
