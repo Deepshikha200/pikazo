@@ -1,5 +1,5 @@
 
-import  { useState } from "react";
+import { useState } from "react";
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import CommonButton from "../CommonButton/CommonButton";
@@ -212,14 +212,12 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
               {pathname === "/" ? (
                 <>
                   <Nav.Link
-                    as="button"
                     className="nav-link"
                     onClick={() => handleNavLinkClick("about-us")}
                   >
                     About Us
                   </Nav.Link>
                   <Nav.Link
-                    as="button"
                     className="nav-link"
                     onClick={() => handleNavLinkClick("placements")}
                   >
