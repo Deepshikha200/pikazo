@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./CoursesInnerPages.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
-import { RedCross } from "../../../assets/images/Icons/SvgIcons";
+import { ButtonArrow, RedCross } from "../../../assets/images/Icons/SvgIcons";
 import GetInTocuh from "./../../../common/GetInTocuh/GetInTocuh";
+import CommonButton from "../../../common/CommonButton/CommonButton";
+import ContactUsModal from "../../../common/Modal/ContactUsModal";
 
 const CoursesInnerPages = ({
   subtitle,
@@ -13,11 +15,22 @@ const CoursesInnerPages = ({
   jobs,
   src,
 }) => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section className="inner-courses">
-      <div>
+      <div className="inner-courses-top">
         <img src={src} alt="" className="inner-courses-img" loading="lazy" />
+        <div className="inner-courses-top-button">
+          <CommonButton text="Enroll Now" svgIcon={<ButtonArrow />} className="white_text"
+            onClick={() => setShowModal(true)}
+          />
+        </div>
       </div>
+      <ContactUsModal
+        show={showModal}
+        handleClose={() => setShowModal(false)}
+      />
       <div className="inner-courses-preview">
         <Container>
           <Row>

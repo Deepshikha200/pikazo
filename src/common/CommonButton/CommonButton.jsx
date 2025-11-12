@@ -9,6 +9,7 @@ const CommonButton = (props) => {
         }`}
     >
       {props.text}
+      {props.svgIcon && <span className="btn-style_icon">{props.svgIcon}</span>}
     </button>
   );
 };

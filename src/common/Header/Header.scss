@@ -374,6 +374,10 @@ header {
     }
   }
 
+  .dropdown-menu {
+    border: 0;
+  }
+
   .dropdown-menu.show {
     background-color: $navyblue;
     padding-left: 1rem;

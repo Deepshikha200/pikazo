@@ -1,10 +1,9 @@
-import {  useState } from "react";
+import { useState } from "react";
 import Slider from "react-slick";
 import { Shimmer } from "react-shimmer";
 import CommonHeading from "../../../../common/CommonHeading/CommonHeading";
 import { AllImages } from "../../../../assets/Student_Work/ArtImages";
 import { useNavigate } from "react-router-dom";
-import { useStudent } from "../../../../hooks/useAnimate";
 import "./OurStudent.scss";
 
 const OurStudent = () => {

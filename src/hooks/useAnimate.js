@@ -115,7 +115,6 @@ export const usePlacementsAnimation = (containerRef) => {
         { x: "40rem", y: "-10rem" },
       ];
 
-      // Initial reveal + scatter animation
       gsap.to(".box", {
         opacity: 1,
         duration: 0.55,
@@ -127,7 +126,6 @@ export const usePlacementsAnimation = (containerRef) => {
           start: "top 41%",
         },
         onComplete: () => {
-          // Floating animation (infinite)
           gsap.to(".box", {
             x: (index) => `+=${Math.random() * 2}rem`,
             y: (index) => `+=${Math.random() * 2}rem`,
@@ -144,39 +142,36 @@ export const usePlacementsAnimation = (containerRef) => {
   }, [containerRef]);
 };
 
-export const useStudent = ({ containerRef, trackRef }) => {
-  useGSAP(() => {
-    const track = trackRef.current;
-    const container = containerRef.current;
-    if (!track || !container) return;
+// export const useStudent = ({ containerRef, trackRef }) => {
+//   useGSAP(() => {
+//     const track = trackRef.current;
+//     const container = containerRef.current;
+//     if (!track || !container) return;
 
-    // ✅ Only run if images are rendered
-    const images = track.querySelectorAll("img");
-    if (images.length === 0) return;
+//     const images = track.querySelectorAll("img");
+//     if (images.length === 0) return;
 
-    // ✅ Duplicate the content once images exist
-    track.innerHTML += track.innerHTML;
+//     track.innerHTML += track.innerHTML;
 
-    // ✅ Set width to fit all images
-    track.style.width = `${track.scrollWidth}px`;
+//     track.style.width = `${track.scrollWidth}px`;
 
-    const animation = gsap.to(track, {
-      x: `-${track.scrollWidth / 2}px`, // move half the width
-      ease: "none",
-      duration: 10,
-      repeat: -1,
-    });
+//     const animation = gsap.to(track, {
+//       x: `-${track.scrollWidth / 2}px`,
+//       ease: "none",
+//       duration: 10,
+//       repeat: -1,
+//     });
 
-    const handleMouseEnter = () => animation.pause();
-    const handleMouseLeave = () => animation.play();
+//     const handleMouseEnter = () => animation.pause();
+//     const handleMouseLeave = () => animation.play();
 
-    container.addEventListener("mouseenter", handleMouseEnter);
-    container.addEventListener("mouseleave", handleMouseLeave);
+//     container.addEventListener("mouseenter", handleMouseEnter);
+//     container.addEventListener("mouseleave", handleMouseLeave);
 
-    return () => {
-      animation.kill();
-      container.removeEventListener("mouseenter", handleMouseEnter);
-      container.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, [containerRef, trackRef]);
-};
+//     return () => {
+//       animation.kill();
+//       container.removeEventListener("mouseenter", handleMouseEnter);
+//       container.removeEventListener("mouseleave", handleMouseLeave);
+//     };
+//   }, [containerRef, trackRef]);
+// };

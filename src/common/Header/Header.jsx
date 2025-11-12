@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from "react";
+
+import  { useState } from "react";
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import CommonButton from "../CommonButton/CommonButton";
 import logo from "../../assets/images/Pikazzo logo.png";
 import ContactUsModal from "../Modal/ContactUsModal";
 import { ROUTES } from "../../utils/Constants";
 import "./Header.scss";
-import gsap from "gsap";
 
 const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
   const [navbarExpanded, setNavbarExpanded] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
+  const navigate = useNavigate(); // ✅ useNavigate for React Router navigation
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  // ✅ Smooth scroll handler
   const handleNavLinkClick = (path, offset = -100) => {
     setNavbarExpanded(false);
     onNavbarToggle(false);
@@ -27,6 +32,7 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
     }
   };
 
+  // ✅ Helper to scroll to section
   const scrollToSection = (path, offset) => {
     const element = document.getElementById(path);
     if (element) {
@@ -36,10 +42,8 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
       });
     }
   };
-  const location = useLocation();
-  const pathname = location.pathname;
 
-
+  // ✅ Course lists
   const certificateCourses = [
     { path: ROUTES.GRAPHIC_DESIGN, name: "Graphic Design Course" },
     { path: ROUTES.MOTION_GRAPHICS, name: "Motion Graphics Course" },
@@ -55,7 +59,7 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
   ];
 
   const diplomaCourses = [
-    { path: ROUTES.DIPLOMA_VFX, name: "Diploma in VFX " },
+    { path: ROUTES.DIPLOMA_VFX, name: "Diploma in VFX" },
     { path: ROUTES.DIPLOMA_GRAPHIC, name: "Diploma in Graphic Design" },
     { path: ROUTES.DIPLOMA_GAME, name: "Diploma in Game Design" },
     { path: ROUTES.DIPLOMA_ANIMATION, name: "Diploma in Animation" },
@@ -66,22 +70,6 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
     { path: ROUTES.DEGREE_ANIMATION, name: "B. Voc Animation & Multimedia" },
   ];
 
-  // useEffect(() => {
-  //   gsap.fromTo(
-  //     ".header_btn",
-  //     { scale: 0.8 }, // starting smaller
-  //     {
-  //       scale: 1.2,   // expand to 1.2x size
-  //       duration: 1,
-  //       ease: "power1.inOut",
-  //       yoyo: true,   // shrink back automatically
-  //       repeat: -1,   // infinite loop
-  //     }
-  //   );
-  // }, []);
-
-
-
   return (
     <header className={`site-header ${isScrolled ? "scrolled" : ""}`}>
       <Navbar
@@ -90,16 +78,19 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
         onToggle={(expanded) => setNavbarExpanded(expanded)}
       >
         <Container>
-          <Navbar.Brand>
-            <Link to="/" onClick={handleNavLinkClick}>
-              <img src={logo} alt="logo" className="logo_img" loading="lazy" />
-            </Link>
+          {/* ✅ Logo */}
+          <Navbar.Brand as={Link} to="/">
+            <img src={logo} alt="logo" className="logo_img" loading="lazy" />
           </Navbar.Brand>
+
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
+              {/* ✅ Home */}
               <NavLink to="/" className="nav-link" onClick={handleNavLinkClick}>
                 Home
               </NavLink>
+
+              {/* ✅ Mobile Dropdown */}
               <div className="d-lg-none d-block">
                 <NavDropdown title="Our Courses" id="courses-dropdown">
                   <NavDropdown
@@ -112,7 +103,7 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
                         as={Link}
                         to={course.path}
                         key={index}
-                        onClick={handleNavLinkClick}
+                        onClick={() => setNavbarExpanded(false)}
                       >
                         {course.name}
                       </NavDropdown.Item>
@@ -128,7 +119,7 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
                         as={Link}
                         to={course.path}
                         key={index}
-                        onClick={handleNavLinkClick}
+                        onClick={() => setNavbarExpanded(false)}
                       >
                         {course.name}
                       </NavDropdown.Item>
@@ -144,7 +135,7 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
                         as={Link}
                         to={program.path}
                         key={index}
-                        onClick={handleNavLinkClick}
+                        onClick={() => setNavbarExpanded(false)}
                       >
                         {program.name}
                       </NavDropdown.Item>
@@ -152,32 +143,28 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
                   </NavDropdown>
                 </NavDropdown>
               </div>
+
+              {/* ✅ Desktop Dropdown */}
               <li
                 className="nav-link course_menu me-lg-5 me-0 d-none d-lg-block"
                 onMouseEnter={() => setIsDropdownVisible(true)}
-                onClick={() => setIsDropdownVisible(true)}
                 onMouseLeave={() => setIsDropdownVisible(false)}
               >
                 Our Courses
                 <div
-                  className={
-                    isDropdownVisible
-                      ? "course_menu_dropdown show"
-                      : "course_menu_dropdown"
-                  }
+                  className={`course_menu_dropdown ${isDropdownVisible ? "show" : ""
+                    }`}
                   style={{ display: isDropdownVisible ? "block" : "none" }}
                 >
                   <ul className="items_list">
                     <li className="heading">
-                      <span onClick={() => handleHeadingClick("certificate")}>
-                        Certificate Courses
-                      </span>
+                      <span>Certificate Courses</span>
                       <ul>
                         {certificateCourses.map((course) => (
                           <li key={course.path}>
                             <NavLink
                               to={course.path}
-                              onClick={handleNavLinkClick}
+                              onClick={() => setIsDropdownVisible(false)}
                             >
                               {course.name}
                             </NavLink>
@@ -185,16 +172,15 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
                         ))}
                       </ul>
                     </li>
+
                     <li className="heading">
-                      <span onClick={() => handleHeadingClick("diploma")}>
-                        Diploma Courses
-                      </span>
+                      <span>Diploma Courses</span>
                       <ul>
                         {diplomaCourses.map((course) => (
                           <li key={course.path}>
                             <NavLink
                               to={course.path}
-                              onClick={handleNavLinkClick}
+                              onClick={() => setIsDropdownVisible(false)}
                             >
                               {course.name}
                             </NavLink>
@@ -202,16 +188,15 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
                         ))}
                       </ul>
                     </li>
+
                     <li className="heading">
-                      <span onClick={() => handleHeadingClick("degree")}>
-                        Degree Program
-                      </span>
+                      <span>Degree Program</span>
                       <ul>
                         {degreePrograms.map((course) => (
                           <li key={course.path}>
                             <NavLink
                               to={course.path}
-                              onClick={handleNavLinkClick}
+                              onClick={() => setIsDropdownVisible(false)}
                             >
                               {course.name}
                             </NavLink>
@@ -222,17 +207,19 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
                   </ul>
                 </div>
               </li>
+
+              {/* ✅ About Us & Placements (scrolls only on Home) */}
               {pathname === "/" ? (
                 <>
                   <Nav.Link
-                    href="#about-us"
+                    as="button"
                     className="nav-link"
                     onClick={() => handleNavLinkClick("about-us")}
                   >
                     About Us
                   </Nav.Link>
                   <Nav.Link
-                    href="#placements"
+                    as="button"
                     className="nav-link"
                     onClick={() => handleNavLinkClick("placements")}
                   >
@@ -258,49 +245,34 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
                 </>
               )}
 
+              {/* ✅ Other NavLinks */}
               <NavLink
                 to="/certificate-verification"
                 className="nav-link"
-                onClick={handleNavLinkClick}
+                onClick={() => setNavbarExpanded(false)}
               >
                 Certificate Verification
               </NavLink>
               <NavLink
                 to="/events-and-activities"
                 className="nav-link"
-                onClick={handleNavLinkClick}
+                onClick={() => setNavbarExpanded(false)}
               >
                 Events
-                {/* and Activities */}
               </NavLink>
               <NavLink
                 to="/students-work"
                 className="nav-link"
-                onClick={handleNavLinkClick}
+                onClick={() => setNavbarExpanded(false)}
               >
                 Students Work
               </NavLink>
-
-              {/* <a
-                href="
-              https://pikazoinstitute.com/blog"
-                className="nav-link"
-              >
-                Blogs
-              </a> */}
-              {/* <NavLink
-                to="/blogs"
-                className="nav-link"
-                onClick={handleNavLinkClick}
-              >
-                Blogs
-              </NavLink> */}
             </Nav>
           </Navbar.Collapse>
 
+          {/* ✅ Modal + Button */}
           <div className="navbar-buttons ms-auto me-3 me-lg-0">
             <CommonButton
-              // text="Free demo"
               className="header_btn"
               text={<span className="btn_text">Free demo</span>}
               onClick={() => setShowModal(true)}
@@ -310,6 +282,8 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
               handleClose={() => setShowModal(false)}
             />
           </div>
+
+          {/* ✅ Toggle button for mobile */}
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             className="custom-toggler"

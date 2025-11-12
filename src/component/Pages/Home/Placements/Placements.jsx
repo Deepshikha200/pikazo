@@ -23,6 +23,7 @@ const Placements = () => {
   usePlacementsAnimation(placementsRef);
 
   return (
+    
     <>
       <section className="d-xl-block d-none placements_section" id="placements" ref={placementsRef}>
         <div className="placements ">
