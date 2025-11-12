@@ -22,9 +22,9 @@ const CoursesInnerPages = ({
       <div className="inner-courses-top">
         <img src={src} alt="" className="inner-courses-img" loading="lazy" />
         <div className="inner-courses-top-button">
-          <CommonButton text="Enroll Now" svgIcon={<ButtonArrow />} className="white_text"
+          {/* <CommonButton text="Enroll Now" svgIcon={<ButtonArrow />} className="white_text"
             onClick={() => setShowModal(true)}
-          />
+          /> */}
         </div>
       </div>
       <ContactUsModal
