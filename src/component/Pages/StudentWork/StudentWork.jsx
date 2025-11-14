@@ -38,14 +38,33 @@ const StudentWork = () => {
     "https://www.youtube.com/embed/RqRXKwdALyQ",
   ];
 
+
+  const filmMakingLinks = [
+    "https://www.youtube.com/embed/u3aHRERKUOc",
+    "https://www.youtube.com/embed/2TyM9zIwg8U",
+    "https://www.youtube.com/embed/yMmDZ5MnLdg",
+    "https://www.youtube.com/embed/_c8geY5osyM",
+    "https://www.youtube.com/embed/DR0gSWMvBYA",
+    "https://www.youtube.com/embed/7Zc5jL5pe40"
+  ];
+  const vfxLinks = [
+    "https://www.youtube.com/embed/YsJ-M6uxdpg",
+    "https://www.youtube.com/embed/nf4DgObFwnc",
+    "https://www.youtube.com/embed/4ZtHJoBSa3g",
+    "https://www.youtube.com/embed/lmZjZ5jHYnE"
+  ];
+
+
   const categories = {
-    All: [...StudentUpdate, ...ArtImages, ...VectorArt, ...Graphics],
+    All: [...StudentUpdate, ...ArtImages, ...VectorArt, ...Graphics, ...filmMakingLinks, ...vfxLinks],
     "3D": StudentUpdate,
     "Digital Art": ArtImages,
     "Vector Art": VectorArt,
     "Graphic Designing": Graphics,
     "Motion Graphics": motionGraphicsLinks,
     "Video Editing": videoEditingLinks,
+    "Film Making": filmMakingLinks,
+    "VFX": vfxLinks,
   };
 
   const handleCategoryChange = (category) => {
@@ -92,9 +111,8 @@ const StudentWork = () => {
               <button
                 key={category}
                 onClick={() => handleCategoryChange(category)}
-                className={`student_btn_item ${
-                  selectedCategory === category ? "active" : ""
-                }`}
+                className={`student_btn_item ${selectedCategory === category ? "active" : ""
+                  }`}
               >
                 {category}
               </button>
@@ -122,23 +140,26 @@ const StudentWork = () => {
                   >
                     <motion.div variants={itemVariants}>
                       {selectedCategory === "Motion Graphics" ||
-                      selectedCategory === "Video Editing" ? (
-                        <iframe
-                          width="100%"
-                          height="200"
-                          src={item}
-                          title={`Video ${index + 1}`}
-                          // frameBorder="0"
-                          // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      ) : (
-                        <img
-                          src={item}
-                          alt={`Artboard ${index + 1}`}
-                          className="artboard"
-                        />
-                      )}
+                        selectedCategory === "Video Editing" ||
+                        selectedCategory === "Film Making" ||
+                        selectedCategory === "VFX"
+                        ? (
+                          <iframe
+                            width="100%"
+                            height="200"
+                            src={item}
+                            title={`Video ${index + 1}`}
+                            // frameBorder="0"
+                            // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                        ) : (
+                          <img
+                            src={item}
+                            alt={`Artboard ${index + 1}`}
+                            className="artboard"
+                          />
+                        )}
                     </motion.div>
                   </Col>
                 ))}

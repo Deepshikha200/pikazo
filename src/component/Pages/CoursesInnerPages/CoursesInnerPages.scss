@@ -13,6 +13,19 @@
       position: absolute;
       bottom: 15.4%;
       left: 4%;
+
+      @media (max-width:991px) {
+        display: none;
+      }
+
+      .btn-style {
+        margin-top: 2rem;
+
+        @media (max-width: 1199px) {
+          width: 15rem;
+          min-width: 15rem;
+        }
+      }
     }
   }
 

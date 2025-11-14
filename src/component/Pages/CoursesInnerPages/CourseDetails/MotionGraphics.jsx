@@ -1,7 +1,6 @@
 import React from "react";
 import CoursesInnerPages from "../CoursesInnerPages";
-// import img2 from "../../../../assets/images/banner/Artboard23.png";
-import img2 from "../../../../assets/images/banner/Motion Graphics Banner.webp";
+import img2 from "../../../../assets/images/banner/Motion Graphics Banner.png";
 import { Col, Container, Row } from "react-bootstrap";
 
 const MotionGraphics = () => {

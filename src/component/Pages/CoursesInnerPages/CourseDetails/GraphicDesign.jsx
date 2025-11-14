@@ -3,7 +3,7 @@ import CoursesInnerPages from "../CoursesInnerPages";
 import { Col, Container, Row } from "react-bootstrap";
 import { Graphics } from "../../../../assets/Student_Work/ArtImages";
 import { AnimatePresence, motion } from "framer-motion";
-import img1 from "../../../../assets/images/banner/Graphic Design Banner.webp";
+import img1 from "../../../../assets/images/banner/Graphic Design Banner.png";
 
 const GraphicDesign = () => {
   const faqData = [

@@ -1,6 +1,8 @@
-import React from "react";
-import img from "../../../../assets/images/banner/Film Making Banner.webp";
+import { Col, Container, Row } from "react-bootstrap";
+import img from "../../../../assets/images/banner/Film Making Banner.png";
 import CoursesInnerPages from "../CoursesInnerPages";
+import { AnimatePresence, motion } from "framer-motion";
+
 const FlimMaking = () => {
   const faqData = [
     {
@@ -156,6 +158,31 @@ const FlimMaking = () => {
     "Production Coordinator",
   ];
 
+
+  const filmMakingLinks = [
+    "https://www.youtube.com/embed/u3aHRERKUOc",
+    "https://www.youtube.com/embed/2TyM9zIwg8U",
+    "https://www.youtube.com/embed/yMmDZ5MnLdg",
+    "https://www.youtube.com/embed/_c8geY5osyM",
+    "https://www.youtube.com/embed/DR0gSWMvBYA",
+    "https://www.youtube.com/embed/7Zc5jL5pe40"
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Stagger the appearance of children
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 0.5 } },
+  };
+
   return (
     <section>
       <CoursesInnerPages
@@ -165,6 +192,41 @@ const FlimMaking = () => {
         faqData={faqData}
         jobs={jobs}
       />
+      <Container>
+        <div className="text-center py-5">
+          <h2 className="text-center  graphic_heading">Student Work</h2>
+          <Row className="mt-lg-5 mt-3">
+            <AnimatePresence mode="wait">
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+                className="row"
+              >
+                {filmMakingLinks.map((image, index) => (
+                  <Col lg={3} md={4} sm={6} xs={6}>
+                    <motion.div
+                      key={index}
+                      variants={itemVariants}
+                      className=" student_work_image mb-20"
+                    >
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={image}
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </motion.div>
+                  </Col>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </Row>
+        </div>
+      </Container>
     </section>
   );
 };

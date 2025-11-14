@@ -1,5 +1,4 @@
-import React from "react";
-import img from "../../../../assets/images/banner/Photography Banner.webp";
+import img from "../../../../assets/images/banner/Photography Banner.png";
 import CoursesInnerPages from "../CoursesInnerPages";
 const Photography = () => {
   const faqData = [

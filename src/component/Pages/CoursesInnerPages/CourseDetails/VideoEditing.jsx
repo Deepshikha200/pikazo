@@ -1,6 +1,5 @@
-import React from "react";
 import CoursesInnerPages from "../CoursesInnerPages";
-import img from "../../../../assets/images/banner/Video Editing Banner.webp";
+import img from "../../../../assets/images/banner/Video Editing Banner.png";
 import { Col, Container, Row } from "react-bootstrap";
 
 const VideoEditing = () => {

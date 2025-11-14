@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../../assets/images/banner/Game Design Banner.webp";
+import img from "../../../../assets/images/banner/Game Design Banner.png";
 import CoursesInnerPages from "../CoursesInnerPages";
 const GameDesign = () => {
   const faqData = [
