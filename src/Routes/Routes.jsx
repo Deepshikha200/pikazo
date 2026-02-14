@@ -14,6 +14,9 @@ const ThankyouPage = lazy(() =>
 const CertificatePage = lazy(() =>
   import("../component/Pages/CertificatePage/CertificatePage")
 );
+const PrivacyPolicy = lazy(() =>
+  import("../component/Pages/PrivacyPolicy/PrivacyPolicy")
+);
 const EventsAndActivites = lazy(() =>
   import("../component/Pages/EventsAndActivites/EventsAndActivites")
 );
@@ -108,6 +111,10 @@ const router = createBrowserRouter([
       {
         path: ROUTES.DEGREE_ANIMATION.replace("/", ""),
         element: <BVocAnimation />,
+      },
+      {
+        path: ROUTES.PRIVACY_POLICY.replace("/", ""),
+        element: <PrivacyPolicy />,
       },
       // Add other routes here if needed
     ],

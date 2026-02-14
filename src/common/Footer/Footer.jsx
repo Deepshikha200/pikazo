@@ -23,7 +23,9 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-content">
             <div className="footer-logo">
-              <img src={logo} alt="Pikazzo Logo" loading="lazy" />
+              <Link to={ROUTES.HOME}>
+                <img src={logo} alt="Pikazzo Logo" loading="lazy" />
+              </Link>
             </div>
             <div className="footer-content-text">
               <p>
@@ -77,7 +79,7 @@ const Footer = () => {
           <div className="footer-links">
             <h5>Quick Links</h5>
             <div className="footer-links_ul">
-              <ul>
+              <ul className="home_link">
                 <li>
                   {pathname === ROUTES.HOME ? (
                     <a href="#banner">Home</a>
@@ -104,6 +106,9 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to={ROUTES.EVENTS}>Events</Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.PRIVACY_POLICY} >Privacy Policy</Link>
                 </li>
               </ul>
 
@@ -152,9 +157,10 @@ const Footer = () => {
             </div>
           </div>
 
+        </div>
           <div className="footer-links">
             <div className="d-flex align-items-center flex-wrap gap-3 footer-content-location">
-              <img src={locationicon} alt="Location" loading="lazy"/>
+              <img src={locationicon} alt="Location" loading="lazy" />
               <a
                 href="https://www.google.com/maps/search/SCO+176,+Sector+39-D,+Chandigarh/"
                 target="_blank"
@@ -187,7 +193,6 @@ const Footer = () => {
               ></iframe>
             </div>
           </div>
-        </div>
       </Container>
     </footer>
   );

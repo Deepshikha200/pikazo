@@ -35,4 +35,5 @@ export const ROUTES = {
   EVENTS: "/events-and-activities",
   STUDENTS_WORK: "/students-work",
   BLOGS: "/blogs",
+  PRIVACY_POLICY: "/privacy-policy",
 };
