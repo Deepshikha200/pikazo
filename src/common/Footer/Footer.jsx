@@ -7,6 +7,7 @@ import {
   Linkdin,
   FaceBookIcon,
   Youtube,
+  PhoneIcon,
 } from "../../assets/images/Icons/SvgIcons";
 import locationicon from "../../assets/images/locationIcon_dark.png";
 import { Link, useLocation } from "react-router-dom";
@@ -161,33 +162,60 @@ const Footer = () => {
 
         <div className="footer-contact-info">
           <div className="footer-address-list">
-            <div className="footer-address-item">
-              <div className="address-icon">
-                <img src={locationicon} alt="Location" loading="lazy" />
+            <div className="footer-address-item with_phone">
+              <div className="adress_phne">
+                <div className="address-icon">
+                  <img src={locationicon} alt="Location" loading="lazy" />
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/SCO+176,+Sector+39-D,+Chandigarh/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="location-link"
+                >
+                  SCO 176, (TOP FLOOR) <br /> Sector 39-D, Chandigarh.
+                </a>
               </div>
-              <a
-                href="https://www.google.com/maps/search/SCO+176,+Sector+39-D,+Chandigarh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="location-link"
-              >
-                SCO 176, (TOP FLOOR) <br /> Sector 39-D, Chandigarh.
-              </a>
+              <ul className="phone_with_number">
+                <li>
+                  <span><PhoneIcon /></span>
+                  <a href="tel:+919569473492" className="contact-number">
+                    +91 95694-73492
+                  </a>
+                </li>
+                <li>
+                  <span><PhoneIcon /></span>
+                  <a href="tel:+919056513316" className="contact-number">
+                    +91 90565-13316
+                  </a>
+                </li>
+              </ul>
             </div>
 
-            <div className="footer-address-item">
-              <div className="address-icon">
-                <img src={locationicon} alt="Location" loading="lazy" />
+            <div className="footer-address-item with_phone">
+              <div className="adress_phne">
+                <div className="address-icon">
+                  <img src={locationicon} alt="Location" loading="lazy" />
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/A1+Tower,+opposite+Passport+Office,+Kamalpur,+Hoshiarpur,+Punjab+146001/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="location-link"
+                >
+                  A1 Tower, opposite Passport Office, <br /> Kamalpur,
+                  Hoshiarpur, Punjab 146001.
+                </a>
               </div>
-              <a
-                href="https://www.google.com/maps/search/A1+Tower,+opposite+Passport+Office,+Kamalpur,+Hoshiarpur,+Punjab+146001/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="location-link"
-              >
-                A1 Tower, opposite Passport Office, <br /> Kamalpur,
-                Hoshiarpur, Punjab 146001.
-              </a>
+              <ul className="phone_with_number">
+                <li>
+                  <span><PhoneIcon /></span>
+                  <a href="tel:+919915931034" className="contact-number">
+                    +91  99159 31034
+                  </a>
+                </li>
+              </ul>
+
             </div>
 
             <div className="footer-address-item">
@@ -205,14 +233,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="d-flex align-items-center flex-wrap gap-3 gap-xl-5 mb-4 mt-4">
-            <a href="tel:+919569473492" className="contact-number">
-              +91 95694-73492
-            </a>
-            <a href="tel:+919056513316" className="contact-number">
-              +91 90565-13316
-            </a>
-          </div>
+
 
           <div className="footer-map">
             <iframe
