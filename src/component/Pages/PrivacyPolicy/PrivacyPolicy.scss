@@ -39,15 +39,16 @@
         margin-bottom: 2.5rem;
         position: relative;
         padding-bottom: 1rem;
+        display: inline-block;
 
         &::after {
           content: "";
           position: absolute;
           left: 0;
           bottom: 0;
-          width: 5rem;
+          width: 100%;
           height: 0.3rem;
-          background: $blue;
+          background: $primary;
           border-radius: 1rem;
         }
       }
