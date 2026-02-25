@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import CustomInput from "../../../common/UI/CustomInput/CustomInput";
 import CommonButton from "../../../common/CommonButton/CommonButton";
+import ShowDetails from "./ShowDetails";
 import img1 from "../../../assets/images/certicate1.png";
 import img2 from "../../../assets/images/certicate2.png";
 import img3 from "../../../assets/images/certicate3.png";
@@ -14,12 +15,39 @@ import "./CertificatePage.scss";
 
 const CertificatePage = () => {
   const certificateImg = [img1, img2, img3, img4, img5, img6, img7];
+  const [registrationNo, setRegistrationNo] = useState("");
+  const [showResult, setShowResult] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const enteredValue = registrationNo.trim().toUpperCase();
+
+    if (enteredValue === "CA/168/PK/5") {
+      setShowResult(true);
+    } else {
+      setShowResult(false);
+    }
+  };
+
+  const handleBack = () => {
+    setShowResult(false);
+    setRegistrationNo("");
+  };
+
+  if (showResult) {
+    return <ShowDetails onBack={handleBack} />;
+  }
 
   return (
     <section className="certificate">
       <h2>Certificate Verification</h2>
-      <Form>
-        <CustomInput placeholder="Enter your Registration no. / Unique id" />
+      <Form onSubmit={handleSubmit}>
+        <CustomInput
+          placeholder="Enter your Registration no. / Unique id"
+          value={registrationNo}
+          onChange={(e) => setRegistrationNo(e.target.value)}
+        />
         <CommonButton type="submit" text="Submit" />
       </Form>
 

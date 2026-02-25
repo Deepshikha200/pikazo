@@ -85,4 +85,80 @@
       gap: 4rem;
     }
   }
+
+  .certificate-result {
+    margin: 4rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__title {
+      font-size: 3rem;
+      font-weight: 600;
+      color: $navyblue;
+      margin-bottom: 4rem;
+
+      @media (max-width: 1679px) {
+        font-size: 2.6rem;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 2.2rem;
+      }
+    }
+
+    &__table-wrapper {
+      max-width: 100rem;
+      width: 100%;
+      background-color: $white;
+      padding: 3rem 4rem;
+      border-radius: 1.2rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+      @media (max-width: 767px) {
+        padding: 2rem;
+      }
+    }
+
+    &__table-label {
+      font-size: 1.4rem;
+      color: #848484;
+      margin-bottom: 1.6rem;
+      text-align: left;
+    }
+
+    &__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.4rem;
+
+      thead {
+        background-color: #f8f8f8;
+      }
+
+      th,
+      td {
+        border: 1px solid #e2e2e2;
+        padding: 1.2rem 1.6rem;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        font-weight: 600;
+        color: #444444;
+      }
+
+      td {
+        color: #333333;
+      }
+    }
+
+    &__back-btn {
+      margin-top: 3.6rem;
+      padding: 1.2rem 4.8rem;
+    }
+  }
 }
