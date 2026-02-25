@@ -1,16 +1,19 @@
 import React from "react";
 import CommonButton from "../../../common/CommonButton/CommonButton";
 
-const ShowDetails = ({ onBack }) => {
+const ShowDetails = ({ onBack, details }) => {
+  if (!details) return null;
+
+  const { name, courseLines, duration, batch, certificateId, status, issued } =
+    details;
+
   return (
     <section className="certificate">
-      <h2>Certificate Verification</h2>
-
       <div className="certificate-result">
         <h3 className="certificate-result__title">Result Card</h3>
 
         <div className="certificate-result__table-wrapper">
-          {/* <p className="certificate-result__table-label">Table 1</p> */}
+          <p className="certificate-result__table-label">Table 1</p>
 
           <div className="table-responsive certificate-result__table-responsive">
             <table className="table table-bordered certificate-result__table">
@@ -27,19 +30,20 @@ const ShowDetails = ({ onBack }) => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Yashica Chopra</td>
+                  <td>{name}</td>
                   <td>
-                    Diploma in
-                    <br />
-                    Computer
-                    <br />
-                    Application
+                    {courseLines?.map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        {index !== courseLines.length - 1 && <br />}
+                      </span>
+                    ))}
                   </td>
-                  <td>12 Months</td>
-                  <td>2024-25</td>
-                  <td>CA/168/PK/5</td>
-                  <td>Verified</td>
-                  <td>05/11/2025</td>
+                  <td>{duration}</td>
+                  <td>{batch}</td>
+                  <td>{certificateId}</td>
+                  <td>{status}</td>
+                  <td>{issued}</td>
                 </tr>
               </tbody>
             </table>
@@ -58,4 +62,3 @@ const ShowDetails = ({ onBack }) => {
 };
 
 export default ShowDetails;
-

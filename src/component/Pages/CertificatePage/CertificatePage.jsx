@@ -17,26 +17,54 @@ const CertificatePage = () => {
   const certificateImg = [img1, img2, img3, img4, img5, img6, img7];
   const [registrationNo, setRegistrationNo] = useState("");
   const [showResult, setShowResult] = useState(false);
+  const [selectedDetails, setSelectedDetails] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const enteredValue = registrationNo.trim().toUpperCase();
 
-    if (enteredValue === "CA/168/PK/5") {
-      setShowResult(true);
-    } else {
+    const certificateData = {
+      "CA/168/PK/5": {
+        name: "Yashica Chopra",
+        courseLines: ["Diploma in", "Computer", "Application"],
+        duration: "12 Months",
+        batch: "2024-25",
+        certificateId: "CA/168/PK/5",
+        status: "Verified",
+        issued: "05/11/2025",
+      },
+      "CA/167/PK/5": {
+        name: "Saneha",
+        courseLines: ["Diploma in", "Computer", "Application"],
+        duration: "12 Months",
+        batch: "2024-25",
+        certificateId: "CA/167/PK/5",
+        status: "Verified",
+        issued: "05/11/2025",
+      },
+    };
+
+    const details = certificateData[enteredValue];
+
+    if (!details) {
       setShowResult(false);
+      setSelectedDetails(null);
+      return;
     }
+
+    setSelectedDetails(details);
+    setShowResult(true);
   };
 
   const handleBack = () => {
     setShowResult(false);
+    setSelectedDetails(null);
     setRegistrationNo("");
   };
 
   if (showResult) {
-    return <ShowDetails onBack={handleBack} />;
+    return <ShowDetails onBack={handleBack} details={selectedDetails} />;
   }
 
   return (
