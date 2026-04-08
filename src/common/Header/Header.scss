@@ -266,6 +266,8 @@ header {
       color: $white;
       min-width: 4vw;
       left: -7rem;
+      overflow-y: scroll;
+      height: 90dvh;
 
       @media (max-width:1679px) {
         width: 92rem;

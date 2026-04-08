@@ -6,6 +6,9 @@ export const ROUTES = {
   GO_BACK: "-1",
 
   // Certificate Courses
+  AI_AUTOMATION_PROGRAM: "/ai-automation-program-chandigarh",
+  AGENTIC_AI_PROGRAM: "/agentic-ai-program-chandigarh",
+  GEN_AI_PROGRAM: "/generative-ai-program-chandigarh",
   GRAPHIC_DESIGN: "/graphic-designing-institute-in-chandigarh",
   MOTION_GRAPHICS: "/motion-graphics-course",
   VIDEO_EDITING: "/video-editing-course",
@@ -17,7 +20,7 @@ export const ROUTES = {
   DIGITAL_MARKETING: "/digital-marketing-institute-in-chandigarh",
   GAME_DESIGN: "/game-design-course",
   UI_UX: "/ui-ux-course",
-
+  THANK_YOU: "/thank-you",
   // Diploma Courses
   DIPLOMA_VFX: "/vfx-institute-in-chandigarh",
   DIPLOMA_GRAPHIC: "/graphic-designing-institute-in-chandigarh",

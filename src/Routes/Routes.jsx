@@ -20,6 +20,19 @@ const PrivacyPolicy = lazy(() =>
 const EventsAndActivites = lazy(() =>
   import("../component/Pages/EventsAndActivites/EventsAndActivites")
 );
+const AIAutomationProgram = lazy(() =>
+  import(
+    "../component/Pages/CoursesInnerPages/CourseDetails/AIAutomationProgram"
+  )
+);
+const AgenticAIProgram = lazy(() =>
+  import(
+    "../component/Pages/CoursesInnerPages/CourseDetails/AgenticAIProgram"
+  )
+);
+const GenAIProgram = lazy(() =>
+  import("../component/Pages/CoursesInnerPages/CourseDetails/GenAIProgram")
+);
 const GraphicDesign = lazy(() =>
   import("../component/Pages/CoursesInnerPages/CourseDetails/GraphicDesign")
 );
@@ -72,12 +85,24 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: ROUTES.STUDENTS_WORK.replace("/", ""), element: <StudentWork /> },
-      { path: ROUTES.GO_BACK.replace("/", ""), element: <ThankyouPage /> },
+      { path: ROUTES.THANK_YOU.replace("/", ""), element: <ThankyouPage /> },
       {
         path: ROUTES.CERTIFICATE_VERIFICATION.replace("/", ""),
         element: <CertificatePage />,
       },
       { path: ROUTES.EVENTS.replace("/", ""), element: <EventsAndActivites /> },
+      {
+        path: ROUTES.AI_AUTOMATION_PROGRAM.replace("/", ""),
+        element: <AIAutomationProgram />,
+      },
+      {
+        path: ROUTES.AGENTIC_AI_PROGRAM.replace("/", ""),
+        element: <AgenticAIProgram />,
+      },
+      {
+        path: ROUTES.GEN_AI_PROGRAM.replace("/", ""),
+        element: <GenAIProgram />,
+      },
       {
         path: ROUTES.GRAPHIC_DESIGN.replace("/", ""),
         element: <GraphicDesign />,

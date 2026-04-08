@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 import thankyou from "../../../assets/images/thankyou_img.png";
-import "./ThankyouPage.scss";
 import { Link, useNavigate } from "react-router-dom";
 import {
   FbIcon,
@@ -9,6 +8,8 @@ import {
   WhatsAppIcon,
   YtIcon,
 } from "../../../assets/images/Icons/SvgIcons";
+import "./ThankyouPage.scss";
+
 const ThankyouPage = () => {
   const naviagte = useNavigate();
 

@@ -117,6 +117,21 @@ const Footer = () => {
 
               <ul className="links-list">
                 <li>
+                  <Link to={ROUTES.AI_AUTOMATION_PROGRAM}>
+                    AI Automation Program
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.AGENTIC_AI_PROGRAM}>
+                    Agentic AI Program
+                  </Link>
+                </li>
+                <li>
+                  <Link to={ROUTES.GEN_AI_PROGRAM}>
+                    Gen-AI (Generative AI) Program
+                  </Link>
+                </li>
+                <li>
                   <Link to={ROUTES.GRAPHIC_DESIGN}>Graphic Design Course</Link>
                 </li>
                 <li>
@@ -218,18 +233,30 @@ const Footer = () => {
 
             </div>
 
-            <div className="footer-address-item">
-              <div className="address-icon">
-                <img src={locationicon} alt="Location" loading="lazy" />
+            <div className="footer-address-item with_phone">
+              <div className="adress_phne">
+                <div className="address-icon">
+                  <img src={locationicon} alt="Location" loading="lazy" />
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/Thakur+Complex+Solan+Near+DC+Office/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="location-link"
+                >
+                  Thakur Complex Solan <br /> Near DC Office.
+                </a>
               </div>
-              <a
-                href="https://www.google.com/maps/search/Thakur+Complex+Solan+Near+DC+Office/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="location-link"
-              >
-                Thakur Complex Solan <br /> Near DC Office.
-              </a>
+              <ul className="phone_with_number">
+                <li>
+                  <span>
+                    <PhoneIcon />
+                  </span>
+                  <a href="tel:+917696376493" className="contact-number">
+                    +91 76963 76493
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 

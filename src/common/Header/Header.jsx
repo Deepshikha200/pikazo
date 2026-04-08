@@ -45,6 +45,9 @@ const Header = ({ onNavbarToggle = () => { }, isScrolled }) => {
 
   // ✅ Course lists
   const certificateCourses = [
+    { path: ROUTES.AI_AUTOMATION_PROGRAM, name: "AI Automation Program" },
+    { path: ROUTES.AGENTIC_AI_PROGRAM, name: "Agentic AI Program" },
+    { path: ROUTES.GEN_AI_PROGRAM, name: "Gen-AI (Generative AI) Program" },
     { path: ROUTES.GRAPHIC_DESIGN, name: "Graphic Design Course" },
     { path: ROUTES.MOTION_GRAPHICS, name: "Motion Graphics Course" },
     { path: ROUTES.VIDEO_EDITING, name: "Video Editing Course" },

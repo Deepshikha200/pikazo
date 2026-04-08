@@ -123,8 +123,10 @@
     align-items: center;
     z-index: 2;
 
-    @media (max-height:767px) {
-      display: none !important;
+    @media (max-width:767px) {
+      .video-container:not(.no-video) & {
+        display: none;
+      }
     }
   }
 

@@ -1,5 +1,5 @@
-import  { useState } from "react";
-import {  Container, Row } from "react-bootstrap";
+import { useState } from "react";
+import { Container, Row } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import vfx from "../../../../assets/images/vfx.mp4";
 import ui from "../../../../assets/images/UIUX.mp4";
@@ -15,6 +15,9 @@ import thumbnail5 from "../../../../assets/images/thumbnails/vfx.jpeg";
 import thumbnail6 from "../../../../assets/images/thumbnails/UiUX.jpg";
 import thumbnail7 from "../../../../assets/images/thumbnails/VideoEditing.jpg";
 import thumbnail8 from "../../../../assets/images/thumbnails/WebGraphics.jpg";
+import genAiThumbnail from "../../../../assets/images/thumbnail/gen-ai.png";
+import agenticAiThumbnail from "../../../../assets/images/thumbnail/agentic-ai.png";
+import aiAutomationsThumbnail from "../../../../assets/images/thumbnail/ai-automations.png";
 
 const CoursePreview = () => {
   const [playingVideo, setPlayingVideo] = useState(null);
@@ -27,6 +30,30 @@ const CoursePreview = () => {
     }));
   };
   const courses = [
+    {
+      id: "gen-ai",
+      title: "Gen- Ai Course",
+      url: null,
+      description:
+        "This course is all about using AI to create content images, videos, text, designs, and more. You'll learn how tools like ChatGPT, Midjourney, and other Gen-AI platforms can turn your ideas into real output within seconds.",
+      thumbnail: genAiThumbnail,
+    },
+    {
+      id: "agentic-ai",
+      title: "Agentic Ai",
+      url: null,
+      description:
+        "In this course, you'll learn how to create AI agents that don't just respond they take actions, make decisions, and complete tasks independently.",
+      thumbnail: agenticAiThumbnail,
+    },
+    {
+      id: "ai-automations",
+      title: "Ai Automations",
+      url: null,
+      description:
+        "This course teaches you how to automate tasks using AI so you don't have to do repetitive work again and again. You'll learn how to connect tools, build workflows, and create systems that run on autopilot.",
+      thumbnail: aiAutomationsThumbnail,
+    },
     {
       id: "vfx",
       title: "VFX",
@@ -108,11 +135,12 @@ const CoursePreview = () => {
           {courses.map((course, index) => (
             <div key={course.id} className="course_preview_item">
               <div
-                className="video-container"
+                // className="video-container"
+                className={`video-container ${!course.url ? "no-video" : ""}`}
                 onMouseEnter={() => setPlayingVideo(course.id)}
                 onMouseLeave={() => setPlayingVideo(null)}
               >
-                {!playingVideo || playingVideo !== course.id ? (
+                {/* {!playingVideo || playingVideo !== course.id ? (
                   <div className="thumbnail-overlay">
                     <img
                       src={course.thumbnail}
@@ -120,7 +148,17 @@ const CoursePreview = () => {
                       className="thumbnail "
                     />
                   </div>
-                ) : null}
+                ) : null} */}
+                {(!course.url || playingVideo !== course.id) && (
+                  <div className="thumbnail-overlay">
+                    <img
+                      src={course.thumbnail}
+                      alt={course.title}
+                      className="thumbnail"
+                    />
+                  </div>
+                )}
+
                 <ReactPlayer
                   url={course.url}
                   playing={playingVideo === course.id}
