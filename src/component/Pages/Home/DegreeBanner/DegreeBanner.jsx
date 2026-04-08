@@ -1,12 +1,8 @@
 import React from "react";
-import dark_logo from "../../../../assets/images/dark_logo.png";
-
 import banner_light from "../../../../assets/images/banner_light.png";
 import "./DegreeBanner.scss";
 
 import { Col, Container, Row } from "react-bootstrap";
-import CommonButton from "../../../../common/CommonButton/CommonButton";
-import { ButtonArrow } from "../../../../assets/images/Icons/SvgIcons";
 import GetInTocuh from "../../../../common/GetInTocuh/GetInTocuh";
 import Marquee from "react-fast-marquee";
 

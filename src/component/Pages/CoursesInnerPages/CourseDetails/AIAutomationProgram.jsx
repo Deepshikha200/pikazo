@@ -1,8 +1,4 @@
-import React from "react";
 import CoursesInnerPages from "../CoursesInnerPages";
-import { Col, Container, Row } from "react-bootstrap";
-import { Graphics } from "../../../../assets/Student_Work/ArtImages";
-import { AnimatePresence, motion } from "framer-motion";
 import img1 from "../../../../assets/images/banner/AIAutomation.jpeg";
 
 const AIAutomationProgram = () => {
@@ -121,21 +117,6 @@ const AIAutomationProgram = () => {
     "CRM Automation Expert",
     "Freelance Automation Consultant",
   ];
-
-  const itemVariants = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 0.5 } },
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 1 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
 
   return (
     <section className="pb-5">

@@ -58,39 +58,6 @@ export const useAnimation = (containerRef) => {
   }, [containerRef]);
 };
 
-
-export const affilationAnimation = (containerRef) => {
-  useGSAP(() => {
-    if (!containerRef.current) return;
-
-    const ctx = gsap.context(() => {
-      gsap.from(".award-box", {
-        opacity: 0,
-        y: -100,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 85%",
-        },
-      });
-
-      gsap.to(".award-box", {
-        scale: 1.07,
-        transformOrigin: "center center",
-        paused: true,
-        scrollTrigger: {
-          trigger: containerRef.current,
-        },
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, [containerRef]);
-};
-
-
 export const usePlacementsAnimation = (containerRef) => {
   useGSAP(() => {
     if (!containerRef.current) return;
@@ -127,8 +94,8 @@ export const usePlacementsAnimation = (containerRef) => {
         },
         onComplete: () => {
           gsap.to(".box", {
-            x: (index) => `+=${Math.random() * 2}rem`,
-            y: (index) => `+=${Math.random() * 2}rem`,
+            x: (_index) => `+=${Math.random() * 2}rem`,
+            y: (_index) => `+=${Math.random() * 2}rem`,
             duration: 0.77,
             repeat: -1,
             yoyo: true,

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./StudentWork.scss";
-import { Col, Container, Row } from "react-bootstrap";
-import CommonHeading from "../../../common/CommonHeading/CommonHeading";
+import { Col, Row } from "react-bootstrap";
 import {
   ArtImages,
   VectorArt,
@@ -16,7 +15,6 @@ import student_work_mobile from "../../../assets/images/student_work_mobile.png"
 const StudentWork = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [animationKey, setAnimationKey] = useState(0);
-  //h
 
   const motionGraphicsLinks = [
     "https://www.youtube.com/embed/4WLDBVRUsUE",

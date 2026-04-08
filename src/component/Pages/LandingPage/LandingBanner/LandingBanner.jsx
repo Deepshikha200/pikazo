@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Container, Form, Row, Col } from "react-bootstrap";
-import img1 from "../../../../assets/images/banner.jpg";
 import unreal from "../../../../assets/images/bannerf1.jpg";
 import amd from "../../../../assets/images/banner1.jpeg";
 import img3 from "../../../../assets/images/banner_update.jpg";
@@ -21,7 +20,6 @@ const LandingBanner = () => {
   const [userCaptcha, setUserCaptcha] = useState("");
   const navigate = useNavigate();
   const sliderRef = useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   // Slider Images
   const content = [
@@ -47,7 +45,6 @@ const LandingBanner = () => {
     pauseOnHover: false,
     pauseOnFocus: false,
     arrows: false,
-    beforeChange: (current, next) => setCurrentSlide(next),
   };
 
   // Captcha

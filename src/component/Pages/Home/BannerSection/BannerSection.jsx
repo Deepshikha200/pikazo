@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import unreal from "../../../../assets/images/bannerf1.jpg";
 import amd from "../../../../assets/images/banner1.jpeg";
 import img3 from "../../../../assets/images/banner_update.jpg";
@@ -28,7 +28,6 @@ const BannerSection = () => {
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef(null);
 
   const settings = {
@@ -43,7 +42,6 @@ const BannerSection = () => {
     verticalSwiping: true,
     pauseOnHover: false,
     pauseOnFocus: false,
-    beforeChange: (current, next) => setCurrentSlide(next),
   };
 
   return (

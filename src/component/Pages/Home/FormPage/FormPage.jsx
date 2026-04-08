@@ -3,7 +3,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import "./FormPage.scss";
 import img2 from "../../../../assets/images/aboutimg11.jpg";
 import img1 from "../../../../assets/images/aboutimg12.jpg";
-import CommonButton from "../../../../common/CommonButton/CommonButton";
 import GetInTocuh from "../../../../common/GetInTocuh/GetInTocuh";
 import {
   FaceBookIcon,

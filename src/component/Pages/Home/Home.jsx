@@ -12,7 +12,6 @@ import Testimonial from "./Testimonial/Testimonial";
 // import GetInTocuh from "../../../common/GetInTocuh/GetInTocuh";
 // import DegreeBanner from "./DegreeBanner/DegreeBanner";
 import BannerTwo from "./DegreeBanner/BannerTwo";
-import AdmissionOpen from "./AdmissionOpen/AdmissionOpen";
 import FaqsSection from "./FaqsSection/FaqsSection";
 import { useNavigate } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import vfx from "../../../../assets/images/vfx.mp4";
 import ui from "../../../../assets/images/UIUX.mp4";
@@ -132,7 +132,7 @@ const CoursePreview = () => {
           Unlock Your Potential with Knowledge That Inspires Brilliance.
         </p>
         <div className="course-items ">
-          {courses.map((course, index) => (
+          {courses.map((course) => (
             <div key={course.id} className="course_preview_item">
               <div
                 // className="video-container"

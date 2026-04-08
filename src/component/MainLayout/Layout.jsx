@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../../common/Header/Header";
 import Footer from "../../common/Footer/Footer";
@@ -21,7 +21,7 @@ const Layout = () => {
       <Header onNavbarToggle={toggleNavbar} />
 
       <main
-        className={`outlet ${isNavbarOpen ? "" : ""}`}
+        className="outlet"
         onClick={() => isNavbarOpen && toggleNavbar(false)}
       >
         <Outlet />

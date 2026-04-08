@@ -168,9 +168,8 @@ const GraphicDesign = () => {
                 className="row"
               >
                 {Graphics.map((image, index) => (
-                  <Col lg={3} md={4} sm={6} xs={6}>
+                  <Col lg={3} md={4} sm={6} xs={6} key={index}>
                     <motion.div
-                      key={index}
                       variants={itemVariants}
                       className=" student_work_image mb-20"
                     >

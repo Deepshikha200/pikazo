@@ -1,10 +1,7 @@
 import { Form } from "react-bootstrap";
 import "./CustomInput.scss";
-// import { CloseEye, OpenEye } from "../../../assets/images/Icons/SvgIcons";
-import { useState } from "react";
-const CustomInput = (props) => {
-  const [active, setActive] = useState(false);
 
+const CustomInput = (props) => {
   return (
     <>
       <Form.Group className={`customInput ${props.className}`}>
@@ -12,7 +9,7 @@ const CustomInput = (props) => {
           {props.label} {props.sub && <sup>*</sup>}
         </Form.Label>
         <Form.Control
-          type={props.type === "password" && active ? "text" : props.type}
+          type={props.type}
           placeholder={props.placeholder}
           onChange={props.onChange}
           autoComplete="off"

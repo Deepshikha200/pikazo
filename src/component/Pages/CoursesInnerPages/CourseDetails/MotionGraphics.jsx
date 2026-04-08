@@ -149,8 +149,8 @@ const MotionGraphics = () => {
           <h2 className="text-center  graphic_heading">Student Work</h2>
           <Row>
             {motionGraphicsLinks.map((item, index) => (
-              <Col lg={3} sm={6} xs={12} className="mb-4">
-                <div key={index} className="py-3">
+              <Col lg={3} sm={6} xs={12} className="mb-4" key={index}>
+                <div className="py-3">
                   <iframe
                     width="100%"
                     height="200"

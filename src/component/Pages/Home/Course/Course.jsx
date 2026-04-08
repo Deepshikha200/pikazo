@@ -3,7 +3,6 @@ import Marquee from "react-fast-marquee";
 import "./Course.scss";
 import { motion } from "framer-motion";
 import {
-  ButtonArrow,
   OneYear,
   SixMonths,
   ThreeMonths,

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import "./CoursesInnerPages.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";

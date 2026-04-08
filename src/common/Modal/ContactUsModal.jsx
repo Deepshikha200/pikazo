@@ -73,7 +73,6 @@ const ContactUsModal = ({ show, handleClose }) => {
 
   const {
     values,
-    handleBlur,
     handleChange,
     handleSubmit,
     errors,

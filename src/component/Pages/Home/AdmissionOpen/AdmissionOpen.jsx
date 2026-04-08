@@ -1,4 +1,4 @@
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import GetInTocuh from "../../../../common/GetInTocuh/GetInTocuh";
 import Marquee from "react-fast-marquee";
 import "./AdmissionOpen.scss";

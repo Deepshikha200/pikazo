@@ -1,4 +1,4 @@
-import React from "react";
+import { Col, Row } from "react-bootstrap";
 
 const ConatctUs = () => {
   return (
@@ -7,7 +7,7 @@ const ConatctUs = () => {
         <Col lg={4}></Col>
         <Col lg={4}></Col>
         <Col lg={4}></Col>
-     </Row>
+      </Row>
     </section>
   );
 };
