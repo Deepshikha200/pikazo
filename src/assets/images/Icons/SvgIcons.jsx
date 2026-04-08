@@ -189,7 +189,7 @@ export const ThreeYear = () => (
 
 export const LeftArrow = () => (
   <svg
-    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-vubbuv"
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-vubbuv"
     focusable="false"
     aria-hidden="true"
     viewBox="0 0 24 24"

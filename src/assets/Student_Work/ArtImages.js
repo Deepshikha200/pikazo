@@ -178,7 +178,9 @@ export const TestimonialsPhone = [
   test11,
   test12,
   test13,
-]
+  test14,
+  test15,
+];
 // AMD
 import amd1 from "../images/eventsimg/AMD/Amd1.jpg";
 import amd2 from "../images/eventsimg/AMD/Amd2.jpg";
